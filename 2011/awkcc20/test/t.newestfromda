@@ -1,0 +1,20 @@
+BEGIN {
+	print "example data" > "tmpfile"
+	print "nova:350" > "tmpfile"
+	print "nova:350" > "tmpfile"
+	print "nova:350" > "tmpfile"
+	print "nova:289" > "tmpfile"
+	print "nova:289" > "tmpfile"
+	print "camaro:350" > "tmpfile"
+	print "camaro:350" > "tmpfile"
+	print "camaro:440" > "tmpfile"
+	print "chevelle:350" > "tmpfile"
+	print "chevelle:350" > "tmpfile"
+	close("tmpfile")
+	SUBSEP=FS=OFS=":"
+	model=1
+	engine_size=2
+	while (getline < "tmpfile" > 0)
+		save[$model,$engine_size]++
+	for(i in save) print i,save[i] | "sort"
+}

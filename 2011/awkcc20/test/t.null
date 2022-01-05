@@ -1,0 +1,16 @@
+BEGIN {
+	foo(hello)
+	for (i in a) print i, a[i]
+	print "|" junk "|"
+}
+
+func foo(x, z)
+{
+#CC	print_var("Z", &Ap_z);	
+#CC	print_var("X", &Ap_x);	
+#CC	print_var("junk", Au_junk);	
+#CC	print_var("nullvar", nullvar);	
+	z="|" x 1 "|"
+	print z
+	a[x,1]="foo"
+}

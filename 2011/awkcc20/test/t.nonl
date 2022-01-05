@@ -1,0 +1,10 @@
+BEGIN {
+	p="echo \"foobar\\c\""
+	p | getline x
+	print "|" x "|"
+	close(p)
+	p="echo \"2\\c\""
+	p | getline x
+	print "|" x "|"
+	close(p)
+}

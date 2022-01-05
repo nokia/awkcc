@@ -1,0 +1,39 @@
+i pkginfo
+i copyright
+i request
+
+!default 0755 bin bin
+
+############################################################
+# Create package directories
+############################################################
+d none $AWKHOME
+d none $AWKHOME/bin
+d none $AWKHOME/include
+
+############################################################
+# Move programs to bin directory
+############################################################
+f bin $AWKHOME/bin/awkcc=opt/awkcc/bin/awkcc 0555 bin bin
+f bin $AWKHOME/bin/awkcc.sh=opt/awkcc/bin/awkcc.sh 0555 bin bin
+f bin $AWKHOME/bin/libAWK.a=opt/awkcc/bin/libAWK.a 0444 bin bin
+s bin /usr/lbin/awkcc=awkcc/bin/awkcc 
+
+############################################################
+# Move header files to include directory
+############################################################
+f hdrs $AWKHOME/include/awk.h=opt/awkcc/include/awk.h 0444 bin bin
+f hdrs $AWKHOME/include/dollars.h=opt/awkcc/include/dollars.h 0444 bin bin
+f hdrs $AWKHOME/include/ear.h=opt/awkcc/include/ear.h 0444 bin bin
+f hdrs $AWKHOME/include/hash.h=opt/awkcc/include/hash.h 0444 bin bin
+f hdrs $AWKHOME/include/header.h=opt/awkcc/include/header.h 0444 bin bin
+f hdrs $AWKHOME/include/specassign.h=opt/awkcc/include/specassign.h 0444 bin bin
+f hdrs $AWKHOME/include/y.tab.h=opt/awkcc/include/y.tab.h 0444 bin bin
+
+############################################################
+# Install manual pages
+############################################################
+d man $MANDIR
+d man $MANDIR/u_man
+d man $MANDIR/u_man/man1
+f man $MANDIR/u_man/man1/awkcc.1=usr/man/u_man/man1/awkcc.1 444 bin bin

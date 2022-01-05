@@ -1,0 +1,2 @@
+FILENAME ~ "a" { print "hello" }
+FILENAME ~ "b" { print "goodbye" }

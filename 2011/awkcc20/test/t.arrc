@@ -1,0 +1,21 @@
+BEGIN {
+	X=3
+	for (i=0; i<X; i++) {
+		for (j=0; j<X; j++) {
+			x=i SUBSEP j
+			a[x]=foo
+			foo++
+		}
+	}
+	xyzzy(a)
+}
+
+func xyzzy(b)
+{
+
+	for (i=0; i<X; i++) {
+		print bar[i]
+		for (j=0; j<X; j++)
+			printf("%.6f%s", b[i, j], ((j+1<X)?" ":"\n"))
+	}
+}

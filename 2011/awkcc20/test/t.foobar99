@@ -1,0 +1,13 @@
+BEGIN {
+	print "-----------------------------------------"
+	n="[\.,\(\)\"\'\?]"
+	pat="(_.)+((" n "| )*(_.)+)*(" n ")*"
+	tomatch="              _1_9_8_6     1985     1984"
+print pat
+print tomatch
+	print match(tomatch, "(_.)+((" n \
+			"| )*(_.)+)*(" n ")*")
+print RSTART, RLENGTH
+	print match(tomatch, pat)
+	print match(tomatch, pat)
+}

@@ -1,0 +1,9 @@
+BEGIN{
+#s = "hello & goodbye"
+s="length(\"&\")"
+t = "abcdefghijklmnop"
+print "s=" s
+print "t before=" t
+gsub("c",s,t)
+print "t after=" t
+}

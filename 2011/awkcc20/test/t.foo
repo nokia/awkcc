@@ -1,0 +1,5 @@
+BEGIN {
+	a=3.3
+	a++
+	print a
+}

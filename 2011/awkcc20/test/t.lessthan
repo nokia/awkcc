@@ -1,0 +1,17 @@
+BEGIN {
+	fewerv()
+	print a b c
+	fewera()
+	print x[1] x[2] x[3]
+}
+func fewerv(a, b, c)
+{
+	a=1;b=2;c=3
+	print a b c
+}
+
+func fewera(x)
+{
+	x[1]=1;x[2]=2;x[3]=3
+	print x[1] x[2] x[3]
+}

@@ -1,0 +1,149 @@
+#      Copyright (c) 1994 AT&T
+#      All Rights Reserved
+#
+#      Note: This software was created by the Bell Laboratories unit of AT&T.
+#      Bell Laboratories was subsequently part of Lucent Technologies, later part of
+#      Alcatel-Lucent, and now part of Nokia; some copyrights may have been assigned
+#      by AT&T to its successors. This license is granted by Nokia solely to the
+#      extent of its right to do so.
+#
+#      Filename: request.
+
+#ident "@(#)request   version  40.1.2.3  RDS UNIX source.  Last delta: 06/30/00 13:39:57"
+
+#!/bin/sh
+trap 'exit 3' 15
+[ "$TRACE" = "on" ] && set -x && env
+
+CMD=$PKG
+
+##
+## ckyorn/ckitem on some systems don't display default message
+##
+if echo | ckitem -d a b 2>&1 >&- | grep -i default >&-
+then
+	DEF_ckitem=""
+else
+	DEF_ckitem="T"
+fi
+if echo | ckyorn -d a 2>&1 >&- | grep -i default >&-
+then
+    	DEF_ckyorn="" 
+else
+    	DEF_ckyorn="T"
+fi
+
+##
+## Ask where binary should go
+##
+PROMPT="Where should binaries be installed?"
+HELP=" \
+Choose the appropriate directory for your system.
+If you are pre-answering these questions on a machine which
+is not the final installation system, you may see a warning about
+the directory not existing on the current system."
+
+LABEL="Possible binary directories for $CMD:"
+OPTBIN="/opt/rds/bin"
+BIN="/usr/bin"
+
+##
+## set BINDIR default by progressing through possibilities
+## 
+# if package installed, use those defaults..
+DEFAULT=`pkgparam $PKGINST BINDIR 2>/dev/null`
+if [ -z "$DEFAULT" ] 
+then
+    DEFAULT=$BIN
+    [ -d "$OPTBIN" ] && DEFAULT=$OPTBIN
+fi
+
+BINDIR=`ckitem -m1 -W75 -n -p "$PROMPT${DEF_ckitem:+ (default: $DEFAULT)}" \
+	-l "$LABEL" -h "$HELP"  \
+	-d "$DEFAULT"  "$OPTBIN" "$BIN"` || \
+	exit $?
+
+# add optrds directories to installed classes
+[ "$BINDIR" = "$OPTBIN" ] && CLASSES="optrds $CLASSES"
+
+##
+## Ask about catman page, if it exists
+##
+if [ -d /usr/catman ]
+then
+	CATMAN="$CATDIR/g1"
+	PROMPT="Do you want the $CMD catman page installed?"
+	HELP=" \
+Enter 'y' to install the $CMD catman page.  Installing the 
+catman page allows the System V /usr/bin/man command to
+find and display them."
+
+	ans=`ckyorn -d "y" -p "$PROMPT${DEF_ckyorn:+ (default: y)}" -h "$HELP"` || \
+		exit $?
+	ans=`echo $ans | sed 's/^[yY].*/y/'`	# canonize to y
+
+	if [ "$ans" = y ]
+	then
+		CLASSES="$CLASSES catman"
+	fi
+fi
+
+##
+## Ask about unformatted man page
+##
+
+if [ -d /usr/catman ]
+then
+	PROMPT="Do you want the unformatted $CMD manual page installed?"
+	HELP=" \
+Enter 'y' to install the unformatted $CMD manual page.  You may
+troff and print the unformatted $CMD manual page.  Also, /usr/ucb/man
+and other man commands may expect to find this unformatted man page in
+this location."
+else
+	PROMPT="Do you want the $CMD manual page installed?"
+	HELP=" \
+Enter 'y' to install the $CMD manual page.  Installing
+the manual page only makes sense if you have the man(1) command 
+on your system."
+fi
+
+ans=`ckyorn -d "y" -p "$PROMPT${DEF_ckyorn:+ (default: y)}" -h "$HELP"` || \
+	exit $?
+ans=`echo $ans | sed 's/^[yY].*/y/'`	# canonize to y
+
+if [ "$ans" = y ]
+then
+    PROMPT="Where should the $CMD man page be installed?"
+
+    LABEL="Possible manual page directories for $CMD:"
+    OPTMAN="/opt/awkcc/man"
+    RDSMAN="/opt/rds/man"
+    MAN="/usr/share/man"
+
+    #
+    # set MANDIR default by progressing through possibilities
+    #
+    DEFAULT=`pkgparam $PKGINST MANDIR 2>/dev/null`
+    if [ -z "$DEFAULT" ] 
+    then
+	case "$BINDIR" in
+	    "$OPTBIN")  DEFAULT=$OPTMAN ;;
+	    "$BIN")	DEFAULT=$MAN ;;
+	esac
+    fi
+
+    MANDIR=`ckitem -m1 -W75 -n -p "$PROMPT $DEF_ckitem" -l "$LABEL" -h "$HELP" \
+	-d "$DEFAULT" "$OPTMAN" "$RDSMAN" "$MAN"` || \
+	exit $?
+    [ "$MANDIR" = "$OPTMAN" -o "$MANDIR" = "RDSMAN" ] && CLASSES="$CLASSES optman"
+    CLASSES="$CLASSES man"
+fi	
+
+echo "
+CLASSES=$CLASSES
+BINDIR=$BINDIR
+MANDIR=$MANDIR
+" >$1 || exit 1
+
+exit 0

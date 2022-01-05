@@ -1,0 +1,12 @@
+function a(b)
+{
+	if (++x < 10)
+		a(b)
+}
+function test(x)
+{
+	a(x)
+	x=1 #[1]=1
+}
+
+BEGIN { test() ; print "goodbye" }

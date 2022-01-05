@@ -1,0 +1,3 @@
+BEGIN {
+	printf(":%s:\n", getline)
+} 

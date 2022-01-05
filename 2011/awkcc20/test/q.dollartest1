@@ -1,0 +1,6 @@
+BEGIN{
+s="$hello,$goodbye"
+print "s (before) =" s
+gsub("[$]","~&",s)
+print "s (after) =" s
+}

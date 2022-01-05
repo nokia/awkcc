@@ -1,0 +1,14 @@
+#awkcchint -u
+BEGIN {
+	OFS="|"
+	temp="asdf"
+print "jcr3.1a", send, slen, ""
+print "jcr3.1b", subs, length(temp), temp, ""
+		if ((send=subs+255) > (slen=length(temp))) {
+print "jcr3.1c", send, slen, ""
+			send = slen
+		}
+print "jcr3.1d", send, slen, ""
+	if (send == slen) print "GOOD"
+print "jcr3", subs, send, slen 
+}

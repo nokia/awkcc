@@ -1,0 +1,17 @@
+BEGIN { updgrps(); print "onetwothree" }
+
+function updgrps(keystr, domlist, glist, mlist, rlist,
+					ngrps, curgrp, i)
+{
+	ngrps = glist[keystr]
+	for (i = 1; i <= ngrps; i++)				#	for each group
+	{
+		curgrp = glist[keystr, i]
+		dorules(curgrp, rlist[curgrp], domlist, glist, mlist)
+	}
+}
+
+function dorules(group, rules, domlist, glist, mlist,
+					rulearray, nrules, elems, nelems, i, retval)
+{
+}

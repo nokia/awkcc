@@ -1,0 +1,12 @@
+BEGIN {
+	OFS="\t"
+	a[1]="one"
+	a[2]="two"
+	a[3]="three"
+	a["i"]="eye"
+	a["i", "one"]="eyeone"
+	for (i in a) {
+		print a["i"], a[i], a["i", "one"] | "sort"
+	}
+	close("sort")
+}

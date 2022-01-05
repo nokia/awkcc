@@ -1,0 +1,11 @@
+BEGIN {
+	a="hello"
+	print "A"
+	a=a;
+	print "B"
+	a=a;
+	print "C"
+	a=a;
+	print "D"
+	a=a;
+}

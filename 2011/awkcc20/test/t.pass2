@@ -1,0 +1,9 @@
+BEGIN {
+	a="a" #1.3
+	b="b" #1.4
+	c="c" #1.5
+	st="(%s%s%s)"
+	x=sprintf(st,"abcde", sprintf(st,c,b,a), sprintf(st,a,b,c))
+	#x=sprintf(st,sprintf(st,a,b,c),sprintf(st,c,b,a),sprintf(st,a,c,b))
+	print x
+}

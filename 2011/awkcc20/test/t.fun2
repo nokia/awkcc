@@ -1,0 +1,10 @@
+func f(n) {
+	while (n < 10) {
+		print n
+		n = n + 1
+	}
+}
+func g(n) {
+	print "g", n
+}
+{ f($1); g($1); print n }

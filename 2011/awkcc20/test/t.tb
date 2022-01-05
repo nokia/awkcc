@@ -1,0 +1,5 @@
+BEGIN 	{
+	for (i=0; i<10; i++) {
+		x=i "hello"; print x
+	}
+}

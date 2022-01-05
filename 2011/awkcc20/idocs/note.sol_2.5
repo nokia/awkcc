@@ -1,0 +1,290 @@
+
+Project:	port to Solaris 2.5 (4/97)
+
+Feature:	awkcc
+
+Developer:	contracted back to Sun
+
+Sablime work:	Sharon Belgarde
+
+Generic:	awkcc20
+
+MR:		rds970013, rds970014, rds970015
+
+Summary:	1)modified src/mfilechg - rds970013
+		2)added idocs/note.sol_2.5 - rds970014
+		3)added awkcc/getopt.c - rds970015
+		4)added awkcc/makefile - rds970015
+		5)added awkcc/node.c - rds970015
+		6)added lib/makefile - rds970015
+                7)edited pkg/sparc/pkginfo(no AT&T)
+                8)edited pkg/sparc/copyright(no AT&T)
+		NOTE: I created two new directories in sablime,
+		      "awkcc" and "lib" for items 3-6.
+
+
+*** OPCOM Porting Notes from Sun ***
+*** see also ihtest:/t5/rds/sun2lucent/tape1 ***
+
+
+(2) The differences from the original source code distribution (ready
+    for GNU patch command)
+
+soltest:/import/work5/martel/att-rds/awkcc$ gdiff -r -c ../awkcc.orig .
+Only in .: PORTING.NOTES
+diff -r -c ../awkcc.orig/awkcc/getopt.c ./awkcc/getopt.c
+*** ../awkcc.orig/awkcc/getopt.c	Fri Mar 22 14:38:15 1996
+--- ./awkcc/getopt.c	Tue Apr 16 17:16:04 1996
+***************
+*** 1,5 ****
+--- 1,6 ----
+  #include <stdio.h>
+  
++ #if !defined (SUN4) && !defined(SVRV)
+  /*
+   * get option letter from argument vector
+   */
+***************
+*** 60,62 ****
+--- 61,65 ----
+  	} while (*sp++);
+  	return (NULL);
+  }
++ 
++ #endif /* !defined (SUN4) && !defined(SVRV) */
+diff -r -c ../awkcc.orig/awkcc/makefile ./awkcc/makefile
+*** ../awkcc.orig/awkcc/makefile	Fri Mar 22 14:38:15 1996
+--- ./awkcc/makefile	Wed Apr 17 11:07:57 1996
+***************
+*** 60,70 ****
+  	$(CC) $(CFLAGS) -o awkcc $(TARG)
+  
+  $(OBJROOT)/$(TARGBIN)/awkcc: awkcc
+! 	[ -d $(OBJROOT)/$(TARGBIN) ] || make -p $(OBJROOT)/$(TARGBIN)
+  	cp awkcc $(OBJROOT)/$(TARGBIN)
+  	strip $(OBJROOT)/$(TARGBIN)/awkcc
+  
+  install: $(OBJROOT)/$(TARGBIN)/awkcc
+  
+! clean: install
+  	rm -f $(TARG) awkcc y.tab.h
+--- 60,70 ----
+  	$(CC) $(CFLAGS) -o awkcc $(TARG)
+  
+  $(OBJROOT)/$(TARGBIN)/awkcc: awkcc
+! 	[ -d $(OBJROOT)/$(TARGBIN) ] || mkdir -p $(OBJROOT)/$(TARGBIN)
+  	cp awkcc $(OBJROOT)/$(TARGBIN)
+  	strip $(OBJROOT)/$(TARGBIN)/awkcc
+  
+  install: $(OBJROOT)/$(TARGBIN)/awkcc
+  
+! clean:
+  	rm -f $(TARG) awkcc y.tab.h
+diff -r -c ../awkcc.orig/awkcc/node.c ./awkcc/node.c
+*** ../awkcc.orig/awkcc/node.c	Fri Mar 22 14:38:16 1996
+--- ./awkcc/node.c	Wed Apr 17 10:33:28 1996
+***************
+*** 146,152 ****
+  	int	i;
+  
+  	if (node==(Nodep) NULL) return;
+! 	if (node = 0x38) return;	
+  	for (i=0; i<(int) node->subs; i++)
+  		if (node->narg[i])
+  			freenode(node->narg[i]);
+--- 146,152 ----
+  	int	i;
+  
+  	if (node==(Nodep) NULL) return;
+! 	if (node==(Nodep) 0x38) return;	
+  	for (i=0; i<(int) node->subs; i++)
+  		if (node->narg[i])
+  			freenode(node->narg[i]);
+Only in ./awkcc: s.getopt.c
+Only in ./awkcc: s.makefile
+Only in ./awkcc: s.node.c
+Only in .: bin
+Only in .: include
+diff -r -c ../awkcc.orig/lib/makefile ./lib/makefile
+*** ../awkcc.orig/lib/makefile	Fri Mar 22 14:38:23 1996
+--- ./lib/makefile	Wed Apr 17 11:09:16 1996
+***************
+*** 39,43 ****
+  
+  install: $(OBJROOT)/$(TARGLIB)/libAWK.a
+  
+! clean: install
+  	rm -f $(SOURCES) libAWK.a
+--- 39,43 ----
+  
+  install: $(OBJROOT)/$(TARGLIB)/libAWK.a
+  
+! clean:
+  	rm -f $(SOURCES) libAWK.a
+Only in ./lib: s.makefile
+Only in .: make.log1
+Only in .: make.log2
+Only in .: make.log3
+Only in .: make.log4
+diff -r -c ../awkcc.orig/makefile ./makefile
+*** ../awkcc.orig/makefile	Fri Mar 22 14:38:12 1996
+--- ./makefile	Wed Apr 17 11:05:29 1996
+***************
+*** 48,54 ****
+  	chmod 755 $(OBJROOT)/$(TARGSH)/awkcc.sh
+  	
+  
+! clean: install
+  	(cd ./lib;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGLIB=$(TARGLIB)" "TARGHDR=$(TARGHDR)" "OBJROOT=$(OBJROOT)")
+  	
+  	(cd ./awkcc;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGBIN=$(TARGBIN)" "OBJROOT=$(OBJROOT)")
+--- 48,54 ----
+  	chmod 755 $(OBJROOT)/$(TARGSH)/awkcc.sh
+  	
+  
+! clean:
+  	(cd ./lib;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGLIB=$(TARGLIB)" "TARGHDR=$(TARGHDR)" "OBJROOT=$(OBJROOT)")
+  	
+  	(cd ./awkcc;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGBIN=$(TARGBIN)" "OBJROOT=$(OBJROOT)")
+Only in .: s.makefile
+diff -r -c ../awkcc.orig/test/Compare ./test/Compare
+*** ../awkcc.orig/test/Compare	Fri Mar 22 14:36:59 1996
+--- ./test/Compare	Tue Apr 16 16:56:12 1996
+***************
+*** 1,3 ****
+--- 1,5 ----
++ #!/bin/ksh
++ 
+  AWKPROG=awk
+  type nawk 1>/dev/null 2>&1
+  [ "$?" = "0" ] && AWKPROG=nawk
+Only in ../awkcc.orig/test: bigpop
+Only in ../awkcc.orig/test: eventemp
+Only in ../awkcc.orig/test: foo
+Only in ../awkcc.orig/test: glop
+Only in ../awkcc.orig/test: junk1
+Only in ../awkcc.orig/test: junk2
+Only in ../awkcc.orig/test: oddtemp
+Only in ./test: s.Compare
+Only in ../awkcc.orig/test: smallpop
+Only in ../awkcc.orig/test: tmpfile
+soltest:/import/work5/martel/att-rds/awkcc$ 
+
+
+(3) Here are the explanations for the changes made to the code
+
+Q)
+
+/opt/SUNWspro/bin/cc -O -DSUN4  -c  getrec.c
+"getrec.c", line 29: warning: statement not reached
+
+A)
+
+Nothing to fix since this warning was expected. See lint NOTREACHED
+comment before the warning:
+	
+		/* NOTREACHED */
+		return(0);
+	}
+
+Q)
+
+/opt/SUNWspro/bin/cc -O -DSUN4  -c  getopt.c
+"getopt.c", line 20: warning: Prototype mismatch in arg 2 for function getopt:
+	function : old style declaration pointer to pointer to char
+	prototype: pointer to const pointer to char
+"getopt.c", line 20: warning: Prototype mismatch in arg 3 for function getopt:
+	function : old style declaration pointer to char
+	prototype: pointer to const char
+
+A)
+
+getopt() not required for SVRV. Cpp directive:
+
+	#if !defined (SUN4) && !defined(SVRV)
+
+is added to awkcc/getopt.c
+
+Q)
+
+test -f /usr/bin/ranlib && ranlib /home/daniel/att/att-rds/awkcc/bin/libAWK.a
+*** Error code 1 (ignored)
+
+A)
+
+Nothing to fix since this warning was expected. See '-' before the
+test command in lib/makefile:
+
+	-test -f /usr/bin/ranlib && ranlib $(TARGLIB)/libAWK.a
+
+Q)
+
+/opt/SUNWspro/bin/cc -O -DSUN4  -c  node.c
+"node.c", line 149: warning: improper pointer/integer combination: op "="
+
+A)
+
+Bug in the freenode() function:
+
+	if (node = 0x38) return;	
+
+changed to:
+
+	if (node==(Nodep) 0x38) return;	
+
+There are no other references to 0x38 in the awkcc source tree and I
+don't know why 0x38 was used, but the code bellow this line was never
+executed and memory never freed. I doubt if code was ever needed.
+
+Q)
+
+Make test prints:
+
+q.a.c: BAD
+q.comint: BAD
+t.if2: BAD
+t.if3: BAD
+t.newbg: BAD
+finished with regression suite...
+
+A)
+
+Some test cases that check to see if awkcc is working and compatible
+with OS version of awk failed.  Originally script was run as
+/bin/sh. When /bin/ksh was used one error less occurred:
+
+	q.comint: BAD
+	t.if2: BAD
+	t.if3: BAD
+	t.newbg: BAD
+	finished with regression suite...
+
+Test was run with RDS nawk92. The number of errors reduced to only
+one:	q.comint: BAD. 
+
+Q) 
+
+Commands within the makefiles like:
+
+	[ -d //home/daniel/att/att-rds/awkcc/bin ] || make -p //home/daniel/att/att-rds/awkcc/bin
+
+print-out the complete set of make rules and macro definitions and fail.
+
+A)
+
+There was a bug in the awkcc/makefile. Make should be replaced with
+mkdir.  -p is used to create all non-existing parent directories.
+
+Q)
+
+Make clobber or make clean causes objects to be rebuild first, Why?
+
+A)
+
+There was an incorrect dependency:
+	clean: install
+		rm -f foo bar
+
+It's occurrence was removed from all makefiles.
+
+

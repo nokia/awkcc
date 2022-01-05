@@ -1,0 +1,2485 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+
+nsbFile: 1
+generatedBy: NSBD version 1.6 patchlevel 2006/05/19 16:55:04
+generatedAt: Fri, 02 Sep 2011 15:16:17 GMT
+package: awkccsrc
+updateParameters:
+    targets awkcc.cpiogz
+    excludeCvs
+paths:
+    awkcc.npd
+	length: 279
+	md5: c0f051f76abc9a09da860d4e6b56a6b7
+	mtime: 1313947326
+    awkccsrc.npd
+	length: 175
+	md5: 736d00373f0efe00e6d7227c75d45157
+	mtime: 1314646071
+    Makefile
+	length: 1941
+	md5: 70c9cd45e076afbe5b0347ef46d8d335
+	mtime: 1314975401
+    awkcc20/
+    awkcc20/lib/
+    awkcc20/lib/ctest.c
+	length: 513
+	md5: b2e4bb27e473916eddeaf70f057d9c21
+	mtime: 1314976089
+    awkcc20/lib/specassign.h
+	length: 4257
+	md5: e587a2e7656accfa54900a1e008b847c
+	mtime: 1314976089
+    awkcc20/lib/misc.c.stdarg
+	length: 9527
+	md5: 778bdc1855767ee0b1dea5942da0d966
+	mtime: 1314976089
+    awkcc20/lib/getrec.c
+	length: 2309
+	md5: 4e53f071799b853abbb2f959032e049f
+	mtime: 1314976089
+    awkcc20/lib/misc.c.varargs
+	length: 9545
+	md5: 339ced19873cbea6ca73acb41a09bed2
+	mtime: 1314976089
+    awkcc20/lib/awkerr.c
+	length: 1049
+	md5: 10f3de98d33ae663bd169c3e45f9b1ac
+	mtime: 1314976089
+    awkcc20/lib/opennext.c
+	length: 1974
+	md5: 5c4f5e83815a87d1546e98a27140010e
+	mtime: 1314976089
+    awkcc20/lib/ear.h
+	length: 4283
+	md5: e870e69234f21dea2a2fcf12f41c53a5
+	mtime: 1314976089
+    awkcc20/lib/splitrec.c
+	length: 2413
+	md5: b38e7fdad983c56086b4655f68326ab6
+	mtime: 1314976089
+    awkcc20/lib/make_array.c
+	length: 977
+	md5: 26a7ee1888473551faa244b04ec9f6dc
+	mtime: 1314976089
+    awkcc20/lib/gsub.c
+	length: 2770
+	md5: 5b82bc3e533346977cdac77b0d149d08
+	mtime: 1314976089
+    awkcc20/lib/awkerr.c.varargs
+	length: 1075
+	md5: 7a6e736cd80135ae0b1b42a75ffb8048
+	mtime: 1314976089
+    awkcc20/lib/hash.h
+	length: 1114
+	md5: a13ed381b09ba6a29e8a15090c791a90
+	mtime: 1314976089
+    awkcc20/lib/hash.c
+	length: 4745
+	md5: 3a35378aa863add6699d4d3e9f62ae02
+	mtime: 1314976089
+    awkcc20/lib/awkrun.c
+	length: 11438
+	md5: 48aec74634d4d102cec29f1105557edc
+	mtime: 1314976089
+    awkcc20/lib/comparisons.c
+	length: 1898
+	md5: c726697ea48f7b051f12e4b661392476
+	mtime: 1314976089
+    awkcc20/lib/header.h
+	length: 1828
+	md5: 7822bc0860a236051c15ff7289fe46fa
+	mtime: 1314976089
+    awkcc20/lib/xprintf.c.stdarg
+	length: 3713
+	md5: d8e8d8d63cb15135df53c4433e258aed
+	mtime: 1314976089
+    awkcc20/lib/D0.c
+	length: 1471
+	md5: 54c875cf9ffd1bf53aefb2c3b542d778
+	mtime: 1314976089
+    awkcc20/lib/dollars.h
+	length: 945
+	md5: be805f036046e03983f7b40c25c0a176
+	mtime: 1314976089
+    awkcc20/lib/make_var.c
+	length: 1062
+	md5: c9bd8b84644cff98a49c4a22446cec5b
+	mtime: 1314976089
+    awkcc20/lib/split3.c
+	length: 1733
+	md5: 9b3258f3e075a66706c04966ace07dda
+	mtime: 1314976089
+    awkcc20/lib/files.c
+	length: 2571
+	md5: 897352fd56ff3f8cbcec9681bc7d76e4
+	mtime: 1314976089
+    awkcc20/lib/lines.c
+	length: 1009
+	md5: 7da7511a930237f729e17a399cd6d5dd
+	mtime: 1314976089
+    awkcc20/lib/split.c
+	length: 2265
+	md5: 3182cab70a355396846568b70539af83
+	mtime: 1314976089
+    awkcc20/lib/strsplitrec.c
+	length: 2005
+	md5: de2c2f830e729fd13cc6ef1e6433fea2
+	mtime: 1314976089
+    awkcc20/lib/make_elem.c
+	length: 783
+	md5: eb57183583ce4d2e17e9b085e1e8f747
+	mtime: 1314976089
+    awkcc20/lib/resplitrec.c
+	length: 1968
+	md5: c1b4014eb5107167d5b792974b197f58
+	mtime: 1314976089
+    awkcc20/lib/misc.c
+	length: 9527
+	md5: 778bdc1855767ee0b1dea5942da0d966
+	mtime: 1314976089
+    awkcc20/lib/b.c
+	length: 16406
+	md5: 9fdb4790a62f3bb61817595a2b502a55
+	mtime: 1314976209
+    awkcc20/lib/awkparse.c
+	length: 938
+	md5: 96e125ba200bec1b54b5ee02ef7ef13b
+	mtime: 1314976089
+    awkcc20/lib/y.tab.h
+	length: 396
+	md5: 7acd746d1e78f45e42cd3950e58c239e
+	mtime: 1314976089
+    awkcc20/lib/makefile
+	length: 871
+	md5: 20651ca99ff353dfefa6d28e9fb03b64
+	mtime: 1015631697
+    awkcc20/lib/xprintf.c
+	length: 3713
+	md5: d8e8d8d63cb15135df53c4433e258aed
+	mtime: 1314976089
+    awkcc20/lib/split2.c
+	length: 1820
+	md5: 3aac95a2cc398ac88e2ee928fb716ba0
+	mtime: 1314976089
+    awkcc20/lib/awkerr.c.stdarg
+	length: 1049
+	md5: 10f3de98d33ae663bd169c3e45f9b1ac
+	mtime: 1314976089
+    awkcc20/lib/awk.h
+	length: 1499
+	md5: ab97b03bca4fc2ee7a39b151df8a8fb5
+	mtime: 1314976089
+    awkcc20/lib/make_str.c
+	length: 1171
+	md5: cd405ad3ded157d735bad717408b964b
+	mtime: 1314976089
+    awkcc20/lib/xprintf.c.varargs
+	length: 3755
+	md5: c71f0737e9d7cbea31216668d1c0e00b
+	mtime: 1314976089
+    awkcc20/lib/getd.c
+	length: 1553
+	md5: d5f5b960fb2189af52145c3fa9ee02b4
+	mtime: 1314976089
+    awkcc20/cdocs/
+    awkcc20/cdocs/user_guide/
+    awkcc20/cdocs/admin_guide/
+    awkcc20/cdocs/quick_guide/
+    awkcc20/cdocs/inst_guide/
+    awkcc20/pkg/
+    awkcc20/pkg/i486/
+    awkcc20/pkg/i486/depend
+	length: 81
+	md5: c9044c009a7a1b3e055c0cdb653bb86f
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/i486/postinstall
+	length: 816
+	md5: ebd310629cc4ae79782d7fa4fcd0d5c3
+	mtime: 1314976240
+    awkcc20/pkg/i486/copyright
+	length: 193
+	md5: ce8eee02e5e23228ecf3e7dbd50645d8
+	mtime: 1314976394
+    awkcc20/pkg/i486/request
+	length: 3836
+	md5: 0d312e33d645becf88cd2846719a7416
+	mtime: 1314976342
+    awkcc20/pkg/i486/README.depend
+	length: 332
+	md5: 7c4923e4436fccee1b077e594210c8fe
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/i486/prototype
+	length: 950
+	md5: 10b170b1a9de6c17b8b65a39d43dcbbe
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/i486/pkginfo
+	length: 353
+	md5: 54a97ba746b2090437eeced69c9d54c6
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/i386/
+    awkcc20/pkg/i386/copyright
+	length: 160
+	md5: 8d9cc1a53b8e7cd4f91ab32884df002b
+	mtime: 1314976357
+    awkcc20/pkg/i386/postremove
+	length: 18
+	md5: c870ec053dfcb4abebe0be093575c15c
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/i386/prototype
+	length: 567
+	md5: 3f3891481803b552f096098d5ad5e3df
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/i386/pkginfo
+	length: 274
+	md5: baf57e670ec330af6a6581c22b4f7659
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/sparc/
+    awkcc20/pkg/sparc/depend
+	length: 53
+	md5: d19bf1ffa61794782277c5e506bdde79
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/sparc/copyright
+	length: 175
+	md5: 8c88146704e52b334a23698b195c7a67
+	mtime: 1314976362
+    awkcc20/pkg/sparc/request
+	length: 2603
+	md5: 1caa8e0c37e2f985508c05f22a7fa541
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/sparc/README.depend
+	length: 495
+	md5: faa4a79c72ed3fc7ef2c6e56549e471b
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/sparc/prototype
+	length: 795
+	md5: 9fcd0c1925b3fd0c58af84677788f589
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/sparc/pkginfo
+	length: 304
+	md5: 34d8826e53c3415bd8701dc63752cd68
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/uts/
+    awkcc20/pkg/uts/awkccsrc/
+    awkcc20/pkg/uts/awkccsrc/copyright
+	length: 160
+	md5: 3345abd382f488dceec06a1a1cb8475d
+	mtime: 1314976366
+    awkcc20/pkg/uts/awkccsrc/prototype
+	length: 12762
+	md5: d30299f342241b2027c9c7b79ff6febc
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts/awkccsrc/pkginfo
+	length: 611
+	md5: b1b6502cb6d22c68c024f4f5154c3566
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts/awkccsrc/README.oam
+	length: 481
+	md5: d9b0ebcc088f79d28759589af29d59f6
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts/awkcc/
+    awkcc20/pkg/uts/awkcc/copyright
+	length: 160
+	md5: 3345abd382f488dceec06a1a1cb8475d
+	mtime: 1314976369
+    awkcc20/pkg/uts/awkcc/protosvr4
+	length: 554
+	md5: 53ac222e8aca754e896edd0d60dda80b
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/uts/awkcc/protopre4
+	length: 691
+	md5: a71334ff41210d813f95761113c7fed8
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/uts/awkcc/prototype
+	length: 691
+	md5: a71334ff41210d813f95761113c7fed8
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts/awkcc/pkginfo
+	length: 283
+	md5: efb6cc7337c9359f2ae2a214b896ccad
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/uts/awkcc/README.oam
+	length: 312
+	md5: f55d1e6cb2a1e7b0358318ebd7c7815c
+	mode: r
+	mtime: 1015631696
+    awkcc20/pkg/uts4/
+    awkcc20/pkg/uts4/copyright
+	length: 180
+	md5: 64a5d6089507599a0361feb1b1250630
+	mtime: 1314976373
+    awkcc20/pkg/uts4/request
+	length: 2345
+	md5: 4ed70d0f9fea790558ab62b5fe90e7bd
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts4/README.depend
+	length: 384
+	md5: d2ae7ec1ed6cf1cd6dacde1849808111
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts4/prototype
+	length: 1592
+	md5: 9843e977e62067439bd7a2828619201e
+	mode: r
+	mtime: 1015631697
+    awkcc20/pkg/uts4/pkginfo
+	length: 277
+	md5: b58263cf2f23a0af09d8eb3d9d8cd84e
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/
+    awkcc20/src/README.awkcc
+	length: 6747
+	md5: db6e98a9eb92799ad6ab91169e8bda04
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/mfilechg
+	length: 1461
+	md5: f6bd12f16b9c6afa8441c4d330631d09
+	mtime: 1314976411
+    awkcc20/src/awkcc.mk
+	length: 1478
+	md5: 39d71ead931daff6e6a771cb573e25b0
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/makefile.uts4
+	length: 4760
+	md5: f6d34c2e5f5512b4422fd8cb9d4a7ea9
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/makefile.ilinux
+	length: 2969
+	md5: b7dba2d52e46b564e9df6b935f4a212a
+	mode: r
+	mtime: 1125439365
+    awkcc20/src/makefile.sun
+	length: 2969
+	md5: b7dba2d52e46b564e9df6b935f4a212a
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/INSTALL
+	length: 6552
+	md5: 39365351b4f0f9a0a16ed2f60fe72b15
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/awkcc.mk.uts
+	length: 1516
+	md5: 86a2f79329a8edb4b34a286e5b8e0d69
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/makefile.uts
+	length: 4512
+	md5: 21e92d28cce9c08a29e641c7f8d6bd29
+	mode: r
+	mtime: 1015631697
+    awkcc20/src/makefile.i386
+	length: 2756
+	md5: 049e5be4eba413104bbefc3f395e6717
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/
+    awkcc20/test/t.set1
+	length: 51
+	md5: 0863069c425f959eda036d80930fa9ec
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.780
+	length: 20
+	md5: 1f1ba693e7cf8c5cb4b37e11dd5d9459
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.34
+	length: 22
+	md5: 59688c27208235c3b7f5094d5993cf7f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.reFS
+	length: 39
+	md5: 6bbf8635071f1aec0ab24c17a3a10552
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.dobreak2
+	length: 71
+	md5: 25fb573d7b5dc58338d543435451178a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.format4
+	length: 127
+	md5: ee89a744ca5c55baef0ad579c0f7a15f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.gsub1
+	length: 23
+	md5: 579f43c5295f34f32a608a24a0ad6cda
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/tmpfile
+	length: 117
+	md5: f89d77c96661426195e5319991a56199
+	mtime: 1313932062
+    awkcc20/test/t.roff
+	length: 251
+	md5: 8aadcf52854e6a60f4376dbb4a8870f1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.foobar3
+	length: 115
+	md5: f2dde4c34c26427e6fd4e2c49bd7e33f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t1
+	length: 134
+	md5: 8020c8e8ed34fc170a71cbd82b2f040c
+	mtime: 1313931618
+    awkcc20/test/t.sp
+	length: 62
+	md5: fc9ba18b50006dd0a2dc6c8995032f22
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.gets
+	length: 38
+	md5: 657b98edee880e095b4b87d6383255a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.26a
+	length: 101
+	md5: 9160fae685ad6648af6c5bc34854095e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.10
+	length: 9
+	md5: 7e0a0e66ca75349b0ecc16d878b19479
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.incr
+	length: 52
+	md5: 852d03829d360958205927d841f4b1c3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.5a
+	length: 147
+	md5: 796bc42faa8fa82c8cc23f097b1190b4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.assert
+	length: 228
+	md5: 203fcb8b6a69a96c2965b5d533f65827
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.foobar
+	length: 199
+	md5: 284675ff2f0c43484e40aef68a5ec537
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pass3
+	length: 221
+	md5: 505bb661df8552e5f48336cd78680dd8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.argc2
+	length: 227
+	md5: 5f41734f57516df69b7076149f72e320
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.randk
+	length: 107
+	md5: 618fd8db4a979c272929c809bede676f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doll4
+	length: 89
+	md5: 547035f0bd3161f7ab06c0b5850a7ae6
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.4.x
+	length: 18
+	md5: c4bcb7196bb172c755b855d9e81b4e7c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.31
+	length: 70
+	md5: 250c844e003958f300005c1a78c630e5
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cmdline
+	length: 73
+	md5: 1b0ccf765d52fe35d84b5cfcf9a5e228
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f3
+	length: 17
+	md5: baba29161e98b6c0be0418e2eb7d2cad
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.32
+	length: 33
+	md5: 047685fd2bf4badd3836362cd7261d2b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.4
+	length: 21
+	md5: fdba2368451f848399e8f20ef14defbd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.26
+	length: 112
+	md5: b17d26245f64277b3fa2ec78661de417
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.re7
+	length: 52
+	md5: 4d13ac4763536e6761af41e949e7ea1b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fun
+	length: 78
+	md5: 8b907edaea9135b7712dbfcbc789e85a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.quest
+	length: 146
+	md5: 6a3385cbe999b4fd3ccef72786a84916
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.builtins
+	length: 87
+	md5: a9b0245ecb6ab6a8793159694b567bcd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/gawk
+	length: 1560
+	md5: 62f2a8c975e99711fc1b6cc91bbc5f13
+	mtime: 1313932199
+    awkcc20/test/t.incr2
+	length: 93
+	md5: 3296610cec64e48ea7602c2a108ab106
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.oddarr
+	length: 102
+	md5: 8f9d2cf546e64fef755a7209f3f0dc30
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ofmt3457
+	length: 2415
+	md5: f4d1bb8bd9151e6bd3df32a0c503ee41
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doll2
+	length: 140
+	md5: 40b73151e8af2065f0af854ddc12ddc2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cmp
+	length: 8
+	md5: 087c2c1ec46e72d484f2c35cfac56ef2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest7c
+	length: 196
+	md5: 5d051374f0efd9f32a7939d75f6dcf96
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.re1
+	length: 98
+	md5: 8a1a82af555fc454903e2484a701d960
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pat
+	length: 52
+	md5: 714abdbfc33d1fd343414ca07ed6b93f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.47
+	length: 61
+	md5: 630d70a318d0f65f3ba03f7bc193eced
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.gsub
+	length: 31
+	md5: 37e347c598c84611b6a6022e25e4dec2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.30
+	length: 21
+	md5: fcd11caf43a618ab89da81d058b8ee6d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.delete3
+	length: 72
+	md5: e1c7eee16c7cbb03b95d061afbc957bc
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.intest
+	length: 118
+	md5: 534aa3c64771331d771f7531a9b30234
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.split
+	length: 64
+	md5: fc882d9ca1ac0f3a47ac16d48e92b189
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest2
+	length: 139
+	md5: 9ea1c1ded552b3435e4b89688d720839
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest3
+	length: 137
+	md5: fee50b2eefb98a2002ae21e54e4ebe8f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/junk2
+	length: 1559
+	md5: 930ab713c0895e306a00f200900bd015
+	mtime: 1313932139
+    awkcc20/test/t.concat
+	length: 26
+	md5: a97a8b841858c7672e9f22961e207c10
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.for1
+	length: 68
+	md5: f4c800a2e70ae9072556a0e28b83fd59
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.longstr
+	length: 137
+	md5: bf9c6e26e4abfd748c7b8f774d7e3e36
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.foobar99
+	length: 343
+	md5: b7620ba9213fb9d40dd0397df3a3fa72
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.asdfasdf2
+	length: 498
+	md5: 78ff2893f1c01f8942e48d0109d3f570
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.46
+	length: 17
+	md5: 17cdee5e724bde265759858af45babee
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.nf
+	length: 45
+	md5: eed6a64e6f8c76d0b5796a1f80d1918b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.dollartest2
+	length: 94
+	md5: 64168a4e7c3fdc39e20f4d18d7de0108
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/testall
+	length: 182
+	md5: 302b54de06ea887178227372dcd5ea7f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.seqno
+	length: 15
+	md5: 09dc6cab31f8050c591a509ac2057128
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.3
+	length: 23
+	md5: 1e5715962140c0760fa00b89679633bd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.comint.c
+	length: 4594
+	md5: 71083799f90eb0c9c38ec7c96bb7f5ce
+	mtime: 1313931980
+    awkcc20/test/nawk
+	length: 1560
+	md5: 62f2a8c975e99711fc1b6cc91bbc5f13
+	mtime: 1313932204
+    awkcc20/test/t.vf2
+	length: 27
+	md5: d09790fbbbc2eac13a9ef5dfc6875cd5
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.break2
+	length: 133
+	md5: b687f34b1ce48aac5ee0fe9996d80585
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.quest2
+	length: 137
+	md5: 1a76492c72c7fb4535ad474325f8ad76
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ofmt
+	length: 34
+	md5: e705e955171869e9990a4ab132092a10
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pipe
+	length: 49
+	md5: a6188507a812536ad35a6490ff5db520
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.stately
+	length: 159
+	md5: 86de27bc53e1a906d0ea86d1ecd61672
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.hfl100
+	length: 51
+	md5: 81490af72bda137679492c7a02054c79
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ors
+	length: 38
+	md5: 57ee9240e1f91a9e5a33a11134c4b04d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.newcat
+	length: 98
+	md5: 89fb1727d15cf0a882f4036b5e3496a3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.testfreeftm
+	length: 103
+	md5: 16d0948ad99b57c41cf6e55b1c010b77
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fun4
+	length: 96
+	md5: a11d5be06db8e1c1036295d64e50e98b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.sad1
+	length: 230
+	md5: 57b76dda156d8a34c5952924ee428d52
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.19
+	length: 43
+	md5: 7e0096bf1abbc7b30fd22bcfd15ff2d9
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f.x
+	length: 26
+	md5: 50d0283de354030c1db1c8dbf6d962c9
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.exit1
+	length: 259
+	md5: 9200e5dbf461127a77b9f4b19a3e7ae2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doll
+	length: 99
+	md5: 9840b65fb0654d3327400e225b5572da
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.e
+	length: 23
+	md5: fe62a6c0bfdf738df71d0a3da5eb2fc8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f0
+	length: 20
+	md5: 0e77b359ba891de24d2c321675b63592
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/cc
+	length: 1559
+	md5: 930ab713c0895e306a00f200900bd015
+	mtime: 1313932256
+    awkcc20/test/t.newjlb
+	length: 126
+	md5: 84ae0d202b803acef1f392f1ccbceec0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.strcmp
+	length: 42
+	md5: 38661808ffa7323de44c2002d9744fbc
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.johnbug
+	length: 388
+	md5: fd8639a4bcde436b4a35941339533875
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.inter
+	length: 57
+	md5: a141cdea76947b6be7b0334c48cbb91c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.asdf333
+	length: 114
+	md5: 2352e95680c68150afbbdf7d0a2bb340
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.null
+	length: 253
+	md5: 0e7626d515e56110c861eaa06e2d1a2a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.bug1
+	length: 103
+	md5: 60c57150576e2ffa6f17156daed5afcb
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.22
+	length: 23
+	md5: d0c0d101532cbf8c0a8d62c2b5c7b6a0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/oddtemp
+	length: 790
+	md5: 1b3f350d1d591aefb5bee636af70a3df
+	mtime: 1313932067
+    awkcc20/test/q.amptest12
+	length: 157
+	md5: 550511713a0a23fa21f9928766bde0c4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cat1
+	length: 38
+	md5: 8836236db0790fe7fdc45a6803d47e41
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cat2
+	length: 21
+	md5: a33b2c6a17646e78d3dcef59e568927c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/eventemp
+	length: 641
+	md5: ff177d9427907fdeaa53d5bc2b4654cf
+	mtime: 1313932067
+    awkcc20/test/t.argv
+	length: 23
+	md5: 7330bc0185ce9cdfb75141302ab11bee
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.hello
+	length: 25
+	md5: 2e7c0d6af4b176a7dfcf7e15e0d8e862
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doublec
+	length: 159
+	md5: 64753699a18825b2992a53497009dc25
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ass
+	length: 56
+	md5: a29872ef49c008facaeb8ca53c60550c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.50
+	length: 117
+	md5: 89a420b709fdc120c3561c297f521d04
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.if
+	length: 21
+	md5: 10e9e577519d78a35ecd69f5f51bf97f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.rete
+	length: 63
+	md5: 1c64a6151c0a73d0835c286a0b5c7efd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.quest3
+	length: 133
+	md5: caa9cfe3754391f46520f504673fa021
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.6a
+	length: 64
+	md5: 070d382f6552db7e385af95d8232394c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.13
+	length: 25
+	md5: 316fc6a588ad391f58d9441265796d64
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.if2
+	length: 3232
+	md5: d33798577660d282e191335d46941d5a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.vf3
+	length: 36
+	md5: aaa967198705dc11bdafd256b68da12a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pow2
+	length: 35
+	md5: f5de386a418ee0f5e398c4c63c297292
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f2
+	length: 19
+	md5: 9b4c8263fd2915097a84d21f6b00c564
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.i.x
+	length: 59
+	md5: 1ad3db2f95c9e249dafcd229350e9fdd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.14
+	length: 5
+	md5: 9eb8e03cbe6b15c371340e47a43d45c6
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest8
+	length: 136
+	md5: 4686f0ff6567ffa0a37a632f64e84da8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest7
+	length: 226
+	md5: 40d276949e32441fe3c2e2b6dc0e0959
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.comint2
+	length: 189
+	md5: 05a284bff985ddec36bedb90ac9f6017
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.printf3
+	length: 84
+	md5: 905c62b82385176f1e82b28a9b139643
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.jcrtest
+	length: 223
+	md5: 2d2decc696d0e6f39452cf89c9d457b9
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.909.cc
+	length: 57072
+	md5: 223df72c82d44a08bed3a2d0a244e7ae
+	mode: rwx
+	mtime: 1313932243
+    awkcc20/test/t.break
+	length: 91
+	md5: 2a3d36bca0e4a4d0196ac2832fbabfde
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.in2
+	length: 77
+	md5: 7f58b4a17aec0456f1849923a035fc36
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.18
+	length: 28
+	md5: c8c8de05e10715bc9fc644023814dae7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.not
+	length: 55
+	md5: 2ab90c644947cea7e903e788411aae8d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.wmb
+	length: 91
+	md5: 899cb3f1ceee14889141a61a00ddb8ba
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.subsephfl
+	length: 270
+	md5: 69947330547987e576b3f3c4ddf9c5b6
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.arith
+	length: 76
+	md5: f317acecfc9c1a777d6e10551b7ba4d5
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.3.x
+	length: 50
+	md5: af2735b97763ff4796756b4eadf59cb7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest1
+	length: 62
+	md5: f790555080797a4fd7d4985acbe3db73
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.44
+	length: 100
+	md5: fda5d7832afd448ad99955c2ab5d375b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.time
+	length: 236
+	md5: 8b6aa7972713a173b05425900bcf215b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.delete4
+	length: 175
+	md5: da64dd07bfecfc1c8643262ddca292e8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.arrc
+	length: 248
+	md5: b49dc7160248eee41db7ac3fe0664f1a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.set0
+	length: 114
+	md5: d78001fd44579e5d3c2a8fc3f37560f8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f4
+	length: 20
+	md5: 8de9e270965e1a00c45d55d199bf60ce
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.nameval
+	length: 132
+	md5: 9df79f5de517265e4221120930bebb12
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.5
+	length: 141
+	md5: da65995b90933e98e2fc9f83f16d5982
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.if1
+	length: 70
+	md5: ced71ea2609bb3854d6578809cda650b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.12
+	length: 25
+	md5: d738de33d6b3a312d0319483379db127
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.6
+	length: 17
+	md5: e21e726cf9646f2c0f6d8cae014846cf
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.sub
+	length: 127
+	md5: 27fc5a5c133b287c8f2dd9fa5e18d207
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.match
+	length: 15
+	md5: 3c5dfce46e2fcc80d7f9c7f24c46e87a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.dollartest3
+	length: 94
+	md5: b0168e380eb8e5f7131dd2cbb502e566
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.avg
+	length: 80
+	md5: 7f77150a9111515a482b05f47e5eb0d0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/test.data
+	length: 1431
+	md5: e25cb4dfac3392ce7f8919fd01218a69
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.sep
+	length: 90
+	md5: f9e07a4ad63ca909dd37051d20dc941e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.bbbad1
+	length: 105
+	md5: 8d383b39fa65ef1205f7eee5692dc4a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cmdline99
+	length: 91
+	md5: 4a3249f6118bdf95d65e4f07a78b5ff4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.5.x
+	length: 28
+	md5: 8d2b1da63f23ffe74e536094ce27bbe1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.hfl99
+	length: 66
+	md5: 7ec991cb67d1ff1898c02344fa053948
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/test.out
+	length: 12833
+	md5: 9644532ec54f95c300b35bb719aecc89
+	mtime: 1313932071
+    awkcc20/test/t.yly
+	length: 31
+	md5: cae99b9e7995cdb98afc616f7acbc73c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pp2
+	length: 99
+	md5: 41332dfa0ae63e63f361efb45727864d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.max
+	length: 58
+	md5: 9079aca8d985b35297a0db572a9a9b89
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.reg1
+	length: 147
+	md5: d844acfc95a58c823f51ea7aa12a1d84
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.w
+	length: 47
+	md5: fdeda24cba9ebf5247394ff1f39c2b77
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.toupper
+	length: 154
+	md5: 4339002a34a3fa2096ec2641ed909f1d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fun5
+	length: 99
+	md5: ce01c64d6c09572cb9e78e6d4bf7abfb
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.sub2
+	length: 22
+	md5: 26bb575e2e2a73838eb05b88d8157773
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.d.x
+	length: 43
+	md5: 775225554c234b83fb05352105a9177c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.newbg
+	length: 189
+	md5: cac8c5a701c61cb4675e233301c200e3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.newestfromda
+	length: 523
+	md5: e7cbca0a2c0cd3e367ddcd38eff6f4bd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/CompleteWith.error
+	length: 84
+	md5: 43280d78d4ebf1dab666d6bc4fd85a76
+	mtime: 1313932064
+    awkcc20/test/t.tb
+	length: 61
+	md5: 12d50a04a13e1583f111ff482cec9589
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doublea
+	length: 635
+	md5: 39f77ccaebbd82506a141bfd44366f9b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.delete
+	length: 123
+	md5: b12547466e3b146cccb54dcf0e44932f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pp
+	length: 8
+	md5: b30cf943b5c4f13d1050305880f1ca44
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.48b
+	length: 85
+	md5: 546f39930afe96a0b170e9f502682f54
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.freea
+	length: 71
+	md5: 47cb35efff749bab325b86dee6ad8411
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.dollartest1
+	length: 93
+	md5: e4fb33bdd83eeafdca583ad216f0880e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.9
+	length: 10
+	md5: c4aa13fdd5fa9797a135caea29508474
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.3
+	length: 32
+	md5: c9203f956a02378c4664fbcf449ba202
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.777
+	length: 184
+	md5: ec761e9c571faa7d55ddb8536214fed2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.hflconv
+	length: 223
+	md5: 4912c274c26e939ea5b0e66c7df30d1a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.makef
+	length: 30
+	md5: b0bbc04aea376978f894cd337ef54e55
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/CompleteWith.e
+	length: 84
+	md5: 43280d78d4ebf1dab666d6bc4fd85a76
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.index
+	length: 144
+	md5: da6a342400c795ac15dbc84afdaa2dfb
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.11
+	length: 7
+	md5: 3879323d6f188b70a73c0301e8bcb8c0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cut1
+	length: 32
+	md5: af4501204c26e84e08376fddd99737a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ost99
+	length: 396
+	md5: 3f7aa2df0dff3d90493b7470481cf9c3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fs2
+	length: 232
+	md5: f1cbaf5b548f434248dca2f80f99ec6c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.4
+	length: 17
+	md5: c2b91c8845d3fdbe977a601442aa56b7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.16
+	length: 6
+	md5: 85691a4b4054bcc1414cbf2fbbb7d5ba
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.00
+	length: 22
+	md5: 5b33a36404d87016193526d10c34e47c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cat
+	length: 114
+	md5: 36358fc9eab8e2b7ba9ef93761fdd946
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.split9
+	length: 66
+	md5: 4fb10b159530597acc2eebcdc2930cb1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.dolawk
+	length: 84
+	md5: 2cb1c4d8846e624cba5dfd57826b214f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.36
+	length: 78
+	md5: eb5cc3ff615c0b789c56a2ae6b825f2e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.emitppmm
+	length: 1260
+	md5: e16fd3180c13d891da28d7786d260681
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.33
+	length: 48
+	md5: fe59793f7b8387578f82b127086a0377
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.in1
+	length: 135
+	md5: 33fc212b167ff551960639ffceb82c6d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.sub1
+	length: 23
+	md5: 26d48286ae428acc90e5f838209e6dad
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.printf
+	length: 83
+	md5: ae35d3fcf43332767b1021727d39a43c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fret
+	length: 211
+	md5: 6b9291f239570be764678c2a8206da4d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.set3
+	length: 29
+	md5: fbe74422c016a38bb001992a7c886acf
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.17
+	length: 17
+	md5: 96f2351223c801122a9952b530f06921
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pass
+	length: 138
+	md5: 96edbbf1896d53b3804b39a41b840448
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.51
+	length: 108
+	md5: f85b0ef20a9c198a0479ccc7d2854511
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fun2
+	length: 111
+	md5: 5415739e287515d81c74a7c471f56297
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.strcmp1
+	length: 52
+	md5: 97f1e63e43aad046550b7c0a7a9654c7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.asdfasdf
+	length: 531
+	md5: 8c6454874ef114289ddf23710bf96361
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.aeiouy
+	length: 81
+	md5: 2a47e28408e2311774cba67c0ad1f22f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.oddball1
+	length: 39
+	md5: 5bf13cba5b403842d670f9bf6138ab10
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.49
+	length: 38
+	md5: 2e45394af12857b500f7a4ad22737aa8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.numbers
+	length: 87
+	md5: 234a7adc6980605f33dad83092068c1f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.reg
+	length: 37
+	md5: 471f288be4bb32c28657fd3d979b5142
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.re2
+	length: 21
+	md5: f28ce3abe3c60ba60260577e5f68ed7e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.27
+	length: 73
+	md5: 1b4f2e66b74923bb15b5e5f8b63c9724
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.nf3
+	length: 63
+	md5: 265a87f88e0f752121d88f323b1b2983
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.dobreak
+	length: 65
+	md5: 6c32068bf5a6f4a785d6d196e2184b46
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.41
+	length: 83
+	md5: c805b42279bbb20cea4ea907abe4adc0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.1.x
+	length: 32
+	md5: 42b5d0d933af14ee1d5555d454896b5f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.35
+	length: 118
+	md5: 43946b55f555c95b8abaa280bbd96356
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ost100
+	length: 398
+	md5: 08d0a11d34e996b7ec0176186558cd02
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.empty
+	length: 20
+	md5: d8b381a9c0033dd3ce1cd48efd7095eb
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.24
+	length: 42
+	md5: e8567da5d5ea4c9b63d9b96ca27bc45a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.xPP
+	length: 49
+	md5: 1f4917be1b70d252518335cd0407af20
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.set0a
+	length: 41
+	md5: 2720042ab1cf3636b869a761d2fe4fd1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.break1
+	length: 135
+	md5: 004142eef889b4a7cde530efb7f6e9d4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.48a
+	length: 81
+	md5: 45b3c38012951dc37f71d532cccfd624
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ppdoll
+	length: 93
+	md5: 5785add84d7ed422b6012ad2e54b3a6d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.stderr
+	length: 38
+	md5: 00123b8c5a5060d029069c203d263f23
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cont3
+	length: 105
+	md5: 7788f33f66fe736cf4c60fd0dfce3781
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.j.x
+	length: 55
+	md5: a4448d3d69c6fa47b5a44c10c1f8a8ea
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.next3
+	length: 398
+	md5: 0e83c47d891063faaa5ce6ef0f68bbf1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cmdline_proc
+	length: 42
+	md5: 8868d1a0c3c3e7afc5aa7ed5ea97af3d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.for
+	length: 39
+	md5: 67f7a30b6e460d41b9e03598423ebe43
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.8
+	length: 26
+	md5: f20b2a83eca0eace5eae11b90d95edec
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.2.x
+	length: 31
+	md5: ea674f73a3b4eb5458348fe2d21125d9
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.comint.cc
+	length: 61971
+	md5: c5687fd3de4eed05c6f5f9c863c34465
+	mode: rwx
+	mtime: 1313931981
+    awkcc20/test/t.countend
+	length: 48
+	md5: f3b28a402bf4185ddd35b36e9ba204e0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.array1
+	length: 123
+	md5: 1396039110a7a729f32c27904b8a8bc0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ofs
+	length: 60
+	md5: 0ad9c6b1473bd3f64f4c0add9a30f5a0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.argc
+	length: 19
+	md5: 059dff267649d71ae28e8bdf40667904
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.for2
+	length: 61
+	md5: 92c2c32bef6d6abe703ff460dca5132f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doll3
+	length: 72
+	md5: 269135bbacc9d417f3a14c6e734fd2cf
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fix_this
+	length: 47
+	md5: ce4c22be2d9b819c7088406ebae1889f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest9
+	length: 137
+	md5: 71aba967540aa59b255dcd9b965efbd8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.asdfasdf3
+	length: 494
+	md5: 788e51311fdf80aff8233549a498e94c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.null0
+	length: 397
+	md5: 1eda4563cafe2303e6ea56be8d974dd7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/junk1
+	length: 1560
+	md5: 62f2a8c975e99711fc1b6cc91bbc5f13
+	mtime: 1313932139
+    awkcc20/test/t.gsub3
+	length: 87
+	md5: 851345c81da57a7271f971aa8e1740c2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.array2
+	length: 168
+	md5: 0853c3ecfef0df8762b9362c39013f42
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.1
+	length: 35
+	md5: b64bbda68572085cc46f0c806f6df5e4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cond
+	length: 313
+	md5: ecbb11d64ef067fa3ad83ed4a54db816
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.split9a
+	length: 164
+	md5: f05c7fca0f95714830a40d818e9a7cc8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.nonl
+	length: 137
+	md5: b61cdf6fa85e02bc0417b79dfe39484c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.monotone
+	length: 112
+	md5: e2aae063b59820869f1e917a47ea8014
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.arith2
+	length: 26
+	md5: 532a1b262dce7edc8dc870d8bcb9369a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.redir
+	length: 55
+	md5: 99687333b508c5e9cc82b130412dbe0f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.split2
+	length: 36
+	md5: be422711f0ab55207b172852fa7c79ff
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.array
+	length: 147
+	md5: eb445752b50d5198cbd08ce606a6b28f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.contin
+	length: 130
+	md5: 8bdfbb8905c45f87049ef9924c9875a3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.prepost
+	length: 131
+	md5: 3895d72988b6e69b8fe113d533317871
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.dobreak3
+	length: 61
+	md5: 2441718f97c3ef4b10a5ce2475d3fd39
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/awker.c
+	length: 1254
+	md5: d8bc4ea919eef708dbf7aef5167042ea
+	mtime: 1313932243
+    awkcc20/test/t.lbs
+	length: 96
+	md5: 035e6914000d81aeee649737ef57911d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cum
+	length: 38
+	md5: a0083a4d98695715935ae7e0d124b36d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.37
+	length: 15
+	md5: 0522127e271427ff7fe849669d153f5e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.23
+	length: 19
+	md5: 0a70c2f56c40a104a467c0d9065de5a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.15
+	length: 5
+	md5: 0308bb02a5342db9aabdc8e426afd5b8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.x
+	length: 4
+	md5: b20a509ce1a3dfc434c0e0ccd32c709b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fs
+	length: 217
+	md5: 58fca47631979f0d07ae3c1834c2fc03
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.toupper2
+	length: 38
+	md5: bbb7a117a15cfd82885417590bd9f044
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.779
+	length: 69
+	md5: ba5dd52afd73bf9f5e68bff36240d016
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.28
+	length: 20
+	md5: c46f41a908c865a2f72e04d6aea07952
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.awk
+	length: 66
+	md5: 87b89c7b57410a5b8e013d716f8cff2b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.vf
+	length: 44
+	md5: 05998fead995c9af4eb399d1dee82cb5
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cond2
+	length: 133
+	md5: f63004c149769bbc2bdf45a857f20514
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pass2
+	length: 201
+	md5: 2976a225f293951e3de4b9b6c7f9da67
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.endprint
+	length: 24
+	md5: 034ddd9ef572b4a944c2ddbd6e46fcfd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.6.x
+	length: 14
+	md5: faeeac9f2ed60fab92d571587ad84efa
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.break3
+	length: 116
+	md5: e194de2d408d077ed5ba14242ee0a9a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.count
+	length: 17
+	md5: 5cd12495c156799f51c3a64a97e7828b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f
+	length: 15
+	md5: e7ec19993b809453f28db6c1c94647ad
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.8.x
+	length: 15
+	md5: cba400d242d3dd7808df6adca9f0b805
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doublesp
+	length: 48
+	md5: 3d114c2dede012e806bed79a21c5328f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.40
+	length: 41
+	md5: e3629f8d5bd88d73c4da205cc47c5750
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.7
+	length: 9
+	md5: b6f3b805525dbdcaf25caefa212a3925
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.set2
+	length: 41
+	md5: e7b1d064b92cdae6d0176f6dfb5a5b96
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.smallnum
+	length: 61
+	md5: b276257921c8e6c05edaf06d30027dcd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.comint
+	length: 808
+	md5: 7aee3f77475866ad05c59463a068525d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.foobar
+	length: 42
+	md5: 7833c1b85e04a9965c1ae89eead67af1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.38
+	length: 85
+	md5: c2dfe84f35de817f9c7d09307f9351f3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.getline
+	length: 117
+	md5: 107a243aa7f2ec18860793edb14bedcb
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.asgn
+	length: 26
+	md5: 29065c8347a45c1ffcd4796f960686d3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cont
+	length: 125
+	md5: dd79518eefc9aaeddef880272e15458c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.45
+	length: 53
+	md5: 9d34c87d07a00a2703f40171f3eb0651
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.wolit
+	length: 178
+	md5: e556a65005424c248db465937b579fc3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest4
+	length: 158
+	md5: 799227e7860f44174c929e32edfaf039
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.incr3
+	length: 58
+	md5: 18598f5050c71f0f875670f3de6310a4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.6b
+	length: 65
+	md5: 9a2d54741f57c84bac7cb2eed9c2e86e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.foo
+	length: 31
+	md5: e1f9b85bb69dadb520aadad892b2c356
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.2
+	length: 17
+	md5: 84c113625259837c83240a201194402c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.52
+	length: 325
+	md5: b6ddc1c9fa928383732faa5e87115a7e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/Compare
+	length: 468
+	md5: 82fd3b5bcbbaad111afd3a382f4be071
+	mode: rx
+	mtime: 1015631697
+    awkcc20/test/q.amptest6b
+	length: 198
+	md5: 7200c3e72357a34d4f9e33359cc2872e
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.in
+	length: 122
+	md5: ee3c36a04d64fcef8efc6c7941cf12c0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.hfl8
+	length: 787
+	md5: e85f4b25ec3cb5dc67c366e34bf309b2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest7b
+	length: 198
+	md5: 0acee002ea2ad40f3da6a179b416224f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.intest2
+	length: 186
+	md5: 2620a47be6abaf4d7d51ed3aeea86d57
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.nr
+	length: 74
+	md5: f8148cf852619e8b73cb1dac5f81dac7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.splitfoo
+	length: 445
+	md5: 303603d1e46b1f33d887f971ff20b6c2
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.foobar4
+	length: 77
+	md5: b276e5193b3d07b887afc50169f61fcc
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.0
+	length: 23
+	md5: 5a5d442fd2295aa891b3da9887f29be7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.coerce
+	length: 47
+	md5: 85f7bb519dc3fc3118516ab63642c10a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.exit
+	length: 32
+	md5: 525b169ae4894e4b20542e7741fd93a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/glop
+	length: 18
+	md5: baf5346564b6611078f7f586495f3cbc
+	mtime: 1313932070
+    awkcc20/test/q.amptest5
+	length: 288
+	md5: 2f8b3a5977a334eba350e8875a865818
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.rjj
+	length: 71
+	md5: 58ed8a2d1b7413f95bb78e69b5e88af9
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest11
+	length: 146
+	md5: 1a62419aa7b7c9be7d17f4101a9eee8c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.48
+	length: 92
+	md5: c93fdbe865e7b25d4bd29f6d260672a6
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.f1
+	length: 16
+	md5: 9a1bb80bc811feacf0e83c095b992f89
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.min
+	length: 76
+	md5: 7fc32c796af86df049b7df5e870635d7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.oddball
+	length: 76
+	md5: 41cb0d4d2eaab4212d27ec8747ad5313
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.set0b
+	length: 77
+	md5: 3e014edf1a4ef93dd83b67359d837a25
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.rjj2
+	length: 68
+	md5: 7b34b6b643c6de24b3739ddc53b3f03c
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.a1
+	length: 97
+	md5: 9c4ef7c9c860531b37b83afe8e804dcc
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.ofmt3456
+	length: 638
+	md5: 90957e2052ade65d60359bbf35bca836
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.vf1
+	length: 66
+	md5: 4da2462a212e34c53fc8675decc9b0ed
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.if3
+	length: 219
+	md5: 7cf8d95de5cef68f6715bf28f5a3ad19
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.fun3
+	length: 89
+	md5: 885d880c031c16e0eb8f184d3c1e3516
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.aeiou
+	length: 58
+	md5: a3f9d043a626f516ea1a8262dd51cbbe
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.asdf
+	length: 69
+	md5: dc64700c634a17deb201423bbd265ec3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.blh999
+	length: 121
+	md5: b76c7c36898bc5c64b9761ccb5ccd8cd
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.doubleb
+	length: 1947
+	md5: 2e2c00ce5ee46676e024bb8b772c43c4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.substr
+	length: 90
+	md5: 42ee57e983f810393ef31e467bc78276
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.42
+	length: 186
+	md5: c5a4a822fb473b7717ba9efe59f226a3
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.comment1
+	length: 88
+	md5: 8118021c65b119696324eb3ba2e5fc05
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.b.x
+	length: 36
+	md5: ffebf6f2f331b1e1a910d0d52056fdd1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.exit2
+	length: 41
+	md5: d1113ad717771f0de7a43e87dd13c4e7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.else
+	length: 46
+	md5: 4921a0ae071ea987461086d8a13217b5
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest6c
+	length: 197
+	md5: 59c0fe53f72dc0ce948a1b7e0a9fb0d1
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.39
+	length: 49
+	md5: 871222540d753dd69c3f18f11f794d24
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.pp1
+	length: 87
+	md5: 4bcc056517d6b1cd1ae81d9711d204b6
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.21
+	length: 31
+	md5: 6d5ca0ebf5ec3512244f62d3d32ea88a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.bthassign
+	length: 318
+	md5: 76bc68941e32724c043205a66bc10717
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.mod
+	length: 81
+	md5: aaf37d6e1e3c30a926ea06004f4b4777
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.quote
+	length: 21
+	md5: b40484c3566e31737394839fba5b02f0
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/test.countries
+	length: 249
+	md5: 2142240d4ff7ea303c2a6e493276ddff
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/foo
+	length: 1431
+	md5: e25cb4dfac3392ce7f8919fd01218a69
+	mtime: 1313932051
+    awkcc20/test/p.1
+	length: 10
+	md5: ad122bfe4ff6ea1f9c9954a713e14491
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.909
+	length: 35
+	md5: 8028186c876eaec585eabfaa4c60c204
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.6
+	length: 76
+	md5: 509c139512678b2754edc06be62d26a7
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.substr1
+	length: 66
+	md5: 905a822e2c2baef1a86f3eff87a41c0a
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.a2
+	length: 91
+	md5: 4e1cfd172b46ff7417dc817c41d602d4
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.25
+	length: 46
+	md5: 8b639d65d95d2c1b117672ace6888838
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.29
+	length: 41
+	md5: c0317c872738933b8718ae7b02426995
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.comment
+	length: 112
+	md5: 87d0b436596c611a11f8848f2f293be6
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.cindex
+	length: 145
+	md5: 8f23d5150fd45588016c03351a47958d
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.43
+	length: 103
+	md5: d63af2ef502199a8c67db6c45a8e7586
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/p.20
+	length: 25
+	md5: edddc1602e4cce7431ecca05dfced935
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.lessthan
+	length: 180
+	md5: 492030776f3b04c61260241c4a7648e5
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.rec
+	length: 19
+	md5: c984a17d4ce21f219a633e3a914f616b
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.2
+	length: 38
+	md5: a1a2eb07aaa78311a761c8399fddde9f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest6
+	length: 199
+	md5: 8a9733106f71279207171e708f2996ea
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.delinloop
+	length: 310
+	md5: 2e7727d1dead5af06245af520db48b69
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.in3
+	length: 83
+	md5: fcf9bef5a91ec02262b5a88351844b87
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/q.amptest10
+	length: 138
+	md5: 3fe0b5cd688465cb810f87fa12a66b68
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.tb2
+	length: 33
+	md5: 01c0dea344c222635e93f6eed9de528f
+	mode: r
+	mtime: 1015631697
+    awkcc20/test/t.next
+	length: 29
+	md5: 58fb9ac7b3c0eb68b510f1462afec784
+	mode: r
+	mtime: 1015631697
+    awkcc20/man/
+    awkcc20/man/awkcc.1
+	length: 3766
+	md5: 731a4e6aece4643c092e6928919b2604
+	mtime: 1314976434
+    awkcc20/man/awkcc.mm
+	length: 18779
+	md5: 92536043ee5dee0116f3a1ed06280bec
+	mode: r
+	mtime: 1015631697
+    awkcc20/man/awkcc.cover
+	length: 2277
+	md5: 19341231c6644c64c3df95c66580e937
+	mode: r
+	mtime: 1015631697
+    awkcc20/awkcc/
+    awkcc20/awkcc/symtab.c
+	length: 6923
+	md5: 3eef0fcdac0846ceef38d89747147f6f
+	mtime: 1314976089
+    awkcc20/awkcc/emitstmt.c
+	length: 6402
+	md5: 5c60b754f2731637763d776a372fc6f1
+	mtime: 1314976089
+    awkcc20/awkcc/print.c
+	length: 1841
+	md5: ff5c1c0626fb71ed621bce3166480f00
+	mtime: 1314976089
+    awkcc20/awkcc/awk.g.y
+	length: 10807
+	md5: 37bb312dd4f861b9d592af1fd5d24ee6
+	mode: r
+	mtime: 1015631697
+    awkcc20/awkcc/tempvar.c
+	length: 4503
+	md5: 0fc8e5818c017838ad2374146977b5ed
+	mtime: 1314976089
+    awkcc20/awkcc/stack.c
+	length: 5018
+	md5: 4f5ac7612f3e5b48995b376803ff1efb
+	mtime: 1314976089
+    awkcc20/awkcc/misc.c.stdarg
+	length: 7877
+	md5: 971f0b9274bef8c270926f02f7a3f64e
+	mtime: 1314976089
+    awkcc20/awkcc/misc.c.varargs
+	length: 7894
+	md5: 518bc1b6279bab8c600942d3ea5c61a8
+	mtime: 1314976089
+    awkcc20/awkcc/emitppmm.c
+	length: 1638
+	md5: 4c07e3a7d31ef31254f2f601540eb576
+	mtime: 1314976089
+    awkcc20/awkcc/structs.h
+	length: 1290
+	md5: 1be3b3e894c51293ccdbb6e179de90ff
+	mtime: 1314976089
+    awkcc20/awkcc/parse.h
+	length: 964
+	md5: ce494418c3786833e44b7dc391140e4a
+	mtime: 1314976089
+    awkcc20/awkcc/type.c
+	length: 14364
+	md5: a1e0cbb715a866509ef8f9f6fca14d07
+	mtime: 1314976089
+    awkcc20/awkcc/write.c
+	length: 8220
+	md5: db5b28ca376c11cf46b16d4294d53d43
+	mtime: 1314976089
+    awkcc20/awkcc/funcs.h
+	length: 1160
+	md5: 9d8d3bf08bdd63711f22a68e0469c549
+	mtime: 1314976089
+    awkcc20/awkcc/node.c
+	length: 3328
+	md5: 00d7646f822ce65574a3eab545165784
+	mtime: 1314976089
+    awkcc20/awkcc/fix.c
+	length: 7469
+	md5: 5401c41223531896514aeb4b8aebf726
+	mtime: 1314976089
+    awkcc20/awkcc/arrstack.c
+	length: 1492
+	md5: 5ca759a763160ee5bdb22ff75ed31211
+	mtime: 1314976089
+    awkcc20/awkcc/main.c
+	length: 2909
+	md5: 0236c72a75c74f15df3eb2ca4d1d0a46
+	mtime: 1314976089
+    awkcc20/awkcc/awk.lx.c
+	length: 34634
+	md5: 93025cf8aa4eb73851589d19232f6141
+	mtime: 1314976503
+    awkcc20/awkcc/walk.c
+	length: 3088
+	md5: 9de16dcd78bee9ea200ec7930443008e
+	mtime: 1314976089
+    awkcc20/awkcc/misc.h
+	length: 2603
+	md5: dc92b6ef585fe529b1b8a177138a7cbf
+	mtime: 1314976089
+    awkcc20/awkcc/comp.c
+	length: 3605
+	md5: e2c853f7ab68dbd2baab38b7bea78e5f
+	mtime: 1314976089
+    awkcc20/awkcc/emit.c
+	length: 15717
+	md5: bd3b60c3df86f1de7b634e3e5fb5a929
+	mtime: 1314976089
+    awkcc20/awkcc/awkcc.sh.basic
+	length: 888
+	md5: 96ec85d84ae696819491407b615de431
+	mode: r
+	mtime: 1015631697
+    awkcc20/awkcc/funcs.h.varargs
+	length: 1128
+	md5: c802097a3712b181518c2b8c4afe8c14
+	mtime: 1314976089
+    awkcc20/awkcc/funcs.h.stdarg
+	length: 1160
+	md5: 9d8d3bf08bdd63711f22a68e0469c549
+	mtime: 1314976089
+    awkcc20/awkcc/awkcc.sh
+	length: 964
+	md5: 19a8931829bc75dee2397908c173549e
+	mtime: 1313954309
+    awkcc20/awkcc/tokens.h
+	length: 2051
+	md5: 979b395e2b94e13c8ff2eb787cf24a19
+	mtime: 1314976089
+    awkcc20/awkcc/misc.c
+	length: 7877
+	md5: 971f0b9274bef8c270926f02f7a3f64e
+	mtime: 1314976089
+    awkcc20/awkcc/awkcc.h
+	length: 318
+	md5: 5b2d4805acaaa4c1bac3f213cefa642c
+	mtime: 1314976089
+    awkcc20/awkcc/emitfunc.c
+	length: 5772
+	md5: 7725d9ee0b597bd9c5234b36e823b012
+	mtime: 1314976089
+    awkcc20/awkcc/prefuncall.c
+	length: 1029
+	md5: 5a19ba77af9dd0c9241836d9ece8bb07
+	mtime: 1314976089
+    awkcc20/awkcc/getopt.c
+	length: 1524
+	md5: 199058d8069d38f9621c557e7a9115aa
+	mtime: 1015970112
+    awkcc20/awkcc/printop.c
+	length: 3297
+	md5: bd7714ce1bb18310473b885689d738ff
+	mtime: 1314976089
+    awkcc20/awkcc/y.tab.h
+	length: 1753
+	md5: 9909e80c46e0d342bf6dacaddc535fae
+	mtime: 1313954309
+    awkcc20/awkcc/makefile
+	length: 1198
+	md5: d59b95d8cbc84b116aa3c2eb70b3bee4
+	mtime: 1140059068
+    awkcc20/awkcc/awk.lx.l
+	length: 6557
+	md5: e6c9db580214f2f1cbbafd52e1bb89a8
+	mode: r
+	mtime: 1015631697
+    awkcc20/idocs/
+    awkcc20/idocs/note.sol_2.5
+	length: 7330
+	md5: 751ffb1f40feb3d7b0a682f1e263286c
+	mode: r
+	mtime: 1015631696
+    awkcc20/idocs/awkcc.fts
+	length: 13642
+	md5: 5584243ff811abf6ff632a806f1be3bc
+	mode: r
+	mtime: 1015631696
+    awkcc20/idocs/awkcc.rs
+	length: 9377
+	md5: af98e825ab70058401984c55bd081550
+	mode: r
+	mtime: 1015631696
+    awkcc20/idocs/awkcc.sts
+	length: 324
+	md5: e0754c770ab446b1a2519ea7e899ff7e
+	mode: r
+	mtime: 1015631696
+    README.exptools
+	length: 1180
+	md5: 478a9a7075edd649f7c74a3082b8f6a1
+	mtime: 1313844827
+    COPYING
+	length: 6608
+	md5: 8b2b75593d0dc03690f03b9334e9f15f
+	mtime: 1314907580
+    misc/
+    misc/lib/
+    misc/lib/awkcc/
+    misc/lib/awkcc/LICENSE
+	length: 140
+	md5: af018b7335feccf6a25f414bf6fe6d55
+	mtime: 1306248066
+    misc/lib/toolnews/
+    misc/lib/toolnews/awkcc
+	length: 1034
+	md5: 78e82c230becc3565d45f24e89808c95
+	mtime: 1313845956
+    misc/man/
+    misc/man/man1/
+    misc/man/man1/awkcc.1
+	length: 3625
+	md5: 0997e03ff28f38ce58c5000bbe63f857
+	mtime: 1125432846
+    misc/bin/
+    misc/bin/awkcc
+	length: 296
+	md5: 84600fd3e522d5cd586f05f6b7f85ab5
+	mode: rwx
+	mtime: 1125435662
+    misc-arch/
+    misc-arch/idarwin/
+    misc-arch/idarwin/lib/
+    misc-arch/idarwin/lib/awkcc/
+    misc-arch/idarwin/lib/awkcc/awkcc.sh
+	length: 981
+	md5: ae6b2ede39172ce8a51eb6f02ea93c22
+	mode: rwx
+	mtime: 1313845851
+    misc-arch/hppa/
+    misc-arch/hppa/lib/
+    misc-arch/hppa/lib/awkcc/
+    misc-arch/hppa/lib/awkcc/awkcc.sh
+	length: 974
+	md5: 0e26a89ee348310db1d91f163ffe7569
+	mode: rwx
+	mtime: 1140065111
+    misc-arch/solaris/
+    misc-arch/solaris/lib/
+    misc-arch/solaris/lib/awkcc/
+    misc-arch/solaris/lib/awkcc/awkcc.sh
+	length: 973
+	md5: 13e94f23a317ccf224aeca2dbb736d64
+	mode: rwx
+	mtime: 1140065140
+    misc-arch/ssolaris/
+    misc-arch/ssolaris/lib/
+    misc-arch/ssolaris/lib/awkcc/
+    misc-arch/ssolaris/lib/awkcc/awkcc.sh
+	length: 973
+	md5: 13e94f23a317ccf224aeca2dbb736d64
+	mode: rwx
+	mtime: 1140065140
+    misc-arch/isolaris/
+    misc-arch/isolaris/lib/
+    misc-arch/isolaris/lib/awkcc/
+    misc-arch/isolaris/lib/awkcc/awkcc.sh
+	length: 973
+	md5: 13e94f23a317ccf224aeca2dbb736d64
+	mode: rwx
+	mtime: 1140065128
+    misc-arch/darwin/
+    misc-arch/darwin/lib/
+    misc-arch/darwin/lib/awkcc/
+    misc-arch/darwin/lib/awkcc/awkcc.sh
+	length: 974
+	md5: 0e26a89ee348310db1d91f163ffe7569
+	mode: rwx
+	mtime: 1140065104
+    misc-arch/ilinux/
+    misc-arch/ilinux/lib/
+    misc-arch/ilinux/lib/awkcc/
+    misc-arch/ilinux/lib/awkcc/awkcc.sh
+	length: 982
+	md5: 830f44e216d34cae8ad5965a6d1c70a9
+	mode: rwx
+	mtime: 1300303605
+    misc-arch/sgi/
+    misc-arch/sgi/lib/
+    misc-arch/sgi/lib/awkcc/
+    misc-arch/sgi/lib/awkcc/awkcc.sh
+	length: 973
+	md5: 13e94f23a317ccf224aeca2dbb736d64
+	mode: rwx
+	mtime: 1140065136
+    misc-arch/cygwin/
+    misc-arch/cygwin/lib/
+    misc-arch/cygwin/lib/awkcc/
+    misc-arch/cygwin/lib/awkcc/awkcc.sh
+	length: 974
+	md5: 0e26a89ee348310db1d91f163ffe7569
+	mtime: 1140065070
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11-exptools1 (GNU/Linux)
+
+iEYEARECAAYFAk5g80EACgkQ2BFa/I0QOZzwEACgtqZnfHdWnCsPUKvc4+txNsAD
+hYUAn1V5uyIRiU8ZrO4QAR0EXX5KtseE
+=pCAI
+-----END PGP SIGNATURE-----

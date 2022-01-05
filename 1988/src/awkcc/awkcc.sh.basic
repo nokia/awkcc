@@ -1,0 +1,23 @@
+
+MATHLIB=-lm
+# For Xenix, use
+# FLAGS="-M0 -Mm -compat"
+FLAGS=-O
+
+set -e
+case $3 in
+	"0")	$CC -I$HEADERDIR $FLAGS -o $2 $1 $AWKLIB $MATHLIB 
+		;;
+	"1")	$CC -I$HEADERDIR $FLAGS -pg -o $2 $1 $AWKLIB $MATHLIB 
+	     	echo "This executable will create a gprof file."
+		;;
+	"2")	$CC -I$HEADERDIR -S -O -o awker.s $1 
+		as -J -o awker.o awker.s 
+		ld -X /lib/crt0.o -o $2 awker.o $AWKLIB $MATHLIB -lc 
+		rm -f awker.s awker.o 
+		;;
+	*)	echo "ERROR" 
+		exit 1
+		;;
+esac
+exit 0

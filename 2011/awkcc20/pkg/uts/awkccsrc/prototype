@@ -1,0 +1,516 @@
+i pkginfo
+i copyright
+
+## Comment out one of the two following sections
+## (also see pkginfo file).
+
+# relocatable pkg: can be added to test dir
+!SRCDIR=awkcc
+!PKGDIR=awkcc/pkg
+
+# un-relocatable pkg: always installed in /usr/add-on
+#!SRCDIR=/usr/add-on/awkcc
+#!PKGDIR=/usr/add-on/awkcc/pkg
+
+##
+## Installation & README files
+##
+
+!default 0755 bin bin
+d src $SRCDIR
+
+!default 0644 bin bin
+f src $SRCDIR/INSTALL
+f src $SRCDIR/README
+
+##
+## Manual pages
+##
+
+!default 0755 bin bin
+d man $SRCDIR/man
+
+!default 0644 bin bin
+f man $SRCDIR/man/awkcc.1
+f man $SRCDIR/man/awkcc.cover
+f man $SRCDIR/man/awkcc.mm
+
+##
+## Source directories and files
+##
+
+!default 0755 bin bin
+d src $SRCDIR/src
+
+!default 0644 bin bin
+f src $SRCDIR/src/awkcc.mk
+
+!default 0755 bin bin
+d src $SRCDIR/awkcc
+
+!default 0644 bin bin
+f src $SRCDIR/awkcc/arrstack.c
+f src $SRCDIR/awkcc/awk.g.y
+f src $SRCDIR/awkcc/awk.lx.l
+f src $SRCDIR/awkcc/awkcc.h
+f src $SRCDIR/awkcc/comp.c
+f src $SRCDIR/awkcc/emit.c
+f src $SRCDIR/awkcc/emitfunc.c
+f src $SRCDIR/awkcc/emitppmm.c
+f src $SRCDIR/awkcc/emitstmt.c
+f src $SRCDIR/awkcc/fix.c
+f src $SRCDIR/awkcc/funcs.h
+f src $SRCDIR/awkcc/getopt.c
+f src $SRCDIR/awkcc/main.c
+f src $SRCDIR/awkcc/misc.c
+f src $SRCDIR/awkcc/misc.h
+f src $SRCDIR/awkcc/node.c
+f src $SRCDIR/awkcc/parse.h
+f src $SRCDIR/awkcc/prefuncall.c
+f src $SRCDIR/awkcc/print.c
+f src $SRCDIR/awkcc/printop.c
+f src $SRCDIR/awkcc/stack.c
+f src $SRCDIR/awkcc/structs.h
+f src $SRCDIR/awkcc/symtab.c
+f src $SRCDIR/awkcc/tempvar.c
+f src $SRCDIR/awkcc/tokens.h
+f src $SRCDIR/awkcc/type.c
+f src $SRCDIR/awkcc/walk.c
+f src $SRCDIR/awkcc/write.c
+f src $SRCDIR/awkcc/makefile
+f src $SRCDIR/awkcc/awkcc.sh.basic
+
+##
+## Library directories and files
+##
+
+!default 0755 bin bin
+d src $SRCDIR/lib
+
+!default 0644 bin bin
+f src $SRCDIR/lib/D0.c
+f src $SRCDIR/lib/awk.h
+f src $SRCDIR/lib/awkerr.c
+f src $SRCDIR/lib/awkparse.c
+f src $SRCDIR/lib/awkrun.c
+f src $SRCDIR/lib/b.c
+f src $SRCDIR/lib/comparisons.c
+f src $SRCDIR/lib/ctest.c
+f src $SRCDIR/lib/dollars.h
+f src $SRCDIR/lib/ear.h
+f src $SRCDIR/lib/files.c
+f src $SRCDIR/lib/getd.c
+f src $SRCDIR/lib/getrec.c
+f src $SRCDIR/lib/gsub.c
+f src $SRCDIR/lib/hash.c
+f src $SRCDIR/lib/hash.h
+f src $SRCDIR/lib/header.h
+f src $SRCDIR/lib/lines.c
+f src $SRCDIR/lib/make_array.c
+f src $SRCDIR/lib/make_elem.c
+f src $SRCDIR/lib/make_str.c
+f src $SRCDIR/lib/make_var.c
+f src $SRCDIR/lib/misc.c
+f src $SRCDIR/lib/opennext.c
+f src $SRCDIR/lib/resplitrec.c
+f src $SRCDIR/lib/specassign.h
+f src $SRCDIR/lib/split.c
+f src $SRCDIR/lib/split2.c
+f src $SRCDIR/lib/split3.c
+f src $SRCDIR/lib/splitrec.c
+f src $SRCDIR/lib/strsplitrec.c
+f src $SRCDIR/lib/xprintf.c
+f src $SRCDIR/lib/y.tab.h
+f src $SRCDIR/lib/makefile
+f src $SRCDIR/makefile
+
+##
+## Test Suite directories and files
+##
+
+!default 0755 bin bin
+d tst $SRCDIR/test
+
+!default 0644 bin bin
+f tst $SRCDIR/test/testall 0755 bin bin
+f tst $SRCDIR/test/Compare 0755 bin bin
+f tst $SRCDIR/test/test.data
+f tst $SRCDIR/test/test.countries
+f tst $SRCDIR/test/p.1
+f tst $SRCDIR/test/p.10
+f tst $SRCDIR/test/p.11
+f tst $SRCDIR/test/p.12
+f tst $SRCDIR/test/p.13
+f tst $SRCDIR/test/p.14
+f tst $SRCDIR/test/p.15
+f tst $SRCDIR/test/p.16
+f tst $SRCDIR/test/p.17
+f tst $SRCDIR/test/p.18
+f tst $SRCDIR/test/p.19
+f tst $SRCDIR/test/p.2
+f tst $SRCDIR/test/p.20
+f tst $SRCDIR/test/p.21
+f tst $SRCDIR/test/p.22
+f tst $SRCDIR/test/p.23
+f tst $SRCDIR/test/p.24
+f tst $SRCDIR/test/p.25
+f tst $SRCDIR/test/p.26
+f tst $SRCDIR/test/p.26a
+f tst $SRCDIR/test/p.27
+f tst $SRCDIR/test/p.28
+f tst $SRCDIR/test/p.29
+f tst $SRCDIR/test/p.3
+f tst $SRCDIR/test/p.30
+f tst $SRCDIR/test/p.31
+f tst $SRCDIR/test/p.32
+f tst $SRCDIR/test/p.33
+f tst $SRCDIR/test/p.34
+f tst $SRCDIR/test/p.35
+f tst $SRCDIR/test/p.36
+f tst $SRCDIR/test/p.37
+f tst $SRCDIR/test/p.38
+f tst $SRCDIR/test/p.39
+f tst $SRCDIR/test/p.4
+f tst $SRCDIR/test/p.40
+f tst $SRCDIR/test/p.41
+f tst $SRCDIR/test/p.42
+f tst $SRCDIR/test/p.43
+f tst $SRCDIR/test/p.44
+f tst $SRCDIR/test/p.45
+f tst $SRCDIR/test/p.46
+f tst $SRCDIR/test/p.47
+f tst $SRCDIR/test/p.48
+f tst $SRCDIR/test/p.48a
+f tst $SRCDIR/test/p.48b
+f tst $SRCDIR/test/p.49
+f tst $SRCDIR/test/p.5
+f tst $SRCDIR/test/p.50
+f tst $SRCDIR/test/p.51
+f tst $SRCDIR/test/p.52
+f tst $SRCDIR/test/p.5a
+f tst $SRCDIR/test/p.6
+f tst $SRCDIR/test/p.7
+f tst $SRCDIR/test/p.8
+f tst $SRCDIR/test/p.9
+f tst $SRCDIR/test/q.a
+f tst $SRCDIR/test/q.amptest1
+f tst $SRCDIR/test/q.amptest10
+f tst $SRCDIR/test/q.amptest11
+f tst $SRCDIR/test/q.amptest12
+f tst $SRCDIR/test/q.amptest2
+f tst $SRCDIR/test/q.amptest3
+f tst $SRCDIR/test/q.amptest4
+f tst $SRCDIR/test/q.amptest5
+f tst $SRCDIR/test/q.amptest6
+f tst $SRCDIR/test/q.amptest6b
+f tst $SRCDIR/test/q.amptest6c
+f tst $SRCDIR/test/q.amptest7
+f tst $SRCDIR/test/q.amptest7b
+f tst $SRCDIR/test/q.amptest7c
+f tst $SRCDIR/test/q.amptest8
+f tst $SRCDIR/test/q.amptest9
+f tst $SRCDIR/test/q.comint
+f tst $SRCDIR/test/q.comint2
+f tst $SRCDIR/test/q.dollartest1
+f tst $SRCDIR/test/q.dollartest2
+f tst $SRCDIR/test/q.dollartest3
+f tst $SRCDIR/test/q.foobar
+f tst $SRCDIR/test/q.hfl8
+f tst $SRCDIR/test/t.0
+f tst $SRCDIR/test/t.00
+f tst $SRCDIR/test/t.1
+f tst $SRCDIR/test/t.1.x
+f tst $SRCDIR/test/t.2
+f tst $SRCDIR/test/t.2.x
+f tst $SRCDIR/test/t.3
+f tst $SRCDIR/test/t.3.x
+f tst $SRCDIR/test/t.4
+f tst $SRCDIR/test/t.4.x
+f tst $SRCDIR/test/t.5.x
+f tst $SRCDIR/test/t.6
+f tst $SRCDIR/test/t.6.x
+f tst $SRCDIR/test/t.6a
+f tst $SRCDIR/test/t.6b
+f tst $SRCDIR/test/t.777
+f tst $SRCDIR/test/t.779
+f tst $SRCDIR/test/t.780
+f tst $SRCDIR/test/t.8.x
+f tst $SRCDIR/test/t.909
+f tst $SRCDIR/test/t.a
+f tst $SRCDIR/test/t.a1
+f tst $SRCDIR/test/t.a2
+f tst $SRCDIR/test/t.aeiou
+f tst $SRCDIR/test/t.aeiouy
+f tst $SRCDIR/test/t.argc
+f tst $SRCDIR/test/t.argc2
+f tst $SRCDIR/test/t.argv
+f tst $SRCDIR/test/t.arith
+f tst $SRCDIR/test/t.arith2
+f tst $SRCDIR/test/t.array
+f tst $SRCDIR/test/t.array1
+f tst $SRCDIR/test/t.array2
+f tst $SRCDIR/test/t.arrc
+f tst $SRCDIR/test/t.asdf
+f tst $SRCDIR/test/t.asdf333
+f tst $SRCDIR/test/t.asdfasdf
+f tst $SRCDIR/test/t.asdfasdf2
+f tst $SRCDIR/test/t.asdfasdf3
+f tst $SRCDIR/test/t.asgn
+f tst $SRCDIR/test/t.ass
+f tst $SRCDIR/test/t.assert
+f tst $SRCDIR/test/t.avg
+f tst $SRCDIR/test/t.awk
+f tst $SRCDIR/test/t.b.x
+f tst $SRCDIR/test/t.bbbad1
+f tst $SRCDIR/test/t.blh999
+f tst $SRCDIR/test/t.break
+f tst $SRCDIR/test/t.break1
+f tst $SRCDIR/test/t.break2
+f tst $SRCDIR/test/t.break3
+f tst $SRCDIR/test/t.bthassign
+f tst $SRCDIR/test/t.bug1
+f tst $SRCDIR/test/t.builtins
+f tst $SRCDIR/test/t.cat
+f tst $SRCDIR/test/t.cat1
+f tst $SRCDIR/test/t.cat2
+f tst $SRCDIR/test/t.cindex
+f tst $SRCDIR/test/t.cmdline
+f tst $SRCDIR/test/t.cmdline99
+f tst $SRCDIR/test/t.cmdline_proc
+f tst $SRCDIR/test/t.cmp
+f tst $SRCDIR/test/t.coerce
+f tst $SRCDIR/test/t.cond
+f tst $SRCDIR/test/t.comment
+f tst $SRCDIR/test/t.comment1
+f tst $SRCDIR/test/t.concat
+f tst $SRCDIR/test/t.cond2
+f tst $SRCDIR/test/t.cont
+f tst $SRCDIR/test/t.cont3
+f tst $SRCDIR/test/t.contin
+f tst $SRCDIR/test/t.count
+f tst $SRCDIR/test/t.countend
+f tst $SRCDIR/test/t.cum
+f tst $SRCDIR/test/t.cut1
+f tst $SRCDIR/test/t.d.x
+f tst $SRCDIR/test/t.delete
+f tst $SRCDIR/test/t.delete3
+f tst $SRCDIR/test/t.delete4
+f tst $SRCDIR/test/t.delinloop
+f tst $SRCDIR/test/t.dobreak
+f tst $SRCDIR/test/t.dobreak2
+f tst $SRCDIR/test/t.dobreak3
+f tst $SRCDIR/test/t.dolawk
+f tst $SRCDIR/test/t.doll
+f tst $SRCDIR/test/t.doll2
+f tst $SRCDIR/test/t.doll3
+f tst $SRCDIR/test/t.doll4
+f tst $SRCDIR/test/t.doublea
+f tst $SRCDIR/test/t.doubleb
+f tst $SRCDIR/test/t.doublec
+f tst $SRCDIR/test/t.e
+f tst $SRCDIR/test/t.doublesp
+f tst $SRCDIR/test/t.else
+f tst $SRCDIR/test/t.emitppmm
+f tst $SRCDIR/test/t.empty
+f tst $SRCDIR/test/t.endprint
+f tst $SRCDIR/test/t.exit
+f tst $SRCDIR/test/t.exit1
+f tst $SRCDIR/test/t.exit2
+f tst $SRCDIR/test/t.f
+f tst $SRCDIR/test/t.f.x
+f tst $SRCDIR/test/t.f0
+f tst $SRCDIR/test/t.f1
+f tst $SRCDIR/test/t.f2
+f tst $SRCDIR/test/t.f3
+f tst $SRCDIR/test/t.f4
+f tst $SRCDIR/test/t.fix_this
+f tst $SRCDIR/test/t.foo
+f tst $SRCDIR/test/t.foobar
+f tst $SRCDIR/test/t.foobar3
+f tst $SRCDIR/test/t.foobar4
+f tst $SRCDIR/test/t.foobar99
+f tst $SRCDIR/test/t.for
+f tst $SRCDIR/test/t.for1
+f tst $SRCDIR/test/t.for2
+f tst $SRCDIR/test/t.format4
+f tst $SRCDIR/test/t.freea
+f tst $SRCDIR/test/t.fret
+f tst $SRCDIR/test/t.fs
+f tst $SRCDIR/test/t.fs2
+f tst $SRCDIR/test/t.fun
+f tst $SRCDIR/test/t.fun2
+f tst $SRCDIR/test/t.fun3
+f tst $SRCDIR/test/t.fun4
+f tst $SRCDIR/test/t.fun5
+f tst $SRCDIR/test/t.getline
+f tst $SRCDIR/test/t.gets
+f tst $SRCDIR/test/t.gsub
+f tst $SRCDIR/test/t.gsub1
+f tst $SRCDIR/test/t.gsub3
+f tst $SRCDIR/test/t.hello
+f tst $SRCDIR/test/t.hfl100
+f tst $SRCDIR/test/t.hfl99
+f tst $SRCDIR/test/t.hflconv
+f tst $SRCDIR/test/t.i.x
+f tst $SRCDIR/test/t.if
+f tst $SRCDIR/test/t.if1
+f tst $SRCDIR/test/t.if2
+f tst $SRCDIR/test/t.if3
+f tst $SRCDIR/test/t.in
+f tst $SRCDIR/test/t.in1
+f tst $SRCDIR/test/t.in2
+f tst $SRCDIR/test/t.in3
+f tst $SRCDIR/test/t.incr
+f tst $SRCDIR/test/t.incr2
+f tst $SRCDIR/test/t.incr3
+f tst $SRCDIR/test/t.index
+f tst $SRCDIR/test/t.inter
+f tst $SRCDIR/test/t.intest
+f tst $SRCDIR/test/t.intest2
+f tst $SRCDIR/test/t.j.x
+f tst $SRCDIR/test/t.w
+f tst $SRCDIR/test/t.jcrtest
+f tst $SRCDIR/test/t.johnbug
+f tst $SRCDIR/test/t.lbs
+f tst $SRCDIR/test/t.lessthan
+f tst $SRCDIR/test/t.longstr
+f tst $SRCDIR/test/t.makef
+f tst $SRCDIR/test/t.match
+f tst $SRCDIR/test/t.max
+f tst $SRCDIR/test/t.min
+f tst $SRCDIR/test/t.mod
+f tst $SRCDIR/test/t.monotone
+f tst $SRCDIR/test/t.nameval
+f tst $SRCDIR/test/t.newbg
+f tst $SRCDIR/test/t.newcat
+f tst $SRCDIR/test/t.newestfromda
+f tst $SRCDIR/test/t.newjlb
+f tst $SRCDIR/test/t.next
+f tst $SRCDIR/test/t.next3
+f tst $SRCDIR/test/t.nf
+f tst $SRCDIR/test/t.nf3
+f tst $SRCDIR/test/t.nonl
+f tst $SRCDIR/test/t.not
+f tst $SRCDIR/test/t.nr
+f tst $SRCDIR/test/t.null
+f tst $SRCDIR/test/t.null0
+f tst $SRCDIR/test/t.numbers
+f tst $SRCDIR/test/t.oddarr
+f tst $SRCDIR/test/t.oddball
+f tst $SRCDIR/test/t.x
+f tst $SRCDIR/test/t.oddball1
+f tst $SRCDIR/test/t.ofmt
+f tst $SRCDIR/test/t.ofmt3456
+f tst $SRCDIR/test/t.ofmt3457
+f tst $SRCDIR/test/t.ofs
+f tst $SRCDIR/test/t.ors
+f tst $SRCDIR/test/t.ost100
+f tst $SRCDIR/test/t.ost99
+f tst $SRCDIR/test/t.pass
+f tst $SRCDIR/test/t.pass2
+f tst $SRCDIR/test/t.pass3
+f tst $SRCDIR/test/t.pat
+f tst $SRCDIR/test/t.pipe
+f tst $SRCDIR/test/t.pow2
+f tst $SRCDIR/test/t.pp
+f tst $SRCDIR/test/t.pp1
+f tst $SRCDIR/test/t.pp2
+f tst $SRCDIR/test/t.ppdoll
+f tst $SRCDIR/test/t.prepost
+f tst $SRCDIR/test/t.printf
+f tst $SRCDIR/test/t.printf3
+f tst $SRCDIR/test/t.quest
+f tst $SRCDIR/test/t.quest2
+f tst $SRCDIR/test/t.quest3
+f tst $SRCDIR/test/t.quote
+f tst $SRCDIR/test/t.randk
+f tst $SRCDIR/test/t.re1
+f tst $SRCDIR/test/t.re2
+f tst $SRCDIR/test/t.re7
+f tst $SRCDIR/test/t.reFS
+f tst $SRCDIR/test/t.rec
+f tst $SRCDIR/test/t.redir
+f tst $SRCDIR/test/t.reg
+f tst $SRCDIR/test/t.reg1
+f tst $SRCDIR/test/t.rete
+f tst $SRCDIR/test/t.rjj
+f tst $SRCDIR/test/t.rjj2
+f tst $SRCDIR/test/t.roff
+f tst $SRCDIR/test/t.sad1
+f tst $SRCDIR/test/t.sep
+f tst $SRCDIR/test/t.seqno
+f tst $SRCDIR/test/t.set0
+f tst $SRCDIR/test/t.set0a
+f tst $SRCDIR/test/t.set0b
+f tst $SRCDIR/test/t.set1
+f tst $SRCDIR/test/t.set2
+f tst $SRCDIR/test/t.set3
+f tst $SRCDIR/test/t.smallnum
+f tst $SRCDIR/test/t.sp
+f tst $SRCDIR/test/t.split
+f tst $SRCDIR/test/t.split2
+f tst $SRCDIR/test/t.split9
+f tst $SRCDIR/test/t.split9a
+f tst $SRCDIR/test/t.splitfoo
+f tst $SRCDIR/test/t.stately
+f tst $SRCDIR/test/t.stderr
+f tst $SRCDIR/test/t.strcmp
+f tst $SRCDIR/test/t.strcmp1
+f tst $SRCDIR/test/foo
+f tst $SRCDIR/test/t.sub
+f tst $SRCDIR/test/t.sub1
+f tst $SRCDIR/test/t.sub2
+f tst $SRCDIR/test/t.subsephfl
+f tst $SRCDIR/test/t.substr
+f tst $SRCDIR/test/t.substr1
+f tst $SRCDIR/test/t.tb
+f tst $SRCDIR/test/t.tb2
+f tst $SRCDIR/test/t.testfreeftm
+f tst $SRCDIR/test/t.time
+f tst $SRCDIR/test/t.toupper
+f tst $SRCDIR/test/t.toupper2
+f tst $SRCDIR/test/t.vf
+f tst $SRCDIR/test/t.vf1
+f tst $SRCDIR/test/t.vf2
+f tst $SRCDIR/test/t.vf3
+f tst $SRCDIR/test/t.wmb
+f tst $SRCDIR/test/t.wolit
+f tst $SRCDIR/test/t.xPP
+f tst $SRCDIR/test/t.yly
+f tst $SRCDIR/test/junk1
+f tst $SRCDIR/test/junk2
+f tst $SRCDIR/test/tmpfile
+f tst $SRCDIR/test/eventemp
+f tst $SRCDIR/test/CompleteWith.e
+f tst $SRCDIR/test/oddtemp
+f tst $SRCDIR/test/glop
+f tst $SRCDIR/test/bigpop
+f tst $SRCDIR/test/smallpop
+
+##
+## Source packaging files
+##
+!default 0755 bin bin
+d pkg $PKGDIR
+d pkg $PKGDIR/awkccsrc
+
+!default 0644 bin bin
+f pkg $PKGDIR/awkccsrc/README.oam
+f pkg $PKGDIR/awkccsrc/copyright
+f pkg $PKGDIR/awkccsrc/pkginfo
+f pkg $PKGDIR/awkccsrc/prototype
+
+##
+## Binary packaging files
+##
+!default 0755 bin bin
+d pkg $PKGDIR/awkcc
+
+!default 0644 bin bin
+f pkg $PKGDIR/awkcc/README.oam
+f pkg $PKGDIR/awkcc/copyright
+f pkg $PKGDIR/awkcc/pkginfo
+f pkg $PKGDIR/awkcc/protopre4
+f pkg $PKGDIR/awkcc/protosvr4
+f pkg $PKGDIR/awkcc/prototype
+

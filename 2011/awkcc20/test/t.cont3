@@ -1,0 +1,9 @@
+BEGIN {
+	key[1]=1
+	key[2]=2
+	key[""]=3
+	for (i in key) {
+		if (i == "") continue
+		print i | "sort"
+	}
+}

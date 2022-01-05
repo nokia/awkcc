@@ -1,0 +1,8 @@
+BEGIN {
+	a=ARGV[1]+0
+	
+	for (i=0; i<a; i++)
+		a1[i]=i+1
+	for (i=0; i<100; i++)
+		print a1[1]+1
+}

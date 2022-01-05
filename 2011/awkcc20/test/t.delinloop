@@ -1,0 +1,24 @@
+BEGIN {
+	a[1]="hello"
+	a[2]="goodbye"
+	a[3]="foo"
+	a[4]="foo"
+	a[5]="foo"
+	a[6]="foo"
+	a[7]="foo"
+	a[8]="foo"
+	a[9]="foo"
+	a[10]="foo"
+	a[11]="foo"
+	a[12]="foo"
+	a[13]="foo"
+	for (j=0; j<4; j++) {
+		delete a[j]
+		print j | "sort"
+	}
+	for (i in a) {
+		delete a[i]
+		print i | "sort"
+	}
+	print "done" | "sort"
+}

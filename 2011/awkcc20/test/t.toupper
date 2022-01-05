@@ -1,0 +1,12 @@
+BEGIN {
+	a="HelloGoodBYE"
+	b="}{}|_)_)_)_)_DAdsfadf"
+	c=tolower(a)
+	d=toupper(b)
+	e=tolower(a)  tolower(b)
+	print a
+	print b
+	print c
+	print d
+	print e
+}

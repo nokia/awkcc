@@ -1,0 +1,241 @@
+BEGIN {
+	y="xxx"
+	y+0
+	if (y)
+		print "yes"
+	else print "no"
+
+	x="xxx"
+	if (x)
+		print "yes"
+	else print "no"
+
+	split("xxx xxx xxx", arr)
+	arr[0]+0
+	if (arr[0])
+		print "yes"
+	else print "no"
+	if (arr[1])
+		print "yes"
+	else print "no"
+	print "-----------"
+	yy="xxx"
+	yy+0
+	if (yy)
+		print "yes"
+	else print "no"
+
+	xx="xxx"
+	if (xx)
+		print "yes"
+	else print "no"
+
+	split("xxx xxx xxx", arr2)
+	arr2[0]+0
+	if (arr2[0])
+		print "yes"
+	else print "no"
+	if (arr2[1])
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo xxx" | getline
+	close "echo xxx"
+	if ($1)
+		print "yes"
+	else print "no"
+	$1+0
+	if ($1)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo xxx" | getline
+	close "echo xxx"
+	if ($1)
+		print "yes"
+	else print "no"
+	$1+0
+	if ($1)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo xxx" | getline
+	close "echo xxx"
+	if ($0)
+		print "yes"
+	else print "no"
+	$0+0
+	if ($0)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo xxx" | getline
+	close "echo xxx"
+	if ($0)
+		print "yes"
+	else print "no"
+	$0+0
+	if ($0)
+		print "yes"
+	else print "no"
+	print "***********"
+	y="0xxx"
+	y+0
+	if (y)
+		print "yes"
+	else print "no"
+
+	x="0xxx"
+	if (x)
+		print "yes"
+	else print "no"
+
+	split("0xxx 0xxx 0xxx", arr)
+	arr[0]+0
+	if (arr[0])
+		print "yes"
+	else print "no"
+	if (arr[1])
+		print "yes"
+	else print "no"
+	print "-----------"
+	yy="1xxx"
+	yy+0
+	if (yy)
+		print "yes"
+	else print "no"
+
+	xx="1xxx"
+	if (xx)
+		print "yes"
+	else print "no"
+
+	split("1xxx 1xxx 1xxx", arr2)
+	arr2[0]+0
+	if (arr2[0])
+		print "yes"
+	else print "no"
+	if (arr2[1])
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 1xxx" | getline
+	close "echo 1xxx"
+	if ($1)
+		print "yes"
+	else print "no"
+	$1+0
+	if ($1)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 0xxx" | getline
+	close "echo 0xxx"
+	if ($1)
+		print "yes"
+	else print "no"
+	$1+0
+	if ($1)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 1xxx" | getline
+	close "echo 1xxx"
+	if ($0)
+		print "yes"
+	else print "no"
+	$0+0
+	if ($0)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 0xxx" | getline
+	close "echo 0xxx"
+	if ($0)
+		print "yes"
+	else print "no"
+	$0+0
+	if ($0)
+		print "yes"
+	else print "no"
+	print "==========="
+	y="0"
+	y+0
+	if (y)
+		print "yes"
+	else print "no"
+
+	x="0"
+	if (x)
+		print "yes"
+	else print "no"
+
+	split("0 0 0", arr)
+	arr[0]+0
+	if (arr[0])
+		print "yes"
+	else print "no"
+	if (arr[1])
+		print "yes"
+	else print "no"
+	print "-----------"
+	yy="1"
+	yy+0
+	if (yy)
+		print "yes"
+	else print "no"
+
+	xx="1"
+	if (xx)
+		print "yes"
+	else print "no"
+
+	split("1 1 1", arr2)
+	arr2[0]+0
+	if (arr2[0])
+		print "yes"
+	else print "no"
+	if (arr2[1])
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 1" | getline
+	close "echo 1"
+	if ($1)
+		print "yes"
+	else print "no"
+	$1+0
+	if ($1)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 0" | getline
+	close "echo 0"
+	if ($1)
+		print "yes"
+	else print "no"
+	$1+0
+	if ($1)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 1" | getline
+	close "echo 1"
+	if ($0)
+		print "yes"
+	else print "no"
+	$0+0
+	if ($0)
+		print "yes"
+	else print "no"
+	print "---------"
+	"echo 0" | getline
+	close "echo 0"
+	if ($0)
+		print "yes"
+	else print "no"
+	$0+0
+	if ($0)
+		print "yes"
+	else print "no"
+}

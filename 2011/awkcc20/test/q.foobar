@@ -1,0 +1,12 @@
+BEGIN {
+	a="hello"
+	print gsub(/hello$/, "foo", a)
+	print a
+	print gsub(/o/, "+&+", a)
+	print a
+	print gsub(/\+/, "&-", a);
+	print a
+	print gsub(/-/, "&)", a);
+	print a
+	print gsub(/\)/, "(&", a);
+}

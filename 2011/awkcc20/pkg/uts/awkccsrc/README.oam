@@ -1,0 +1,13 @@
+# To package, issue a command like this:
+
+pkgmk -r / -b /usr/add-on -d /tmp awkccsrc
+
+# This command will pick up the source under "base"
+# directory /usr/add-on and the packaging files from 
+# the current work directory, and put the package in /tmp.   
+# With no -d, the package is put in /var/spool/pkg by default.
+
+# To translate this package directory to datastream form (single
+# file; e.g., for stockroom) issue a command like this:
+
+pkgtrans /tmp /tmp/awkccsrc.oam awkccsrc

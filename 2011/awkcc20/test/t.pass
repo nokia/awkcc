@@ -1,0 +1,14 @@
+BEGIN {
+	a=1.3
+	b=1.4
+	c=1.5
+	foo(a,b,c)
+	foo(a=1.4, b=1.5, c=1.7)
+	st="%g%g%g\n"
+	printf st, a, b, c
+}
+
+func foo(x,y,z)
+{
+	print x,y,z
+}

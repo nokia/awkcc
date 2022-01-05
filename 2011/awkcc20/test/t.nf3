@@ -1,0 +1,5 @@
+BEGIN {
+	foo=$1 #="hello"
+	a=foo "" #$(NF++)=foo ""
+	print a
+}

@@ -1,0 +1,12 @@
+BEGIN {
+	x=0
+	y=0.1
+	z="1"
+	print x++, ++x
+	print y++, ++y
+	print z++, ++z, z++
+	z="1"
+	print ++z
+	++x
+	print sprintf("%d", ++x)
+}

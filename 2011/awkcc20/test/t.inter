@@ -1,0 +1,5 @@
+BEGIN { print "HELLO: " }
+{
+	print $0
+	print "HELLO: "
+}

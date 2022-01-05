@@ -1,0 +1,25 @@
+#This code fragment:
+
+BEGIN {
+print "WHPL:2 :--:--" > "tmpfile"
+print "WHPL:2 :4 :--" > "tmpfile"
+print "WHPL:2 :4 :--" > "tmpfile"
+print "WHPL:4 :--:--" > "tmpfile"
+print "WHPL:4 :--:--" > "tmpfile"
+print "WHPL:4 :--:--" > "tmpfile"
+print "WHPL:4 :11:--" > "tmpfile"
+print "WHPL:5 :--:--" > "tmpfile"
+print "WHPL:6 :--:--" > "tmpfile"
+print "WHPL:9 :--:--" > "tmpfile"
+close("tmpfile")
+}
+BEGIN{
+	FS=":"
+	while (getline < "tmpfile" > 0) {
+		for (j = 2; j < 4; j++) {
+			if($j == 2) {
+				print("J is two |", $j, "|")
+			}
+		}
+	}
+}

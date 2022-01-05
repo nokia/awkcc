@@ -1,0 +1,12 @@
+BEGIN {
+	a[1]=1
+	a[2]=2
+	i=1
+	j=1
+	while (j<3) {
+		for (i in a) delete a[i]
+		if (j>3) continue
+		j++
+	}
+	print "hello", i
+}

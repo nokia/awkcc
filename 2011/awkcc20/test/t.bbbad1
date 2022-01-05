@@ -1,0 +1,8 @@
+BEGIN {
+	print "hello"
+}
+
+function adddep(list, member, group)
+{
+	list[member, ++list[member]] = group
+}

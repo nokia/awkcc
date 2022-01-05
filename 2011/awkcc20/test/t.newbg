@@ -1,0 +1,11 @@
+	BEGIN {
+		a="This is a test.(zzzzz)"
+		print match(/[036]/, a)
+		print RSTART, RLENGTH
+		gsub(/[\141-\161z]/, "_", a)
+		print a
+		a="This is a test."
+		gsub(/[a-z]/, "_", a)
+		print a
+	}
+

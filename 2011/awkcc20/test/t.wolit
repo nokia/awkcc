@@ -1,0 +1,11 @@
+	BEGIN {
+		for (i = 1; i < 20; ++i)
+			a[i] = i;
+		for (i = 1; i in a; ++i) {
+			delete a[i];
+			print i;
+			if (i in a)
+				print "WARNING: a[" i "] not deleted"
+		}
+		exit;
+	}

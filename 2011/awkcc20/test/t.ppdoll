@@ -1,0 +1,8 @@
+BEGIN {
+	$1="01"; n=1
+
+	print "$n++:", $n++
+	print "n:", n
+	print "$n:", $n
+	print "n:", n
+}

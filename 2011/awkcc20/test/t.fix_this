@@ -1,0 +1,8 @@
+BEGIN {
+	foo(b)
+}
+
+func foo(a)
+{
+	print a[1]
+}

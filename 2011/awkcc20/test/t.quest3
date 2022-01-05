@@ -1,0 +1,7 @@
+func e(x) { q(x) }
+func q(z) { f(z) }
+BEGIN { e(b) }
+function f(y)
+{ y[1]="hello"
+	if (1 in y) print "hello"
+	else print "goodbye" }

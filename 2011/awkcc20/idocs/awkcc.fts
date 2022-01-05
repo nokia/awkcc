@@ -1,0 +1,385 @@
+.\" Skeleton file for feature test specification documents.
+.\" Includes section for coversheet and main body.
+.\" Use 'coverdoc -O _coversheet_ _this_file_' to extract the coversheet.
+.\" Define the name of the feature and subfeature this document is for.
+.\" The feature name is often something line "RFS",
+.\" while the subfeature might be something line "MNS" (which is part of RFS).
+.\" The 1st 3 digits of a requirement number often refer to specific commands.
+.\" The feature and subfeature names are sometimes combined (e.g., "DMD").
+.ds fe "awkcc
+.\" The following line is used by ants(1) - the automatic number generator.
+.nr w \w'FT:\*(fe-000.000 '
+.\"
+.\" .tr @
+.\" begin definition of mark word
+.de mw
+.ft B
+\(sb\\$1\(sp
+.ft
+..
+.\" end definition of mark word
+.nr Hs 7
+.nr Hb 7
+.HC ^
+.TL \""" don't use WPN if this won't be an IM "982101-0105" "40135-010"
+Feature Test Specification for \fIawkcc 2.0\fP \- Issue \fI1\fP
+.AU "D.J. Miller" DJM IH 45262 "(708) 979-6471" 1B-219 ihlpz!davem
+.AU "M.E. Barrett" MEB IH BL0452620 "(708) 979-5496" 1C-202 ihspa!meb2
+.\" If we decide to publish them, uncomment next line.
+.\" .TM 45262-91mmdd.01IM
+.AS 1
+******** We don't plan on distributing these documents with IMs so the abstract
+******** isn't needed.  It's not printed by default, so don't worry about it.
+Coversheet abstract goes here.
+It only appears in the coversheet if that's printed.
+.AE
+.ig
+.\" This section contains stuff for the coversheet.
+.CS "# pages excluding coversheet" "" "" "" "" ""
+.\" '.mC' is the Mercury listings
+.mC "cmp" ""
+.\" Don't remember what '.fA y' is!
+.fA y
+.\" '.aC BL' is the company
+.aC BL
+.cC
+The list of people who get complete copies of the document goes here.
+.cE
+.cS
+CoverSheet only list here.
+.cE
+.\" '.OK' is the keyword list
+.OK ""
+..
+.tr ~
+.de HX
+.sp 0.5
+..
+.MT 2
+.H 1 "INTRODUCTION"
+.H 2 "Overview"
+The awkcc 2.0 feature contains one command \fIawkcc.\fP
+The awkcc command converts a program in nawk language to an equivalent program
+in C language and then compiles this translated C program
+to produce an "a.out" file.
+.P
+This specification describes the tests to be run to test this feature.
+.H 2 "Reason for Reissue"
+This is the first issue.
+.H 2 "Glossary"
+This document does not define or use any special terms or acronyms.
+.H 2 "Components To Be Tested"
+This feature includes one command, \fIawkcc(1)\fP and its associated
+manual page.
+These items are identified by the tag \fBFT:\*(fe-\fI<#.#>\fP.
+.H 3 "Software Components"
+The awkcc(1) command will be tested.
+.H 3 "User Document Components"
+The awkcc(1) manual page will be tested.
+.H 2 "Components Not To Be Tested"
+.H 3 "Software Components"
+All items will be tested.
+.H 3 "User Document Components"
+All items will be tested.
+.H 1 "TESTING APPROACH"
+.H 2 "General Approach"
+These tests will verify the basic functionality of awkcc(1) as specified in the
+feature requirements specification.
+As far as possible, the test cases are in the same order as the requirements
+in the requirements specification.
+These tests will be run with the BUSTER test harness, and the results will be
+collected for future reference.
+The criteria for passing tests will depend on whether the tests are fully
+automated or not.
+Automated tests will include integral baseline files so that running the tests
+will collect actual output, compare it with the baseline data and report
+pass or fail based on whether or not the results match the expected values.
+Manual tests will require the tester to run the tests, observe the results and
+determine if the tests pass or not.
+For manual tests, the tests will reside in BUSTER and include complete
+instructions on running the manual tests.
+The expected results of the manual tests will also be provided in the BUSTER
+tests to aid the tester in determining the success or failure of the tests.
+.H 2 "Test Package Architecture"
+Since this test package will utilize the BUSTER test harness, it will
+conform to the standard RDS BUSTER test storage hierarchy.
+Tests will be grouped in a way to make BUSTER-izing easy; hence, the BUSTER
+test identification numbers will not necessarily match the requirement
+numbers being tested.
+Also, multiple requirements may be tested by a single BUSTER test.
+The tests will be stored in the RDS official BUSTER test directories.
+.P
+These tests will test the command by converting programs in
+nawk language to equivalent programs in C language and then compiling
+the translated C programs to produce "a.out" files. All of the options
+of the command will be tested. The original nawk programs will be executed
+to produce baseline files. The "a.out" files will then be invoked to 
+verify that they produce the same results as the original nawk language
+programs. 
+.P
+The test package will contain a README file for each individual BUSTER test
+which will identify the tests controlled by that test script.
+It will identify which requirements are being tested by each test, and
+it will also identify any special procedure necessary to execute the
+tests other than the normal way of running BUSTER tests.
+.H 2 "Special Procedural Requirements"
+These tests have no special procedural requirements.
+.H 1 "ENVIRONMENTAL NEEDS"
+The following items are required for development and execution of these tests.
+.H 2 "Hardware"
+One RDS 4.0 test system is necessary to develop these tests.
+One RDS 4.0 test system of each supported architecture type is necessary
+to run these tests.
+No other special hardware is necessary.
+.H 2 "Software"
+The BUSTER test harness is necessary to develop and run these tests.
+No other special software is necessary.
+.H 2 "Documentation"
+The awkcc(1) manual page will be used to develop these tests.
+The feature requirement specification for awkcc 2.0 will also be used to
+develop tests.
+.H 2 "Execution"
+There are no special execution requirements for these tests.
+.H 1 "TEST CASES TO BE PROVIDED"
+.H 2 "Software Test Cases"
+.P
+.H 3 "General Requirements"
+.H 4 Overview.
+The tests in this section verify compliance with the general requirements
+of the feature.
+.H 4 "Test Cases."
+.VL \nwu
+.LI FT:\*(fe\-010.010
+\fBVerify that the name, location, mode, and ownership of the executable file
+are correct. The \fIls\fP command will be used for this test.\fR
+.br
+Requirement \f(CWR:awkcc-010.010\fP.
+.LI FT:\*(fe\-010.020
+\fBVerify that valid nawk programs are compiled without errors,
+and a C program and its (the translated C programs)
+compiled version, an
+.I a.out
+file, are also generated.\fR
+.br
+Requirement \f(CWR:awkcc-010.020\fP.
+.LI FT:\*(fe\-010.030
+\fBVerify that the C program generated by the awkcc command is compilable
+on that system.\fR
+.br
+Requirement \f(CWR:awkcc-010.030\fP.
+.LI FT:\*(fe\-010.040
+\fBVerify that the C program generated by the awkcc command is functionally
+equivalent to 
+the nawk command, using the given nawk program for a given input file.\fR
+.br
+Requirement \f(CWR:awkcc-010.030\fP.
+.LI FT:\*(fe\-010.050
+\fBVerify that an invalid nawk program, i.e., a nawk program containing syntax
+errors, is not compiled, and appropriate error messages are generated.\fR
+.br
+Requirement \f(CWR:awkcc-010.040\fP.
+.LE
+.H 3 "Functional Requirements"
+.H 4 Overview.
+The tests in this section verify compliance with the functional requirements
+of the feature.
+The common method of implementing these test cases is to invoke the "a.out"
+file with the given inputs and conditions and capture the standard output and
+standard error output.
+When execution completes, the resulting files will be examined to
+verify that they have been produced correctly as required
+for the particular test case.
+As part of this verification, the resulting files will be \fIcat\fPed
+together and compared with the files produced by execution of the original
+nawk program.
+The collection must match the original output file.
+In cases where execution fails, all tests will verify that the
+files are produced or not produced as required
+for the particular test case.
+.H 4 "Test Cases."
+.VL \nwu
+.LI FT:\*(fe\-020.010
+\fBVerify that when the -b option is used, C code that does not buffer all the
+output is generated.\fR
+.br
+Requirement \f(CWR:awkcc-020.010\fP.
+.LI FT:\*(fe\-020.020
+\fBVerify that when the output is to a terminal, the output is not buffered.\fR
+.br
+Requirement \f(CWR:awkcc-020.010\fP.
+.P
+3BTAC may be required for this test.
+.LI FT:\*(fe\-020.030
+\fBVerify that when the -B option is used, C code that buffers the output
+is generated. This is the default option.\fR
+.br
+Requirement \f(CWR:awkcc-020.020\fP.
+.LI FT:\*(fe\-020.040
+\fBVerify that when the -J option is used,
+the proper option is passed on to the assembler
+when it is invoked (during the compilation of the translated C program)
+so that correct branch instructions for "large" programs are generated
+and there are no compilation errors.
+(This option may be required for assemblers on some machines;
+e.g., VAX machines.)\fR
+.br
+Requirement \f(CWR:awkcc-020.030\fP.
+.LI FT:\*(fe\-020.050
+\fBVerify that when the -o 
+.mw outfile
+option is used, the compiled version of the
+translated C program is stored in 
+.mw outfile 
+instead of \fIa.out\fR.
+.br
+Requirement \f(CWR:awkcc-020.040\fP.
+.LI FT:\*(fe\-020.060
+\fBVerify that when the -o
+.mw outfile
+option is not used, the compiled version of the
+translated C program is stored in an \fIa.out\fP file.\fR
+.br
+Requirement \f(CWR:awkcc-020.050\fP.
+.LI FT:\*(fe\-020.070
+\fBVerify that when the -c
+.mw cprogfile
+option is used, the translated C program is
+stored in 
+.mw cprogfile 
+instead of \fIawker.c\fR.
+.br
+Requirement \f(CWR:awkcc-020.060\fP.
+.LI FT:\*(fe\-020.080
+\fBVerify that when the -c
+.mw cprogfile
+option is not used, the translated C program is
+stored in \fIawker.c\fP.\fR
+.br
+Requirement \f(CWR:awkcc-020.070\fP.
+.LI FT:\*(fe\-020.090
+\fBVerify that when the -u
+.mw var
+option is used, the awk compiler (awkcc) notes the fact
+that
+.mw var
+can be assigned values on the command line
+(of the form
+.mw var "\c
+=
+.mw "some\ value"
+).
+Based on this information, verify that awkcc will generate proper code so that 
+the code works correctly even if an optimizer is used during the
+compilation of the translated C program.\fR
+.br
+Requirement \f(CWR:awkcc-020.080\fP.
+.LI FT:\*(fe\-020.100
+\fBVerify that lines of the form "#awkcchint\ -
+.mw option
+.mw argument
+" in the awk program
+have the same effect as the -u option on the command line.\fR
+.br
+Requirement \f(CWR:awkcc-020.090\fP.
+.LI FT:\*(fe\-020.110
+\fBVerify that invalid options cause an error message to be output and
+the execution of the awkcc command to be terminated.\fR
+.br
+Requirement \f(CWR:awkcc-020.100\fP.
+.LI FT:\*(fe\-020.120
+\fBVerify that when the awkcc command is invoked without an argument to
+the "\-o", "\-c", or "\-u" options, an error message is generated and the
+command is terminated.\fR
+.br
+Requirement \f(CWR:awkcc-020.110\fP.
+.LI FT:\*(fe\-020.130
+\fBVerify that all the options, except the "-f" option, are accepted
+by the 
+.mw outfile
+file (produced by the awkcc command).\fR
+.br
+Requirement \f(CWR:awkcc-020.120\fP.
+.LI FT:\*(fe\-020.140
+\fBVerify that when the 
+.mw outfile
+file is invoked with an invalid argument,
+an error message is generated and the
+.mw outfile
+command terminates.\fR
+.br
+Requirement \f(CWR:awkcc-020.130\fP.
+.LI FT:\*(fe\-020.150
+\fBVerify that when the
+.mw outfile
+file is invoked with a parameter
+but the same parameter
+was not specified, using "\-u"option, when the awkcc command was executed,
+the 
+.mw outfile
+command prints an error message and terminates.\fR
+.br
+Requirement \f(CWR:awkcc-020.140\fP.
+.LE
+.H 3 "Unit Tests"
+.H 4 Overview.
+The tests in this section verify the correctness of the feature design.
+The items tested have no related requirements, but are tested to exercise
+portions of the code not covered by the feature requirements.
+These items are typically error conditions internal to the command.
+The common method of implementing these test cases is to invoke the command
+with the given inputs and conditions and capture the standard output and
+standard error output.
+In cases where the command fails, all tests will verify that any
+output files produced are retained.
+.H 4 "Test Cases."
+.VL \nwu
+.LI FT:\*(fe\-030.010
+Any items will be added by the developer in the implementation phase.
+.LE
+.H 2 "User Document Test Cases"
+.P
+.H 3 Overview.
+The tests in this section verify the proper location, mode and ownership
+of the online manual page.
+They also verify that the manual page has the required content. 
+.P
+The first test can only be done manually.
+.H 3 "Test Cases."
+.VL \nwu
+.LI FT:\*(fe\-040.010
+\fBVerify that the awkcc(1) manual page describes awkcc only and no
+other commands.\fR
+.br
+Requirement \f(CWR:awkcc-030.010\fP.
+.LI FT:\*(fe\-040.020
+\fBVerify that the manual page is installed, if the installer has
+chosen to install the manual page, as either \fI/opt/awkcc/man/man1/awkcc.1\fP,
+\fI/opt/rds/man/man1/awkcc.1\fP, or \fI/usr/share/man/man1/awkcc.1\fP with
+mode \fI0444\fP, owner \fIbin\fP, and group \fIbin\fR.
+.br
+Requirement \f(CWR:awkcc-030.010\fP.
+.LI FT:\*(fe\-040.030
+\fBOn systems with a \fI/usr/catman\fP directory, verify that the
+\fI/usr/bin/man\fP command can display the packed, formatted manual
+page.\fR
+.br
+Requirement \f(CWR:awkcc-030.020\fP.
+.LE
+.H 1 "TEST CASES NOT TO BE PROVIDED"
+.H 2 "Software Test Cases"
+All items will be tested.
+.H 2 "User Document Test Cases"
+All items will be tested.
+.H 1 "ISSUES"
+.H 2 "Open Issues"
+None.
+.H 2 "Closed Issues"
+None.
+.H 1 "ACKNOWLEDGEMENTS"
+I would like to thank Raju Datar for reviewing the various drafts of this 
+document.
+.H 1 "REFERENCES"
+awkcc(1) manual page
+.br
+Requirements Specification for awkcc 2.0 - Issue 1
+.SG

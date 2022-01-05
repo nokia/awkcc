@@ -1,0 +1,9 @@
+BEGIN {
+	print foo()
+}
+
+func foo()
+{
+	a="33lo"
+	return (a+1)
+}

@@ -1,0 +1,8 @@
+BEGIN {
+	n=split("hello[1,2]=goodbye", x, "[,=\\[\\]]")
+	for (i=1; i<=n; i++)
+		print i, x[i]
+	n=split("hello[test1,2]=goodbte", x, /[,=\[\]]/)
+	for (i=1; i<=n; i++)
+		print i, x[i]
+}

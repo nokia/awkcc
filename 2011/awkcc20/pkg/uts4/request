@@ -1,0 +1,101 @@
+#!/bin/sh
+trap 'exit 3' 15
+[ "$TRACE" = "on" ] && set -x && env
+
+CMD=$PKG
+
+##
+## ckyorn/ckitem on some systems don't display default message
+##
+if echo | ckitem -d a b 2>&1 >&- | grep -i default >&-
+then
+	DEF_ckitem=""
+else
+	DEF_ckitem="T"
+fi
+if echo | ckyorn -d a 2>&1 >&- | grep -i default >&-
+then
+    	DEF_ckyorn="" 
+else
+    	DEF_ckyorn="T"
+fi
+
+##
+## Ask where binary should go
+##
+AWKHOME=${BASEDIR:-/opt}
+PROMPT="Enter base directory where package will reside:"
+HELP=" \
+Choose the appropriate base directory for your system.
+If you are pre-answering these questions on a machine which
+is not the final installation system, you may see a warning about
+the directory not existing on the current system."
+
+LABEL="Possible base directories for $CMD:"
+OPT="${AWKHOME:-/opt}"
+ADDON="/usr/add-on"
+
+##
+## set AWKHOME default by progressing through possibilities
+## 
+# if package installed, use those defaults..
+DEFAULT=`pkgparam $PKGINST AWKHOME 2>/dev/null`
+if [ -z "$DEFAULT" ] 
+then
+    DEFAULT=$OPT
+fi
+
+AWKHOME=`ckitem -m1 -W75 -n -p "$PROMPT${DEF_ckitem:+ (default: $DEFAULT)}" \
+	-l "$LABEL" -h "$HELP"  \
+	-d "$DEFAULT"  "$OPT" "$ADDON"` || \
+	exit $?
+[ ! -d "$AWKHOME" ] && echo "WARNING: $AWKHOME does not yet exist on current system."
+
+AWKHOME="$AWKHOME/awkcc"
+
+##
+## Ask about man page
+##
+
+PROMPT="Do you want the $CMD manual page(s) installed?"
+HELP=" \
+Enter 'y' to install the $CMD manual page(s).  Installing the 
+manual page(s) only makes sense if you have the man(1) command 
+on your system."
+
+ans=`ckyorn -d "y" -p "$PROMPT${DEF_ckyorn:+ (default: y)}" -h "$HELP"` || \
+	exit $?
+ans=`echo $ans | sed 's/^[yY].*/y/'`	# canonize to y
+
+if [ "$ans" = y ]
+then
+
+    PROMPT="Where should man page(s) be installed?"
+
+    LABEL="Possible manual page directories for $CMD:"
+    OPTMAN="$AWKHOME/man"
+    MAN="/usr/share/man"
+
+    #
+    # set MANDIR default by progressing through possibilities
+    #
+    DEFAULT=`pkgparam $PKGINST MANDIR 2>/dev/null`
+    if [ -z "$DEFAULT" ] 
+    then
+	DEFAULT=$OPTMAN
+    fi
+
+    MANDIR=`ckitem -m1 -W75 -n -p "$PROMPT $DEF_ckitem" -l "$LABEL" -h "$HELP" \
+	-d "$DEFAULT" "$OPTMAN" "$MAN"` || \
+	exit $?
+    [ ! -d $MANDIR ] && echo "WARNING: $MANDIR does not yet exist on current system."
+    CLASSES="$CLASSES man"
+fi	
+
+echo "
+CLASSES=$CLASSES
+AWKHOME=$AWKHOME
+MANDIR=$MANDIR
+" >$1 || exit 1
+
+exit 0

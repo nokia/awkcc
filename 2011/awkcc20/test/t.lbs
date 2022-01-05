@@ -1,0 +1,5 @@
+BEGIN {
+	string="   hello   goodbye   "
+        gsub("^( )*","",string)
+	print "{" string "}"
+}

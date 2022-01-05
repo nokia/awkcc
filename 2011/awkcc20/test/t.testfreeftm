@@ -1,0 +1,6 @@
+BEGIN {
+	print a(), b(), c()
+}
+func a() { return "a" }
+func b() { return "b" }
+func c() { return "c" }

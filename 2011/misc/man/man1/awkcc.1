@@ -1,0 +1,153 @@
+.nr I 0
+.\"  NUM REG "I" ACTIVATES RDS 4.0-SPECIFIC TEXT WHEN SET TO 0
+.\"  TO DISABLE RDS 4.0 PROJ-SPECIFIC TEXT, CHANGE I VALUE TO 1
+.\"  (I.E.:   .nr I 1)
+.\"
+.ie \nI==0 \{\
+.TH AWKCC 1 EXPTOOLS
+\}
+.el \{
+.TH awkcc 1 "local      April 5, 1987"
+\}
+.SH NAME
+awkcc \- a nawk-to-C translator
+.SH SYNOPSIS
+.PP
+\f3awkcc [\-JVBb] [\-o \f2outfile\fP] [\-c \f2cprogfile\fP] [\-f \f2ccflag\fP] [\-u \f2var\fP]* \f2nawkprog\fP
+.PP
+\f3a.out [\-F [ ] \f2delimiter\fP] [ [\f2var\fP=\f2value\fP]* [\f2files\fP]* ]*
+.SH DESCRIPTION
+.PP
+.I awkcc
+reads the \fInawk\fP program in
+.I nawkprog,
+then creates a C program in
+.I awker.c.
+This program is then compiled with a library \f3libAWK.a\fP, and an 
+executable file is placed, by default, in
+.I a.out
+file.
+.PP
+The
+.I a.out
+command
+may be invoked with the same command-line options as \fInawk\fP,
+with the exception of \f2nawk\f1's
+\f3\-f \f2program\f1 option.
+.sp 0.5
+\f3Note about \-f\|/\-F options:\f1
+.br
+The \f3\-f\f1 option of \f2nawk\f1 can be used only with
+\f2nawk\f1.  The \f3\-F\f1 option of
+\f2nawk\f1 can be used both with \f2nawk\f1 and with \f2a.out\f1.
+ 
+.SH OPTIONS
+.PP
+The options to 
+.I awkcc 
+are:
+.IP "\f3\-b\fP"
+Translates \f2nawk\f1's \f3print\f1 and \f3printf\f1
+statements to the C function \f2printf\f1(3S).
+Normally, \f2printf\f1(3S)
+buffers the output to everything but the terminal.
+.IP "\f3\-B\fP"
+Causes 
+.I awkcc 
+to write programs that do not
+buffer their output.  This is the default behavior.
+.\" (CURRENTLY THE DEFAULT) ???
+.IP "\f3\-J\fP"
+Causes the assembler to use long branches instead
+of byte-displacement branches.
+If your program is very large, the assembler may
+suggest this option.
+.IP "\f3\-V\f1"
+``verbose'': reports somewhat cryptically on various
+things the user may find interesting.
+.IP "\f3\-o \f2outfile\fP"
+Normally, 
+.I awkcc 
+places a working program in
+.I a.out.
+With this option,
+.I outfile
+is used instead.
+.IP "\f3\-c \f2cprogfile\fP"
+Normally, 
+.I awkcc 
+places its C program text in
+.I awker.c.
+This option tells
+.I awkcc 
+to use the
+.I cprogfile
+instead.
+.IP "\f3\-f \f2ccflag\fP"
+Allows 
+.I awkcc 
+to pass the
+.I ccflag
+\f3-TR\f1\f2t/l\f1
+flag to the \f3UTS\f1 compiler, where
+.I t
+represents text base registers and
+.I l
+the number of literal base registers.  This flag speeds up the
+compilation time only and will be ignored on all non-\f3UTS\f1
+architectures.
+.IP "\f3\-u \f2var\f1"
+Prevents certain optimizations on
+.I var
+which can cause command-line assignment to function incorrectly.
+Alternatively, lines in the \fInawk\fP script of the
+form  \f3#awkcchint -u var\fP  will accomplish the same thing,
+while remaining invisible to the interpreter.
+\f3#awkcchint\fP works
+for the other options also.
+.SH EXAMPLE
+.PP
+If file \f2nwc.nawk\fP contains
+.RS
+.ft B
+{words+=NF } ; END { print FILENAME ":", NR, words }
+.ft R
+.RE
+then the compilation can be performed with
+.RS
+.ft B
+awkcc \-o nwc \-c nwc.c nwc.awk
+.ft R
+.RE
+and one can then invoke
+.RS
+.ft B
+nwc \-F: /etc/passwd
+.ft R
+.RE
+and so on.
+.SH DIAGNOSTICS
+.PP
+\f2awkcc\f1 issues the same error messages as \fInawk\fP.
+.SH SEE ALSO
+.PP
+nawk(1), cc(1), ranlib(1), yacc(1), lex(1).
+.if \nI==2 \{\
+.SH AUTHOR
+.PP
+J. Christopher Ramming (ulysses!jcr)
+\}
+
+.\"    Copyright (c) 1991 AT&T
+.\"    All Rights Reserved
+.\"
+.\"    Note: This software was created by the Bell Laboratories unit of AT&T.
+.\"    Bell Laboratories was subsequently part of Lucent Technologies, later part of
+.\"    Alcatel-Lucent, and now part of Nokia; some copyrights may have been assigned
+.\"    by AT&T to its successors. This license is granted by Nokia solely to the
+.\"    extent of its right to do so.
+.\"
+.\"    Filename: awkcc.1.
+.\"
+.\" "@(#)awkcc.1   version  40.1.2.3  RDS UNIX source.  Last delta: 7/25/91 10:11:17"
+.\"

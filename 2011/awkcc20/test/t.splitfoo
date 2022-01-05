@@ -1,0 +1,18 @@
+BEGIN {
+	FS=":"
+	#for (jcr in y) delete y[jcr]
+	#print x=split("1 2 3 4 5", y, " ")
+	#for (i=1; i<=x; i++) print i, y[i]
+	#for (jcr in y) delete y[jcr]
+	#print x=split("1 2 3 4 5", y, " ")
+	#for (i=1; i<=x; i++) print i, y[i]
+	#for (jcr in y) delete y[jcr]
+	#print x=split("1 2 3 4 5", y, " ")
+	#for (i=1; i<=x; i++) print i, y[i]
+	foobar=1
+}
+{
+	for (jcr in y) delete y[jcr]
+	print x=split($foobar, y, " ")
+	for (i=1; i<=x; i++) print i, y[i]
+}

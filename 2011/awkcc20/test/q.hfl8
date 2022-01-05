@@ -1,0 +1,24 @@
+BEGIN	{
+	query_indices = "$A" #A$A$A"
+	print query_indices, query_indices~/[^A]/
+	print match(query_indices, "[^A]"), RSTART, RLENGTH;
+	print match(query_indices, "$"), RSTART, RLENGTH;
+	print match(query_indices, "[^A]|$"), RSTART, RLENGTH;
+	gsub("[^A]|$","~&",query_indices) 
+printf "5----\n\t"
+	print query_indices
+	query_indices = "$A" #A$A$A"
+	gsub("[^A]|$","*",query_indices) 
+printf "6----\n\t"
+	print query_indices
+	query_indices = "$COUNTRY,$YEAR,$PRODUCT"
+	# append tildes to valid index entries for easy matching later.
+	gsub("[^A-Za-z0-9_$.~]|$","~&",query_indices) 
+printf "7----\n\t"
+	print query_indices
+	query_indices = "$,$,$"
+	# append tildes to valid index entries for easy matching later.
+	gsub("[^$]|$","~&",query_indices) 
+printf "8----\n\t"
+	print query_indices
+}

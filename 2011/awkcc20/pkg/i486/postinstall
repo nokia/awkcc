@@ -1,0 +1,26 @@
+#      Copyright (c) 1994 AT&T
+#      All Rights Reserved
+#
+#      Note: This software was created by the Bell Laboratories unit of AT&T.
+#      Bell Laboratories was subsequently part of Lucent Technologies, later part of
+#      Alcatel-Lucent, and now part of Nokia; some copyrights may have been assigned
+#      by AT&T to its successors. This license is granted by Nokia solely to the
+#      extent of its right to do so.
+#
+#      Filename: postinstall.
+
+#ident "@(#)postinstall   version  40.1.2.3  RDS UNIX source.  Last delta: 06/30/00 13:39:56"
+
+##
+## If the catman page has been installed then rebuild
+## the man index so that the man page shows up.
+##
+
+MANCMD="/usr/bin/man"
+
+if [ -x "$MANCMD" ] && echo $CLASSES | grep catman >/dev/null
+then
+	echo "Running man -u ..."
+	$MANCMD -u
+fi
+exit 0

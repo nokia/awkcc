@@ -1,0 +1,11 @@
+NR < 20 { 
+	print "HELLO1"
+	i=1;$i=$1;
+	print "HELLO2"
+	i=2;$i=$1;
+	print "HELLO3"
+	i=3;$i=$1;
+	print "HELLO4"
+	i=4;$i=$1;
+	print $(x++) 
+}

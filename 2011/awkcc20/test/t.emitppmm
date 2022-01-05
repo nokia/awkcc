@@ -1,0 +1,85 @@
+BEGIN {
+	printf "%d,%g,%s\n", o, p, q
+	o=0
+	printf "%s", o
+	printf "%s", ++o
+	printf "%s",--o
+	printf "%s",o++
+	printf "%s",o--
+	printf "%s",o
+	print "\n010010 <---"
+
+	p=0.0
+	printf "%s",p
+	printf "%s",++p
+	printf "%s",--p
+	printf "%s",p++
+	printf "%s",p--
+	printf "%s",p
+	print "\n010010 <---"
+
+	q="0"
+	printf "%s",q
+	printf "%s",++q
+	printf "%s",--q
+	printf "%s",q++
+	printf "%s",q--
+	printf "%s",q
+	print "\n010010 <---"
+	printf "%d,%g,%s\n", l, m, n
+	l=0
+	printf "%f", l
+	printf "%f", ++l
+	printf "%f",--l
+	printf "%f",l++
+	printf "%f",l--
+	printf "%f",l
+	print "\n010010 <---"
+
+	m=0.0
+	printf "%f",m
+	printf "%f",++m
+	printf "%f",--m
+	printf "%f",m++
+	printf "%f",m--
+	printf "%f",m
+	print "\n010010 <---"
+
+	n="0"
+	printf "%f",n
+	printf "%f",++n
+	printf "%f",--n
+	printf "%f",n++
+	printf "%f",n--
+	printf "%f",n
+	print "\n010010 <---"
+
+	printf "%d,%g,%s\n", i, j, k
+	i=0
+	printf "%d", i
+	printf "%d", ++i
+	printf "%d",--i
+	printf "%d",i++
+	printf "%d",i--
+	printf "%d",i
+	print "\n010010 <---"
+
+	j=0.0
+	printf "%d",j
+	printf "%d",++j
+	printf "%d",--j
+	printf "%d",j++
+	printf "%d",j--
+	printf "%d",j
+	print "\n010010 <---"
+
+	k="0"
+	printf "%d",k
+	printf "%d",++k
+	printf "%d",--k
+	printf "%d",k++
+	printf "%d",k--
+	printf "%d",k
+	print "\n010010 <---"
+}
+

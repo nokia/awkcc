@@ -1,0 +1,107 @@
+CC=/bin/cc
+
+# If you are not on a BSD system you may need to un-comment one of the following:
+
+# for a pc 6300 or 7300:
+#SYSFLAGS=-DPC7300
+# for a sun4 (somebody changed yacc a little bit).
+#SYSFLAGS=-DSUN4
+SUNFLAGS=`if [ -x /bin/sun4 ]; then if /bin/sun4; then echo "-DSUN4"; fi; fi`
+# for Xenix (and add these options to FLAGS in bin/awkcc.sh)
+#SYSFLAGS=-M0 -Mm -compat
+# if your system doesn't have doprnt():
+#SYSFLAGS=-DSYSV 
+3B2FLAGS=`if [ -x /bin/u3b2 ]; then if /bin/u3b2; then echo "-DSYSV"; fi; fi`
+
+SYSFLAGS=$(SUNFLAGS) $(3B2FLAGS)
+
+CFLAGS=-O $(SYSFLAGS)
+
+# if you want the library to compile with a special malloc package, add
+# MALLOC=/absolute-path../filename.o;  otherwise, MALLOC= (nothing) for
+# the system malloc
+MALLOC=
+
+TARGBIN=$(PWD)/bin
+TARGSH=$(PWD)/bin
+TARGLIB=$(PWD)/bin
+TARGHDR=$(PWD)/include
+RDSINSDIR=/opt/awkcc
+RDSINSBIN=/opt/awkcc/bin
+RDSINSHDR=/opt/awkcc/include
+
+# Determine standard path for awkcc.
+STDPATH=`uname -r \| grep ^4 1>/dev/null && echo /usr/bin || echo /usr/lbin`
+
+# Determine man path for awkcc.
+MANPATH=`uname -r \| grep ^4 1>/dev/null && echo /usr/share/man/man1 || echo /usr/man/u_man/man1`
+
+# Added for packaging the awkcc.
+PKGDIR=/var/spool/pkg
+PKGOPT=
+PKGNAME=awkcc
+PKGDIRSRC=/var/spool/pkg
+PKGOPTSRC=
+PKGNAMESRC=awkccsrc
+
+INCFILES=awk.h dollars.h ear.h hash.h header.h specassign.h y.tab.h
+
+install: others $(TARGBIN)/awkcc.sh
+
+test: install
+	echo "running regression suite...\n"
+	(cd test; PATH=$(OBJROOT)/$(TARGBIN)::$(PATH) testall > test.out; echo; grep BAD test.out)
+	echo "finished with regression suite...\n"
+
+others:
+	(cd ./lib;make install "CC=$(CC)" CFLAGS="$(CFLAGS)" "TARGLIB=$(TARGLIB)" "TARGHDR=$(TARGHDR)" "OBJROOT=$(OBJROOT)")
+	(cd ./awkcc;make install "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGBIN=$(TARGBIN)" "OBJROOT=$(OBJROOT)")
+
+mkrdsdir:
+	[ -d $(OBJROOT)/$(RDSINSBIN) ] || mkdir -p $(OBJROOT)/$(RDSINSBIN)
+	[ -d $(OBJROOT)/$(RDSINSHDR) ] || mkdir -p $(OBJROOT)/$(RDSINSHDR)
+
+$(TARGBIN)/awkcc.sh: makefile awkcc/awkcc.sh.basic
+	[ -d $(OBJROOT)/$(TARGSH) ] ||  mkdir -p $(OBJROOT)/$(TARGSH)
+	echo "CC=$(CC)" > $(OBJROOT)/$(TARGSH)/awkcc.sh
+	echo "HEADERDIR=$(TARGHDR)" >> $(OBJROOT)/$(TARGSH)/awkcc.sh
+	echo "AWKLIB=$(TARGLIB)/libAWK.a" >> $(OBJROOT)/$(TARGSH)/awkcc.sh
+	cat awkcc/awkcc.sh.basic >> $(OBJROOT)/$(TARGSH)/awkcc.sh
+	chmod 755 $(OBJROOT)/$(TARGSH)/awkcc.sh
+	
+$(RDSINSBIN)/awkcc.sh: makefile awkcc/awkcc.sh.basic
+	echo "CC=$(CC)" > $(OBJROOT)/$(RDSINSBIN)/awkcc.sh
+	echo "HEADERDIR=$(RDSINSHDR)" >> $(OBJROOT)/$(RDSINSBIN)/awkcc.sh
+	echo "AWKLIB=$(RDSINSBIN)/libAWK.a" >> $(OBJROOT)/$(RDSINSBIN)/awkcc.sh
+	cat awkcc/awkcc.sh.basic >> $(OBJROOT)/$(RDSINSBIN)/awkcc.sh
+	chmod 755 $(OBJROOT)/$(RDSINSBIN)/awkcc.sh
+
+clean: install
+	(cd ./lib;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGLIB=$(TARGLIB)" "TARGHDR=$(TARGHDR)" "OBJROOT=$(OBJROOT)")
+	(cd ./awkcc;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGBIN=$(TARGBIN)" "OBJROOT=$(OBJROOT)")
+
+prepkg:	mkrdsdir $(RDSINSBIN)/awkcc.sh install
+	[ -d $(OBJROOT)/$(MANPATH) ] || mkdir -p $(OBJROOT)/$(MANPATH)
+	sed 's/^.nr I 1/.nr I 0/1' < man/awkcc.1 > $(OBJROOT)/$(MANPATH)/awkcc.1
+
+makepkg:	prepkg
+	echo '#This script is one way to make sure that users do not have to' > $(OBJROOT)/$(STDPATH)/awkcc
+	echo '#add any new directory to their PATH for awkcc. ' >> $(OBJROOT)/$(STDPATH)/awkcc
+	echo '#Note that the symbolic link from the standard awkcc to /opt/awkcc/bin/awkcc does not work.' >> $(OBJROOT)/$(STDPATH)/awkcc
+	echo 'PATH=/opt/awkcc/bin:$${PATH} # Note that awkcc should be first; else infinite loop.' >> $(OBJROOT)/$(STDPATH)/awkcc
+	echo 'export PATH		# Without export it does not work.' >> $(OBJROOT)/$(STDPATH)/awkcc
+	echo 'awkcc $$*		# now call the real awkcc.' >> $(OBJROOT)/$(STDPATH)/awkcc
+	chmod 755 $(OBJROOT)/$(STDPATH)/awkcc
+	[ -d $(OBJROOT)/$(RDSINSHDR) ] || mkdir -p $(OBJROOT)/$(RDSINSHDR)
+	[ -f $(OBJECT)/$(RDSINSBIN)/awkcc ] || cp $(TARGBIN)/awkcc $(OBJECT)/$(RDSINSBIN)
+	[ -f $(OBJECT)/$(RDSINSBIN)/libAWK.a ] || cp $(TARGBIN)/libAWK.a $(OBJECT)/$(RDSINSBIN)
+	for INCARG in $(INCFILES); \
+	do [ -f $(OBJECT)/$(RDSINSHDR)/$$INCARG ] || cp $(TARGHDR)/$$INCARG $(OBJECT)/$(RDSINSHDR); \
+	done
+	cd ./pkg/awkcc; \
+	[ `uname -r \| cut -f1 -d"."`  = "4" ] && cp protosvr4 prototype || cp protopre4 prototype; \
+	pkgmk -o -d $(PKGDIR) -a $(ARCH) -r $(OBJROOT)/ $(PKGOPT) $(PKGNAME)
+	cd ./pkg/awkccsrc; pkgmk -o -d $(PKGDIRSRC) -a $(ARCH) -r $(OBJROOTSRC)/ $(PKGOPTSRC) $(PKGNAMESRC)
+installpkg:	makepkg
+	pkgadd -d $(PKGDIR) $(PKGNAME)
+	pkgadd -d $(PKGDIRSRC) $(PKGNAMESRC)

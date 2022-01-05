@@ -1,0 +1,8 @@
+BEGIN {
+if ("\\t" ~ /\\	/) { print "1.0" }
+if ("abc" ~ /ac/) { print "2.0" }
+#print "\\t" ~ /\\	/
+#print "abc" ~ /ac/
+#print "" ~ //
+print index("abc", "");
+}

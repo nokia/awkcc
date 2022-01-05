@@ -1,0 +1,6 @@
+The awkcc package requires that a C compiler is available.  This
+package has been tested with the native2.1 version of this compiler
+and has preset the CC variable to point to the /bin/cc
+file for this compiler.  The CCS variable must be set to "native" and
+exported. If a different compiler is used then please contact the 
+RDS hotline for assistance with the installation of awkcc.

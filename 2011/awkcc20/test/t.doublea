@@ -1,0 +1,25 @@
+BEGIN {
+# of all regexp and string escaping clauses.
+
+# ordinary characters, when escaped, are ordinary characters
+
+x="hello	goodbye"
+if (x !~ "\e") print "a"
+if (x !~ "\\e") print "b" 
+if (x !~ "\\\e") print "c"
+if (x !~ /\e/) print "d"
+if (x ~ /\\e/) print "1"
+
+# [tbncf] characters, when escaped, are tab, backspace, etc.
+if (x !~ "\t" || x !~ "\	") print "x"
+if (x !~ "\\t" || x !~ "\\\t") print "2"
+if (x !~ /\t/ || x !~ /\	/ || x ~ /\\t/ || x ~ /\\\t/) print "3"
+if (x !~ "\.") print "q"
+if (x ~ "\\.") print "w"
+if (x ~ "\\\.") print "e"
+if (x ~ "\\\\.") print "r"
+
+x= "("
+if (x !~ "\\(") print "w"
+if (x !~ "\\\(") print "e"
+}

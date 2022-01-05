@@ -1,0 +1,6 @@
+BEGIN{
+s="xhello,xgoodbye"
+print "s (before) =" s
+gsub("[^x]","~&",s)
+print "s (after) =" s
+}

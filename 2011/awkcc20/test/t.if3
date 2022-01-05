@@ -1,0 +1,9 @@
+BEGIN {
+	"echo 0" | getline
+	if ($0) print "$0 is true" 
+	else print "$0 is false"
+	if ($1) print "$1 is true" 
+	else print "$1 is false"
+	if ($0==$1) print "$0 and $1 are equal"
+	else print "$0 and $1 are not equal"
+}

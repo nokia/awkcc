@@ -1,0 +1,8 @@
+BEGIN{
+s = "hello & goodbye"
+t = "abcdefghijklmnop"
+print "s=" s
+print "t before=" t
+gsub("a","hello \& goodbye",t)
+print "t after=" t
+}

@@ -1,0 +1,11 @@
+BEGIN {
+	foo()
+	print "hello"
+}
+function foo(y)
+{
+	bar(y)
+}
+func bar(a)
+{
+}

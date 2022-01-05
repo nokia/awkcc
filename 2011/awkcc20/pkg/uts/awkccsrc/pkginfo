@@ -1,0 +1,23 @@
+PKG="awkccsrc"
+NAME="Source for Awkcc"
+DESC="Source code and test data for the nawk to C language translator system"
+ARCH="uts"
+RELEASE="3.1.1a"
+VERSION="2.0"
+CATEGORY="source"
+VENDOR="AT&T Computing and Networking Technology Dept. 45262 (RDS)"
+HOTLINE="(708)-979-5471"
+EMAIL="att!ihlpz!rdunix"
+CLASSES="src man tst pkg"
+
+## Comment out the one of the two following sections
+## (also see prototype file).
+
+# relocatable pkg: can be added to test dir
+BASEDIR=/usr/add-on
+PKGDIR=awkcc/pkg
+SRCDIR=awkcc
+
+# un-relocatable pkg: always installed in /usr/add-on
+#SRCDIR=/usr/add-on/awkcc
+#PKGDIR=/usr/add-on/awkcc/pkg

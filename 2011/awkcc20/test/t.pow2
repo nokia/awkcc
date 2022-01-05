@@ -1,0 +1,5 @@
+BEGIN {
+	x=3
+	a[x++]^=x
+	print x
+}

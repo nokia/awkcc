@@ -1,0 +1,4 @@
+BEGIN { 
+	x=toupper("abc")
+	print x
+}

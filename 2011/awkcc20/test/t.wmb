@@ -1,0 +1,9 @@
+BEGIN {
+	D[1]=2; D[2]=3; D[3]=4;
+
+	a=1
+	while (a in D) {
+		print "Yessirree", a
+		a++
+	}
+}

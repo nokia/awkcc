@@ -1,0 +1,22 @@
+BEGIN{
+s = "hello  goodbye"
+t = "a"
+print "s=" s
+print "t before=" t
+#gsub("a","foo"  value(s),t)
+gsub("a","foo" bar("hello"),t)
+print "t after=" t
+}
+function value(s)
+{
+gsub("&","\\\\&",s)
+print "valued s=" s
+return s
+}
+
+function bar(x)
+{
+	a="123"
+	gsub("1", "2", a)
+	return "-" x "-"
+}

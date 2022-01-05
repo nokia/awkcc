@@ -1,0 +1,5 @@
+{ x[$1,$2]=(i++) }
+{ foo=$1 $2; print foo | "sort" }
+END {
+	for (i in x) print i, x[i] | "sort"
+}

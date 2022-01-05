@@ -1,0 +1,3 @@
+Compare test.data `ls q.* | grep -v ".cc"` > test.out 2>&1
+Compare test.data `ls t.* | grep -v ".cc"` >>test.out 2>&1
+Compare test.countries `ls p.* | grep -v ".cc"` >>test.out 2>&1

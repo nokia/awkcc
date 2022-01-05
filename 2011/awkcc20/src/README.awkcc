@@ -1,0 +1,235 @@
+
+/*
+ *---------------------------------------------------------------------
+ *
+ * INSTALLATION
+ *
+ *---------------------------------------------------------------------
+ */
+
+	If you can read this, you have unbundled a file called AWKCC
+	using /bin/sh.
+
+	There should now be several directories:
+
+		awkcc/
+		lib/
+		include/
+		bin/
+		man/
+
+	The organization is as follows:
+
+		lib/ 
+			contains the source and makefile for
+			libAWK.a.
+
+		awkcc/
+			contains source and makefile for awkcc.
+
+		include/
+			will eventually contain header files necessary
+			for compiling libAWK.a as well as each
+			awker.c program
+
+		bin/
+			will eventually contain awk*, awkcc*, awkcc.sh* 
+			and libAWK.a*
+
+		man/
+			contains a manual page, and possibly a memo.
+
+		test/
+			may contain test cases
+
+	Simply type "nohup make test" at this point from the directory
+	in which awkcc was unloaded, and the necessary
+	executeables will be placed in `pwd`/bin.  Subsequently, some
+	test cases will be executed to see if awkcc is working and compatible
+	with your version of awk.  
+	
+	It is necessary to put `pwd`/bin in your PATH in order to use awkcc.
+	
+	ALSO:  if you do not use the Korn shell, it will be
+	necessary to define the variable PWD for the makefile.
+	Thus instead of simply typing "make" type "PWD=`pwd` make".
+	(An absolute path to the current directory must be used,
+	not ".").
+
+	When you unbundle the source, there will be no "makefile"
+	file in the source directory.  Before starting copy the
+	appropriate makefile.<arch> to makefile.
+
+	EXAMPLE: cp makefile.sun makefile
+
+/*
+ *---------------------------------------------------------------------
+ *
+ * SYSTEM DEPENDENT FEATURES
+ *
+ *---------------------------------------------------------------------
+ */
+
+	Awkcc creates fairly complicated C programs, and more than
+	one optimizer has been known to choke on them.  SO, if your
+	system is one of these, feel free to change bin/awkcc.sh 
+	by commenting out the "FLAGS=-O" statement on line 5.
+
+	Awkcc uses structure assignment, so make sure your compiler
+	supports this.
+
+	Certain limits in your C compiler may need to be upped
+	if you intend to awkcc very, very large programs.
+	In particular, watch for the error messages:
+
+		Compiler error:  out of tree space
+		Compiler error:  out of temporary string space
+
+	These can be fixed with a few judicious twiddles to
+	the #defines in the C compiler source.  Respectively,
+	these are suggested values for our compiler (pcc):
+	
+		config.h:
+		#define TREESZ	1000
+
+		common.c:
+		#define NTSTRBUF 200
+
+	Of course, there is no need to fiddle unless these
+	compiler messages are encountered.  Not all awk
+	programs will produce them.
+
+	Some machines (like Amdahl UTS systems) have more than
+	one C compiler, and the library libAWK.a might not
+	be compatible with an "awker.o" created by
+	a C compiler that was not used to create the library.
+	The fix (for Amdahl UTS) is to put a line
+
+		CCS=native # or CCS=whatever
+		export CCS
+
+	into the shell script awkcc.sh.
+
+	If you are using Xenix, put a line in the main makefile
+
+		CFLAGS=-M0 -Mm -compat
+
+	and change FLAGS in $AWKHOME/bin/awkcc.sh the same way.
+	(Thanks to Jerry Jones for this hint).
+
+	Apparently there are certain problems with the C compiler
+	on the 7300 that break awkcc.  I think the same is true
+	of the 6300.  Larry Mayka in Indian Hill has been most helpful, 
+	pointing out certain bugs in the 7300 compiler and providing 
+	work-arounds.  To use these, modify the "CFLAGS" line in the 
+	main makefile, such that it reads:
+
+		CFLAGS=-O -DPC7300
+
+	Nonetheless, awkcc will occasionally break the C compiler.
+	Two characteristic messages are:
+
+		allocation fails: op STAR, and 
+		compiler error: cfix trouble
+	
+	The upshot is:  if awkcc compiles the program, and the
+	C compiler does not complain, it result is probably OK.
+	If not, you are out of luck.
+
+/*
+ *---------------------------------------------------------------------
+ *
+ * TO USE AWKCC
+ *
+ *---------------------------------------------------------------------
+ */
+
+	The following are necessary ingredients:
+
+		1) ./bin/awkcc
+		2) ./bin/awkcc.sh
+		3) ./bin/libAWK.a
+		4) ./include/*.h
+
+	In order to translate a necessary program, both
+	'awkcc' and 'awkcc.sh' must be in your path, and
+	in addition 'awkcc.sh' must know where to find
+	the header files currently located in ./include.
+
+	The normal sequence of events is:
+
+		1) The user has an awkprogram 'foo'
+
+		2) The user's path contains the awkcc 'bin'
+		   directory, i.e.
+		
+			PATH=$PATH:$AWKBIN;export PATH
+
+		3) The user types "awkcc foo", whereupon
+		   awkcc creates a C program in 'awker.c';
+		   'awkcc' then invokes 'awkcc.sh', which
+		   performs the actual compilation, using
+		   cc's "-I" option to let cc find the
+		   appropriate include files.
+
+/*
+ *---------------------------------------------------------------------
+ *
+ *  KNOWN BUGS AND PROBLEMS.
+ *
+ *---------------------------------------------------------------------
+ */
+
+	Use of the "-b" option causes line-buffering
+	of output, which should solve most problems with output
+	buffering.  This, or something like it, should be the
+	default.  (In fact, this is required for perfect compatability
+	with awk, but only in cases where the user writes to and
+	gets from the same file without an intervening call to
+	"close", or when the user invokes system() on a command
+	that uses a yet-to-be-closed file)
+
+	Awk ignores OFMT if the number to be printed is an integer.
+	Awkcc does not make any exceptions for integers.
+
+	Awk's printf treats non-significant "%"'s differently 
+	from the way that C's does.  For instance, in awk
+		printf("\%") print a "%"
+		printf("\%q") prints %qq
+		print("\%A") prints %A
+	Awkcc uses C's scheme.
+
+	Awk does not catch illegal continue statements in the C
+	sense;  it is insuffiently strict, and treats top-level
+	continue statements as it does "next" statements.  On the
+	other hand, awkcc complains in this case.
+
+/*
+ *---------------------------------------------------------------------
+ *
+ * AWK features which are unimplemented as of right now.
+ *
+ *---------------------------------------------------------------------
+ */
+
+	SYMTAB ????
+	ENV ????
+	the new command-line processing scheme
+
+/*
+ *---------------------------------------------------------------------
+ *
+ *  THINGS TO BE CLEANED UP
+ *
+ *---------------------------------------------------------------------
+ */
+
+	The exit sequence behaves in ways that occasionally fail
+	to mimic awk.  The primary effect is that buffered output
+	from the compiled program and output from pipes may be
+	intermingled in a different order than that from the
+	same program run under the interpreter if stdout is not 
+	attached to /dev/tty.  
+
+	This is also true of pipe closings.
+

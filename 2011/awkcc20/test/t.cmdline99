@@ -1,0 +1,9 @@
+#awkcchint -u stdate
+#awkcchint -u enddate
+BEGIN {
+	exit
+}
+END {
+	print stdate, enddate
+}
+

@@ -1,0 +1,33 @@
+function insert_commas_in_number(x,  num,fraction,integer)
+	{
+        num = sprintf("%19.6f", x)
+#CC print_var("x", &Ap_integer);
+#CC print_var("num", &Ap_integer);
+	integer = num
+	sub("\\.[0-9]*","",integer)
+print integer
+	fraction = substr(num,length(integer)+1,length(num)-length(integer))
+	if (precision != 0) fraction = substr(fraction,1,precision+1)
+	else fraction = ""
+        gsub(/.../, "&,", integer)
+print "y", integer
+	gsub(/[ ]+,/, "", integer)
+print integer
+	sub(/,[.]/, ".", integer)
+print integer
+	sub(/-,/, "-", integer)
+print integer
+###CC { extern VARP	gsubvar
+###CC print_var("JCRFOO", gsubvar)
+###CC print_var("JCRFOO2", &Ap_integer)
+###CC }
+	sub(/,$/, "", integer)
+print "X",integer
+	num = integer fraction
+print integer
+	return num
+	}
+
+BEGIN {
+	print insert_commas_in_number(123456)
+}

@@ -1,0 +1,12 @@
+PKG="awkcc"
+NAME="nawk_to_C_translator"
+DESC="nawk to C language translator system"
+RELEASE="SCD 2.0"
+VERSION="2.0"
+ARCH="uts"
+CATEGORY="RDSfeature"
+VENDOR="AT&T Computing and Networking Technology Dept. 45262 (RDS)"
+HOTLINE="(708)-979-5471"
+EMAIL="att!ihlpz!rdunix"
+CLASSES="none"
+

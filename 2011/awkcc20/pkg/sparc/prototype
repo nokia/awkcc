@@ -1,0 +1,27 @@
+i pkginfo
+i copyright
+i request
+i depend
+
+!default 0755 bin bin
+d fixedrds /opt/awkcc
+d fixedrds /opt/awkcc/bin
+d fixedrds /opt/awkcc/include
+d optrds /opt/rds
+d optrds /opt/rds/bin
+d optman $MANDIR
+d optman $MANDIR/man1
+
+f bin /opt/awkcc/bin/awkcc 0555 bin bin
+f bin /opt/awkcc/bin/awkcc.sh 0555 bin bin
+f bin /opt/awkcc/bin/libAWK.a 0444 bin bin
+f bin $BINDIR/awkcc=usr/bin/awkcc 0555 bin bin
+f hdrs /opt/awkcc/include/awk.h 0444 bin bin
+f hdrs /opt/awkcc/include/dollars.h 0444 bin bin
+f hdrs /opt/awkcc/include/ear.h 0444 bin bin
+f hdrs /opt/awkcc/include/hash.h 0444 bin bin
+f hdrs /opt/awkcc/include/header.h 0444 bin bin
+f hdrs /opt/awkcc/include/specassign.h 0444 bin bin
+f hdrs /opt/awkcc/include/y.tab.h 0444 bin bin
+
+f man $MANDIR/man1/awkcc.1=usr/share/man/man1/awkcc.1 0444 bin bin

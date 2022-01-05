@@ -1,0 +1,8 @@
+NR < 20 { 
+	for (i=0; i<10; i++) {
+		print "HELLO1"
+		$i=$1; 
+		print "HELLO2"
+	}
+	print $(x++) 
+}

@@ -1,0 +1,6 @@
+
+BEGIN {
+    dashes = sprintf("%45s", " ")
+    gsub(/ /, "-", dashes)        # to protect the payee
+    "a" "b"
+}

@@ -1,0 +1,11 @@
+# To package, issue a command like this:
+
+pkgmk -r / -d /tmp awkcc
+
+# This command will pick up binaries installed on the system
+# (all built by the postsrc package),
+
+# To translate this package directory to datastream format (e.g.,
+# single file) issue a command like this:
+
+pkgtrans /tmp /tmp/awkcc.oam awkcc

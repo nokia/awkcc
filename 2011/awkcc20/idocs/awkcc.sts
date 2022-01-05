@@ -1,0 +1,8 @@
+This is file is a place holder.
+
+In RDS 4.0, this system test specification was
+combined with others into rds_util.sts which is in the rds40 generic
+under idocs/rds_util.sts.
+
+In RDS/SCD 2.0 , this system test specification was combined with others 
+into rds_util.sts which is in the scd20 generic under idocs/rds_util.sts.

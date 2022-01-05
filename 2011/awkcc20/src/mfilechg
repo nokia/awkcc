@@ -1,0 +1,46 @@
+#      Copyright (c) 1994 AT&T
+#      All Rights Reserved
+#
+#      Note: This software was created by the Bell Laboratories unit of AT&T.
+#      Bell Laboratories was subsequently part of Lucent Technologies, later part of
+#      Alcatel-Lucent, and now part of Nokia; some copyrights may have been assigned
+#      by AT&T to its successors. This license is granted by Nokia solely to the
+#      extent of its right to do so.
+#
+#      Filename: mfilechg
+
+#ident "@(#)mfilechg   version  40.1.2.4  RDS UNIX source.  Last delta: 06/30/00 13:43:56"
+../makefile ../makefile.orig
+chmod 644 ../makefile
+
+# change "clean: install" to just "clean:"
+ed ../makefile <<!!
+/clean:
+s/ .*//p
+w
+q
+!!
+
+# The following was in the original version -  I tried 
+# not to disturb it with my changes above - SMB
+ed ../makefile <<!!
+?CC=/opt/SUNWspro/bin/cc
+c
+CC=/usr/ccs/bin/cc
+.
+?	sed 's/^.nr I 1/.nr I 0/1' < man/awkcc.1 > \$(OBJROOT)/usr/share/man/man1/awkcc.1
+c
+	sed 's/^.nr I 1/.nr I 0/1' < man/awkcc.1 > \$(OBJROOT)/usr/share/man/man1/awkcc.1
+	[ -d "\$(OBJROOT)/\$(CATMAN)" ] || mkdir -p \$(OBJROOT)/\$(CATMAN)
+	PATH=/opt/dwb/bin:\$(PATH) ; \\
+	tbl \$(OBJROOT)/usr/share/man/man1/awkcc.1 | neqn | nroff -man -Tlp > \$(OBJROOT)/\$(CATMAN)/\$(PKGNAME)
+	pack -f \$(OBJROOT)/\$(CATMAN)/\$(PKGNAME) > /dev/null 2>&1
+.
+w
+q
+!!
+if [ "`uname -m | cut -c1-4`" != "sun4" ]
+then
+	cp ../makefile ../tempfile
+	sed s/SYSFLAGS=-DSUN4/#SYSFLAGS=-DSUN4/g ../tempfile >../makefile
+fi

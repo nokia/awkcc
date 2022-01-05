@@ -1,0 +1,27 @@
+AWKPROG=awk
+type nawk 1>/dev/null 2>&1
+[ "$?" = "0" ] && AWKPROG=nawk
+export AWKPROG
+datafile=$1
+shift
+for i
+do
+	echo $i:
+	${AWKPROG} -f $i $datafile >junk1 
+	if test -f $i.cc
+	then
+		echo >/dev/null
+	else
+		awkcc -o $i.cc -c $i.c $i
+	fi
+	rm -f $i.c
+	$i.cc $datafile >junk2  #2>malloc.data
+	rm -f $i.cc
+	if cmp -s junk1 junk2
+	then 
+		echo $i: good
+		#malloc.exe malloc.data | grep -v unfreed
+	else echo $i:	BAD
+	fi
+	diff -b junk1 junk2 | sed -e 's/^/	/' -e 10q
+done

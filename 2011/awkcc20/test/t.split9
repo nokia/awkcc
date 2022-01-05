@@ -1,0 +1,4 @@
+BEGIN {
+	split("hello" "|" "goodbye", tens, "|")
+	print tens[1]
+}

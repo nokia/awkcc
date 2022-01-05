@@ -1,0 +1,32 @@
+08/19/11
+========
+Updated source to use stdarg.h instead of varargs.h.  Ported to idarwin.
+(Like ilinux, the idarwin version does all builds with -m32)
+
+03/16/11
+========
+User reported that awkcc is failing on 64-bit linux.   Updated the
+awkcc.sh script so that compiles will be done in 32-bit mode on both
+32-bit and 64-bit linux machines.   The resulting awkcc binary will
+be  32-bits, but that compile and run on 64-bit machines as long as
+the necessary headers and libraries are installed.
+
+02/15/06
+========
+User reported a bug that can cause parsing failures when the input contains
+8-bit characters (with values greater than 127)
+
+08/31/05
+========
+Ported to cygwin and darwin.   The recently added ilinux, darwin, and cygwin 
+versions now pass nearly all of the regression tests included in the awkcc 
+source package.
+
+08/30/05
+========
+Ported to ilinux.   The linux version has had very little testing, but
+is able to compile and run some trivial awk programs.
+
+OLD NEWS
+========
+The RDS version 2.0 of awkcc now in exptools

@@ -1,0 +1,13 @@
+BEGIN	{
+	xmin =  1e3
+	xmax = -1e3
+}
+{
+	print "ph:", xmin, xmax
+	xmin = ( 0 + $1 < xmin ) ? int(0 + $1) : (0 + xmin)
+	xmax = ( 0 + $1 > xmax ) ? int(1 + $1) : (0 + xmax)
+
+	print "lh:", xmin, xmax
+}
+END { print xmin, xmax }
+

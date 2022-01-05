@@ -1,0 +1,95 @@
+.TH awkcc 1 "August 26, 1988"
+.SH NAME
+awkcc \- an awk-to-C translator
+.SH SYNOPSIS
+.PP
+awkcc [-JVBb] [-o outfile] [-c cprogfile] [-u var]* awkprog
+.PP
+a.out [-F [ ] delimiter] [ [var=value]* [files]* ]*
+.SH DESCRIPTION
+.PP
+.B awkcc
+reads the \fIawk\fP program in
+.B awkprog,
+then creates a C program in
+.B awker.c.
+This program is then compiled with a library libAWK.a, and an 
+executable file is placed in
+.B a.out.
+.PP
+.B a.out
+may be invoked as \fIawk\fP may be invoked, with the exception of the
+"-f program" option.
+.SH OPTIONS
+.PP
+The options to 
+.B awkcc 
+are:
+.IP "-b"
+This option makes 
+.B awkcc 
+create programs that line buffer all 
+output from "print" or "printf".  Normally, compiled programs
+buffer their output to everything but the terminal.
+.IP "-B"
+This option (currently the default) causes 
+.B awkcc 
+write programs that 
+buffer their output.
+.IP "-J"
+If your program is very large, the assembler may suggest this
+option. "-J" causes the assembler to use long branches instead
+of byte-displacement branches.
+.IP "-V"
+The "verbose" option reports somewhat cryptically on various
+things the user may find interesting.
+.IP "-o outfile"
+Normally, 
+.B awkcc 
+places a working program in
+.I a.out.
+With this option,
+.I outfile
+is used instead.
+.IP "-c cprogfile"
+Normally, 
+.B awkcc 
+places its C program text in
+.I awker.c.
+This option tells 
+.B awkcc 
+to use the
+.B cprogfile
+instead.
+.IP "-u var"
+Prevents certain optimizations on
+.I var
+which can cause command-line assignment to function incorrectly.
+Because this could become tedious, lines in the \fIawk\fP script of the
+form "#awkcchint -u var" will accomplish the same thing,
+while remaining invisible to the interpreter.  #awkcchint works
+for the other options also.
+.SH EXAMPLE
+.PP
+If file "nwc.awk" contains
+.PP
+	{ words+=NF } ; END { print FILENAME ":", NR, words }
+.PP
+then the compilation can be performed with
+.PP
+	awkcc -o nwc -c nwc.c nwc.awk
+.PP
+and one can then invoke
+.PP
+	nwc -F: /etc/passwd
+.PP
+and so on.
+.SH DIAGNOSTICS
+.PP
+Usually the same as those \fIawk\fP emits.
+.SH SEE ALSO
+.PP
+awk(1), cc(1), ranlib(1), yacc(1), lex(1)
+.SH AUTHOR
+.PP
+J. Christopher Ramming 

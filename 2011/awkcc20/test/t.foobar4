@@ -1,0 +1,10 @@
+function a(b)
+{
+	if (++x < 50)
+		a(b)
+	print x
+}
+BEGIN {
+	a(x)
+	x=1 #[1]=1
+}

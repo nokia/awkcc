@@ -1,0 +1,13 @@
+nsbPackageDescription: 1
+paths:
+	awkcc.npd
+	awkccsrc.npd
+	Makefile
+	awkcc20
+	README.exptools
+	COPYING
+	misc/
+	misc-arch/
+updateParameters:
+  targets awkcc.cpiogz
+  excludeCvs

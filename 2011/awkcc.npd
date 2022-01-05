@@ -1,0 +1,14 @@
+nsbPackageDescription: 1
+executableTypes: cygwin,darwin,hppa,idarwin,ilinux,isolaris,sgi,solaris,ssolaris
+pathSubs:
+    misc/
+    ins/%E/ lib/awkcc/
+    misc-arch/%E/
+paths:
+    misc/
+    ins/%E/
+    misc-arch/%E/
+excludePaths:
+	ins/*/awkcc.sh
+updateParameters:
+	source archived

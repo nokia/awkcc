@@ -1,0 +1,89 @@
+.aC BL
+.TL
+awkcc: an AWK-to-C translator
+.AU "J. Christopher Ramming" "" "MH" "" "5954" "30H-003" ""
+.AS
+\fIawk\fP has been described as "a convenient and expressive
+programming language that can be applied to a wide variety
+of computing and data-manipulation tasks."
+Problems for which \fIawk\fP is well-suited can often be solved in just
+a few lines of code, and it is sufficiently flexible that many
+have used it for rapid prototyping with intent to produce a final
+hand-coded system in C.
+.P
+\fIawkcc\fP is a preprocessor that translates \fIawk\fP code into C, 
+which is subsequently compiled using \fIcc\fP.  This tool
+can multiply the speed of many \fIawk\fP scripts, and increases of
+a factor between 2 and 6 are common.  \fIawkcc\fP has been designed
+with transparency in mind;  that is, scripts should produce the same
+results after compilation as they do with the interpreter.  In addition,
+since \fIawkcc\fP uses C as its target language, the package is
+easily ported to any UNIX 
+environment, and has been used on a range
+of machines and operating systems including System V, BSD4.3, and
+Sun 3.2.
+.P
+This memo will give a brief discussion of \fIawk\fP and then describe 
+\fIawkcc\fP, an \fIawk\fP-to-C translator.  It explains what \fIawkcc\fP is and
+how to invoke it, discusses situations in which it makes \fIawk\fP
+a more useful tool, and gives a high-level overview of its construction.  
+Finally, it addresses issues of transparency, portability, and availability.
+.AE
+.OK "AWK" "translators" "preprocessors" "compilers" "languages" ""
+.MT 1
+.dN 59547-880229-01
+.fC 40853
+.wP 114602-0101
+.mC "cmp" ""
+.cI n
+.cC
+A.V. Aho
+D.G. Belanger
+J.L. Bentley
+D.R. Bortz
+R.M. Chaplin
+R.S. Chapman
+L.H. Cole
+S.G. Chappell
+C.W. Creswell
+J.P. Downs
+P.A. Fost
+D.S. Furman
+R.L. Hegerich, Jr.
+K.H. Horton
+H.Y. Hwang
+B.W. Kernighan
+D.R. Kertz
+H.F. Lipson
+J.B. MacDonald
+K. Mondal
+H.S. Moscovitz
+S.C. North
+J.A. Parker
+J.G. Ramage
+J.A. Rotondo
+E.E. Sumner, Jr.
+P.G. Walker
+P.J. Weinberger
+
+Dept. Heads 5928
+Supervision 5928
+Members 59283
+
+M.F. Nettleingham - euo
+R.C. Rauhauser - tech
+A.M. Shaw - custom systems lab
+.cE
+.cS
+L. Bernstein
+J.V. Bodycomb
+H.L. Bosco
+C.S. Dawson
+E. Fuchs
+R.W. Hankins
+S.S. Katz
+R.E. Machol
+D.C. Stanzione
+E.E. Sumner, Sr.
+.cE
+.CS "6" "2" "" "0" "0" "6"

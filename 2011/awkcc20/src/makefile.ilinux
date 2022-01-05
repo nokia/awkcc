@@ -1,0 +1,82 @@
+CC=/opt/SUNWspro/bin/cc
+
+# If you are not on a BSD system you may need to un-comment one of the following:
+
+# for a pc 6300 or 7300:
+#SYSFLAGS=-DPC7300
+# for a sun4 (somebody changed yacc a little bit).
+SYSFLAGS=-DSUN4 
+# for Xenix (and add these options to FLAGS in bin/awkcc.sh)
+#SYSFLAGS=-M0 -Mm -compat
+# if your system doesn't have doprnt():
+#SYSFLAGS=-DSYSV 
+
+CFLAGS=-O $(SYSFLAGS)
+
+# if you want the library to compile with a special malloc package, add
+# MALLOC=/absolute-path../filename.o;  otherwise, MALLOC= (nothing) for
+# the system malloc
+MALLOC=
+
+TARGBIN=$(PWD)/bin
+TARGSH=$(PWD)/bin
+TARGLIB=$(PWD)/bin
+TARGHDR=$(PWD)/include
+
+# Added for packaging the awkcc.
+PKGDIR=/var/spool/pkg
+PKGOPT=
+PKGNAME=awkcc
+
+install: others $(OBJROOT)/$(TARGBIN)/awkcc.sh
+
+test: install
+	echo "running regression suite...\n"
+	(cd test; PATH=$(OBJROOT)/$(TARGBIN)::$(PATH) testall > test.out; echo; grep BAD test.out)
+	echo "finished with regression suite...\n"
+
+others:
+	(cd ./lib;make install "CC=$(CC)" CFLAGS="$(CFLAGS)" "TARGLIB=$(TARGLIB)" "TARGHDR=$(TARGHDR)" "OBJROOT=$(OBJROOT)")
+	(cd ./awkcc;make install "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGBIN=$(TARGBIN)" "OBJROOT=$(OBJROOT)")
+
+$(OBJROOT)/$(TARGBIN)/awkcc.sh: makefile awkcc/awkcc.sh.basic
+	[ -d $(OBJROOT)/$(TARGSH) ] ||  mkdir -p $(OBJROOT)/$(TARGSH)
+	echo "CC=$(CC)" > $(OBJROOT)/$(TARGSH)/awkcc.sh
+	echo "HEADERDIR=$(TARGHDR)" >> $(OBJROOT)/$(TARGSH)/awkcc.sh
+	echo "AWKLIB=$(TARGLIB)/libAWK.a" >> $(OBJROOT)/$(TARGSH)/awkcc.sh
+	cat awkcc/awkcc.sh.basic >> $(OBJROOT)/$(TARGSH)/awkcc.sh
+	chmod 755 $(OBJROOT)/$(TARGSH)/awkcc.sh
+	
+
+clean: install
+	(cd ./lib;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGLIB=$(TARGLIB)" "TARGHDR=$(TARGHDR)" "OBJROOT=$(OBJROOT)")
+	
+	(cd ./awkcc;make clean "CC=$(CC)" "CFLAGS=$(CFLAGS)" "TARGBIN=$(TARGBIN)" "OBJROOT=$(OBJROOT)")
+
+prepkg:	install
+	[ -d $(OBJROOT)/usr/share/man/man1 ] || mkdir -p $(OBJROOT)/usr/share/man/man1 
+	sed 's/^.nr I 1/.nr I 0/1' < man/awkcc.1 > $(OBJROOT)/usr/share/man/man1/awkcc.1
+
+clobber: clean
+
+makepkg:	prepkg
+	[ -d $(OBJROOT)/usr/bin ] || mkdir -p $(OBJROOT)/usr/bin
+	echo '#This script is there only to make sure that users do not have to' > $(OBJROOT)/usr/bin/awkcc
+	echo '#add any new directory to their PATH for awkcc. ' >> $(OBJROOT)/usr/bin/awkcc
+	echo '#Note that the symbolic link from /usr/bin/awkcc to /opt/awkcc/bin/awkcc does not work.' >> $(OBJROOT)/usr/bin/awkcc
+	echo 'PATH=/opt/awkcc/bin:$${PATH} # Note that awkcc should be first; else infinite loop.' >> $(OBJROOT)/usr/bin/awkcc
+	echo 'export PATH		# Without export it does not work.' >> $(OBJROOT)/usr/bin/awkcc
+	echo 'awkcc $$*		# now call the real awkcc.' >> $(OBJROOT)/usr/bin/awkcc
+	cd ./pkg/$(ARCH); pkgmk -o -d $(PKGDIR) -a $(ARCH) -r $(OBJROOT)/ $(PKGOPT) $(PKGNAME)
+
+installpkg:	makepkg
+	/usr/sbin/pkgadd -d $(PKGDIR) $(PKGNAME)
+
+chkpkg:
+	/usr/sbin/pkgchk -v -d $(PKGDIR) $(PKGNAME)
+
+infopkg:
+	pkginfo -l -d $(PKGDIR) $(PKGNAME)
+
+rmpkg:
+	/usr/sbin/pkgrm -n $(PKGNAME)

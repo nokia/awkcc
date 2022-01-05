@@ -1,0 +1,8 @@
+BEGIN {
+	x[1]=1
+	i=x[1]
+	if (i>=1) print "Yes 1"
+	if (i<=1) print "Yes 2"
+	if (1>=i) print "Yes 3"
+	if (1<=i) print "Yes 4"
+}

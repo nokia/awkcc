@@ -1,0 +1,6 @@
+BEGIN {
+	exit(0+ARGV[1])
+}
+END {
+	exit
+}

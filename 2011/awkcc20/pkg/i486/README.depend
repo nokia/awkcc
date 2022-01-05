@@ -1,0 +1,6 @@
+The awkcc package requires that a C compiler is available.  This
+package has been tested with the scde 2.02.00 version of this compiler
+and has preset the CC variable to point to the /bin/cc file for
+this compiler.  If a different compiler is used then please contact
+the RDS hotline for assistance with the installation of awkcc.
+

@@ -1,0 +1,2 @@
+BEGIN { print FS }
+{ print $1 }

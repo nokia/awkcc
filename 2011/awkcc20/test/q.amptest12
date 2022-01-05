@@ -1,0 +1,10 @@
+BEGIN{
+s = "AT&T"
+t = "abcdefghijklmnop"
+print "s before=" s
+print "t before=" t
+gsub("&","\\\\&",s)
+print "s after=" s
+gsub("def",s,t)
+print "t after=" t
+}

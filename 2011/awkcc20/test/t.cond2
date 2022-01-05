@@ -1,0 +1,5 @@
+BEGIN {
+	printf "%s,%s", 1?"hello":3,0?"hello":3
+	printf "%d,%d", 1?"hello":3,0?"hello":3
+	printf "%f,%f", 1?"hello":3,0?"hello":3
+}

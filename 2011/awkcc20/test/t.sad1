@@ -1,0 +1,16 @@
+BEGIN {
+	npas[1]="hello"
+	$1="hello"
+	npa = "hello"
+	nap = $1
+	pan = 1
+	plate = 1.0
+	if (npa == npas[1])
+		print "hello"
+ 	if (nap == npas[1])
+		print "goodbye"
+	if (nap == pan)
+		print "three"
+	if (pan == plate)
+		print "four"
+}

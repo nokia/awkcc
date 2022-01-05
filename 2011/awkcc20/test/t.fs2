@@ -1,0 +1,20 @@
+BEGIN {
+	exit
+}
+END {
+	FS="|"
+	$0="123|4%56|6a78\\|\\a\\ad|"
+	$0=$0;print $1
+	FS="\\|"
+	$0=$0;print $1
+	FS="\\"
+	$0=$0;print $1
+	FS="a"
+	$0=$0;print $1
+	FS="\\a"
+	$0=$0;print $1
+	FS="\\%"
+	$0=$0;print $1
+	FS="\\d"
+	$0=$0;print $1
+}

@@ -1,0 +1,11 @@
+
+BEGIN {
+	integer="goodbyefoobar"
+	integer="hello"
+	print sub(/l/, "4", integer)
+	print integer
+	print sub(/o/, "&-", integer)
+	print integer
+	print sub(/l$/, "", integer)
+	print integer
+}

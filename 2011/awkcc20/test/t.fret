@@ -1,0 +1,13 @@
+BEGIN {
+	for (;x=getl("/etc/motd");)
+		print x, $0
+}
+
+func getl(infile,	x)
+{
+	x=(getline < infile)
+	if (x==0) close(infile)
+	if (x>=0) return x;
+	printf("ERROR: illegal file %s.\n", infile) | SCREEN
+	exit(-1)
+}

@@ -1,0 +1,11 @@
+BEGIN {
+SUBSEP = "x"
+value[1 "x" 2] = "hello"
+value[3,4] = "goodbye"
+print "value[1,2] = " value[1,2]
+print "value[1 \"x\" 2] = " value[1 "x" 2]
+print "value[3,4] = " value[3,4]
+print "value[3 \"x\" 4] = " value[3 "x" 4]
+for (i in value)
+	print "|" i "|" value[i] "|"
+}

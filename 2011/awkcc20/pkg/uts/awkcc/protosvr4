@@ -1,0 +1,14 @@
+i pkginfo
+i copyright
+f none /usr/bin/awkcc 555 bin bin
+f none /usr/share/man/man1/awkcc.1 444 bin bin
+f none /opt/awkcc/bin/awkcc 555 bin bin
+f none /opt/awkcc/bin/awkcc.sh 555 bin bin
+f none /opt/awkcc/bin/libAWK.a 444 bin bin
+f none /opt/awkcc/include/awk.h 444 bin bin
+f none /opt/awkcc/include/dollars.h 444 bin bin
+f none /opt/awkcc/include/ear.h 444 bin bin
+f none /opt/awkcc/include/hash.h 444 bin bin
+f none /opt/awkcc/include/header.h 444 bin bin
+f none /opt/awkcc/include/specassign.h 444 bin bin
+f none /opt/awkcc/include/y.tab.h 444 bin bin

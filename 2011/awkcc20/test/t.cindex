@@ -1,0 +1,7 @@
+BEGIN {
+	print index("12345", "1")
+	print index("12345", "9")
+	print index("12345", "5")
+	print index("12345", "3")
+	print index("12345", "0")
+}

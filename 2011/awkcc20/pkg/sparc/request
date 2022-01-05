@@ -1,0 +1,107 @@
+#!/bin/sh
+trap 'exit 3' 15
+[ "$TRACE" = "on" ] && set -x && env
+
+CMD=$PKG
+
+##
+## ckyorn/ckitem on some systems don't display default message
+##
+if echo | ckitem -d a b 2>&1 >&- | grep -i default >&-
+then
+	DEF_ckitem=""
+else
+	DEF_ckitem="T"
+fi
+if echo | ckyorn -d a 2>&1 >&- | grep -i default >&-
+then
+    	DEF_ckyorn="" 
+else
+    	DEF_ckyorn="T"
+fi
+
+##
+## Ask where binary should go
+##
+PROMPT="Where should binaries be installed?"
+HELP=" \
+Choose the appropriate directory for your system.
+If you are pre-answering these questions on a machine which
+is not the final installation system, you may see a warning about
+the directory not existing on the current system."
+
+LABEL="Possible binary directories for $CMD:"
+OPTBIN="/opt/rds/bin"
+BIN="/usr/bin"
+
+##
+## set BINDIR default by progressing through possibilities
+## 
+# if package installed, use those defaults..
+DEFAULT=`pkgparam $PKGINST BINDIR 2>/dev/null`
+if [ -z "$DEFAULT" ] 
+then
+    DEFAULT=$BIN
+    [ -d "$OPTBIN" ] && DEFAULT=$OPTBIN
+fi
+
+BINDIR=`ckitem -m1 -W75 -n -p "$PROMPT${DEF_ckitem:+ (default: $DEFAULT)}" \
+	-l "$LABEL" -h "$HELP"  \
+	-d "$DEFAULT"  "$OPTBIN" "$BIN"` || \
+	exit $?
+[ ! -d "$BINDIR" ] && echo "WARNING: $BINDIR does not yet exist on current system."
+
+# add optrds directories to installed classes
+[ "$BINDIR" = "$OPTBIN" ] && CLASSES="optrds $CLASSES"
+
+##
+## Ask about man page
+##
+
+PROMPT="Do you want the $CMD manual page(s) installed?"
+HELP=" \
+Enter 'y' to install the $CMD manual page(s).  Installing the 
+manual page(s) only makes sense if you have the man(1) command 
+on your system."
+
+ans=`ckyorn -d "y" -p "$PROMPT${DEF_ckyorn:+ (default: y)}" -h "$HELP"` || \
+	exit $?
+ans=`echo $ans | sed 's/^[yY].*/y/'`	# canonize to y
+
+if [ "$ans" = y ]
+then
+
+    PROMPT="Where should man page(s) be installed?"
+
+    LABEL="Possible manual page directories for $CMD:"
+    OPTMAN="/opt/awkcc/man"
+    RDSMAN="/opt/rds/man"
+    MAN="/usr/share/man"
+
+    #
+    # set MANDIR default by progressing through possibilities
+    #
+    DEFAULT=`pkgparam $PKGINST MANDIR 2>/dev/null`
+    if [ -z "$DEFAULT" ] 
+    then
+	case "$BINDIR" in
+	    "$OPTBIN")  DEFAULT=$OPTMAN ;;
+	    "$BIN")	DEFAULT=$MAN ;;
+	esac
+    fi
+
+    MANDIR=`ckitem -m1 -W75 -n -p "$PROMPT $DEF_ckitem" -l "$LABEL" -h "$HELP" \
+	-d "$DEFAULT" "$OPTMAN" "$RDSMAN" "$MAN"` || \
+	exit $?
+    [ ! -d $MANDIR ] && echo "WARNING: $MANDIR does not yet exist on current system."
+    [ "$MANDIR" = "$OPTMAN" -o "$MANDIR" = "RDSMAN" ] && CLASSES="$CLASSES optman"
+    CLASSES="$CLASSES man"
+fi	
+
+echo "
+CLASSES=$CLASSES
+BINDIR=$BINDIR
+MANDIR=$MANDIR
+" >$1 || exit 1
+
+exit 0

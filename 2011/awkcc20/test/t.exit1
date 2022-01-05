@@ -1,0 +1,15 @@
+BEGIN {
+	print "this is before calling abort"
+	x=abort(1)
+	print "this is after calling abort"
+} 
+func abort(n) {
+	print "in abort - before exit", n
+	exit 2
+	print "in abort - after exit"
+}
+END {
+	print "into END"
+	x = abort(2)
+	print "should not see this"
+}

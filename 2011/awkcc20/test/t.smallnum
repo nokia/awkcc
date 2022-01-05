@@ -1,0 +1,7 @@
+BEGIN {
+	if (1) {
+		a=.5
+		b=0
+	}
+	if (a!=b) print "hello"
+}

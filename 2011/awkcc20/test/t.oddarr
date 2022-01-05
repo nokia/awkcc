@@ -1,0 +1,14 @@
+
+
+func foo(a)
+{
+	delete a[1]
+	for (i in a) print i, a[i]
+}
+
+BEGIN {
+	b[1]=1
+	b[2]=2
+	b[3]=3
+	foo(b)
+}

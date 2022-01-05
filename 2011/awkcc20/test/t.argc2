@@ -1,0 +1,13 @@
+BEGIN	{
+	read_arguments()
+	}
+function read_arguments(    i)
+	{
+printf "ARGC==%d", ARGC
+printf "ARGC==%s", ARGC
+	for (i=1;i<ARGC;i++) 
+	    {
+	    print "ARGC=" ARGC ## test
+	    print "ARGV\[" i "\]=" ARGV[i] ## test
+	    }
+	}

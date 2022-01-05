@@ -1,0 +1,8 @@
+NR < 20 {
+print "ONE"
+	$1=$1;
+print "TWO"
+	$2=$2;
+print "TRE"
+	$3=$3;
+}

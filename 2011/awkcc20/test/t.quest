@@ -1,0 +1,18 @@
+BEGIN {
+	d(b)
+}
+
+function d(e)
+{
+	e(e)
+}
+function e(f)
+{
+	f(f)
+}
+function f(y)
+{
+	y[1]="hello"
+	if (1 in y) print "hello"
+	else print "goodbye"
+}

@@ -1,0 +1,6 @@
+# %lx should work
+BEGIN {
+	printf("|%lf|\n", 3.5)
+	fmt="|%lf|\n"
+	printf fmt, 3.5
+}

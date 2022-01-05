@@ -1,0 +1,8 @@
+BEGIN {
+	xyz("xyz")
+}
+
+func xyz(a, tmparray)
+{
+	print a, tmparray[4]
+}

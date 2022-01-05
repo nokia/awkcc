@@ -1,0 +1,81 @@
+#awkcchint -b
+BEGIN {
+	OFMT="%.8g"
+	print "CRO  D2476-1884-3" > "deleteable.ofmt3457"
+	print "CRO  D2476-1894-6" > "deleteable.ofmt3457"
+	print "CRO  D2476-1878-3" > "deleteable.ofmt3457"
+	close("deleteable.ofmt3457")
+	while (getline < "deleteable.ofmt3457" > 0) 
+{
+if($0 ~ /^CRO /) {
+	# Completed with Related Order
+	# example: CRO  D2476-1884 THRU 1885
+	cro = substr($0, 7);
+	if (substr(cro, 1, 9) ~ /[0-9][0-9][0-9][0-9]-[0-9][0-9][0-9][0-9]/ || \
+	    substr(cro, 1, 8) ~ /[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]/){
+	CRO_type[cro_index] = substr($0, 6, 1);
+	gsub(/-/, "", cro);
+	gsub(/ /, "", cro);
+	CRO_first[cro_index] = substr(cro, 1, 8);
+
+	if (substr(cro, 9, 1) ~ /[0-9]/) {
+		if (substr(cro, 10, 1) ~ /[0-9]/) {
+		   if (substr(cro, 11, 1) ~ /[0-9]/) {
+			print "XXX"
+			if ((substr(cro, 6, 3)+0) < (substr(cro, 9, 3)+0))
+			  CRO_last[cro_index] = substr(cro, 1, 5) substr(cro, 9, 3);
+			else {
+			  foo = (substr(cro,1,5) + 0) + 1;
+			  CRO_last[cro_index] = foo substr(cro, 9, 3);
+#			  print Onum, APP, Osup, $0 >> "CompleteWith.error";
+			  }
+			}
+		   else {
+			print "YYY" | "sort"
+			if (substr(cro, 9, 2) ~ /00/)
+			  CRO_last[cro_index] = substr(cro, 1, 8);
+			else if ((substr(cro, 7, 2)+0) < (substr(cro, 9, 2)+0))
+			  CRO_last[cro_index] = substr(cro, 1, 6) substr(cro, 9, 2);
+			else {
+			  foo = (substr(cro,1,6) + 0) + 1;
+			  CRO_last[cro_index] = foo substr(cro, 9, 2);
+#			  print Onum, APP, Osup, $0 >> "CompleteWith.error";
+			  }
+			}
+		   }
+		else {
+			print "ZZZ" | "sort"
+			if ((substr(cro, 8, 1)+0) < (substr(cro, 9, 1)+0))
+			  CRO_last[cro_index] = substr(cro, 1, 7) substr(cro, 9, 1);
+			else {
+			  foo = (substr(cro,1,7) + 0) + 1;
+			  CRO_last[cro_index] = foo substr(cro, 9, 1);
+			  print Onum, APP, Osup, $0 >> "CompleteWith.error";
+			  }
+			}
+		}
+	else if ((substr(cro,9,4) ~ /THRU/) || (substr(cro,9,4) ~ /thru/)) {
+		if ((substr(cro, 5, 4)+0) < (substr(cro, 13, 4)+0))
+			CRO_last[cro_index] = substr(cro, 1, 4) substr(cro, 13, 4);
+		else {
+			foo = (substr(cro,1,4) + 0) + 1;
+			CRO_last[cro_index] = foo substr(cro, 13, 4);
+#			print Onum, APP, Osup, $0 >> "CompleteWith.error";
+			}
+		}
+
+	else CRO_last[cro_index] = CRO_first[cro_index];
+
+	cro_index++;
+	}
+	else print Onum, APP, Osup, $0 >> "CompleteWith.filter";
+	}
+}
+	exit
+}
+END {
+	for (i in CRO_last)
+		print CRO_type[i], CRO_first[i], CRO_last[i] | "sort"
+	system("rm deleteable.ofmt3457")
+	close("sort")
+}

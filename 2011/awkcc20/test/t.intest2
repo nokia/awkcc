@@ -1,0 +1,13 @@
+{
+	line = substr($0, index($0, " "))
+	print line
+	n = split(line, x)
+	x[$0, $1] = $0
+	print x[$0, $1]
+	if (($0,$1) in x)
+		print "yes1"
+	if ($1 in x)
+		print "yes2"
+	else
+		print "no"
+}

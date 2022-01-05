@@ -1,0 +1,4 @@
+{
+x=substr($2,0,-4) 
+printf "%s %s %s\n", $1, substr($2,0,4), x
+}

@@ -1,0 +1,23 @@
+#Brian:
+#
+#It appears that awk does not apply OFMT consistently when printing numbers.
+#Here is a small script that demonstrates the problem:  are you going to
+#leave this behavior unchanged?  
+#I need to know whether I should go out of my way to mimic it.
+#
+#Thanks,
+#
+#Chris
+
+# Demo script:  the integers are printed without their .0 suffixes.
+# Variant:  without the first statement, the third number should be
+# printed as 10e8 (according to default OFMT=%.6g) but is not.
+BEGIN {
+	OFMT="%.20g"
+	val = 1000.06;		print val
+				print val + 0	
+	val = 1000;		print val
+				print val + 0	
+	val = 1000000000;	print val
+				print val + 0	
+}

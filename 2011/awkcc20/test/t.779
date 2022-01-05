@@ -1,0 +1,5 @@
+BEGIN {
+	print "|" RS "|"
+	print "|" ORS "|"
+	print "|" SUBSEP "|"
+}

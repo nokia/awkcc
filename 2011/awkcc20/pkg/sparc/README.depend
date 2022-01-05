@@ -1,0 +1,9 @@
+The awkcc package requires that a C compiler is available.  This
+package has been tested with the SUNPRO version of this compiler
+and has preset the CC variable to point to the /opt/SUNWspro/bin/cc
+file for this compiler.  If a different compiler is used then
+please contact the RDS hotline for assistance with the installation
+of awkcc.  Awkcc was tested with version 2.0.1 of the SPARCompiler;
+however, any later release of this compiler should be compatible
+upwardly with the awkcc product.
+

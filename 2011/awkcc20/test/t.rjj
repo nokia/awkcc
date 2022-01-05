@@ -1,0 +1,7 @@
+BEGIN	{ FS = "!"; OFS = "!" }
+
+{
+	gsub("=","!",$2);
+	print
+	print $0
+}

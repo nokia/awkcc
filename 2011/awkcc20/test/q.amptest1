@@ -1,0 +1,5 @@
+{
+print "before:" $0
+gsub("&","\\\\&",$0)
+print "after:" $0
+}

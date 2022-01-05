@@ -1,0 +1,7 @@
+BEGIN {
+   output_width = " 80"
+   #gsub(" ","",output_width)
+   print "(before) output_width =" output_width "<--"
+   output_width += 0  # convert to numerical value
+   print "(after) OUTPUT WIDTH=" output_width "<----"
+}

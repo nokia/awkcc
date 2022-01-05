@@ -1,0 +1,700 @@
+q.a:
+q.a: good
+q.amptest1:
+q.amptest1: good
+q.amptest10:
+q.amptest10: good
+q.amptest11:
+q.amptest11: good
+q.amptest12:
+q.amptest12: good
+q.amptest2:
+q.amptest2: good
+q.amptest3:
+q.amptest3.c: In function 'BEGIN':
+q.amptest3.c:95:1: warning: incompatible implicit declaration of built-in function 'strlen'
+q.amptest3: good
+q.amptest4:
+q.amptest4: good
+q.amptest5:
+q.amptest5: good
+q.amptest6:
+q.amptest6: good
+q.amptest6b:
+q.amptest6b: good
+q.amptest6c:
+q.amptest6c: good
+q.amptest7:
+q.amptest7: good
+q.amptest7b:
+q.amptest7b: good
+q.amptest7c:
+q.amptest7c: good
+q.amptest8:
+q.amptest8: good
+q.amptest9:
+q.amptest9: good
+q.comint:
+q.comint.c: In function 'AF_insert_commas_in_number':
+q.comint.c:140:1: warning: incompatible implicit declaration of built-in function 'strlen'
+x(-1075564112,135475696,135475712): N:2, s:, n:0, curr:17, len:1.
+num(-1075564112,135475696,135475712): N:2, s:, n:0, curr:17, len:1.
+q.comint: good
+q.comint2:
+q.comint2: good
+q.dollartest1:
+q.dollartest1: good
+q.dollartest2:
+q.dollartest2: good
+q.dollartest3:
+q.dollartest3: good
+q.foobar:
+q.foobar: good
+q.hfl8:
+q.hfl8: good
+t.0:
+t.0: good
+t.00:
+t.00: good
+t.1:
+t.1.c: In function 'BEGIN':
+t.1.c:93:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.1.c:96:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.1: good
+t.1.x:
+t.1.x: good
+t.2:
+t.2: good
+t.2.x:
+t.2.x: good
+t.3:
+t.3: good
+t.3.x:
+t.3.x: good
+t.4:
+t.4: good
+t.4.x:
+t.4.x: good
+t.5.x:
+t.5.x: good
+t.6:
+t.6: good
+t.6.x:
+t.6.x: good
+t.6a:
+t.6a: good
+t.6b:
+t.6b: good
+t.777:
+t.777: good
+t.779:
+t.779: good
+t.780:
+t.780: good
+t.8.x:
+t.8.x: good
+t.909:
+t.909.c: In function 'USR':
+t.909.c:77:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.909.c: In function 'BEGIN':
+t.909.c:97:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.909: BAD
+	1,2c1,2
+	< /dev/rrp3:
+	< 
+	---
+	> /de
+	> /rrp3:
+t.a:
+t.a: good
+t.a1:
+t.a1: good
+t.a2:
+t.a2: good
+t.aeiou:
+t.aeiou: good
+t.aeiouy:
+t.aeiouy: good
+t.argc:
+t.argc: good
+t.argc2:
+t.argc2: good
+t.argv:
+t.argv: good
+t.arith:
+t.arith: good
+t.arith2:
+t.arith2: good
+t.array:
+t.array: good
+t.array1:
+t.array1: good
+t.array2:
+t.array2: good
+t.arrc:
+t.arrc: good
+t.asdf:
+t.asdf: good
+t.asdf333:
+t.asdf333: good
+t.asdfasdf:
+t.asdfasdf.c: In function 'BEGIN':
+t.asdfasdf.c:84:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.asdfasdf.c:141:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.asdfasdf: good
+t.asdfasdf2:
+t.asdfasdf2: good
+t.asdfasdf3:
+t.asdfasdf3: good
+t.asgn:
+t.asgn: good
+t.ass:
+t.ass: good
+t.assert:
+t.assert.c: In function 'USR':
+t.assert.c:121:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.assert: good
+t.avg:
+t.avg: good
+t.awk:
+REMINDER:  assuming `-b'
+t.awk: good
+t.b.x:
+t.b.x: good
+t.bbbad1:
+t.bbbad1: good
+t.blh999:
+t.blh999: good
+t.break:
+t.break: good
+t.break1:
+t.break1: good
+t.break2:
+t.break2: good
+t.break3:
+t.break3: good
+t.bthassign:
+REMINDER:  assuming `-u '
+WARNING: `-u ' ignored, since you never use variable .
+t.bthassign.c: In function 'BEGIN':
+t.bthassign.c:116:21: warning: incompatible implicit declaration of built-in function 'strlen'
+t.bthassign: good
+t.bug1:
+t.bug1: good
+t.builtins:
+t.builtins.c: In function 'USR':
+t.builtins.c:85:20: warning: incompatible implicit declaration of built-in function 'strlen'
+t.builtins: good
+t.cat:
+t.cat.c: In function 'USR':
+t.cat.c:121:20: warning: incompatible implicit declaration of built-in function 'strlen'
+t.cat.c: In function 'BEGIN':
+t.cat.c:132:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.cat: good
+t.cat1:
+t.cat1: good
+t.cat2:
+t.cat2: good
+t.cindex:
+t.cindex: good
+t.cmdline:
+t.cmdline: good
+t.cmdline99:
+REMINDER:  assuming `-u stdate'
+REMINDER:  assuming `-u enddate'
+t.cmdline99: good
+t.cmdline_proc:
+t.cmdline_proc: BAD
+	1c1
+	< 
+	---
+	> test.data
+t.cmp:
+t.cmp: good
+t.coerce:
+t.coerce: good
+t.comment:
+t.comment: good
+t.comment1:
+t.comment1: good
+t.concat:
+t.concat: good
+t.cond:
+t.cond: good
+t.cond2:
+t.cond2: good
+t.cont:
+t.cont: good
+t.cont3:
+t.cont3: good
+t.contin:
+t.contin: good
+t.count:
+t.count: good
+t.countend:
+t.countend: good
+t.cum:
+t.cum: good
+t.cut1:
+t.cut1.c: In function 'BEGIN':
+t.cut1.c:89:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.cut1: good
+t.d.x:
+t.d.x.c: In function 'BEGIN':
+t.d.x.c:102:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.d.x.c:106:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.d.x: good
+t.delete:
+t.delete: good
+t.delete3:
+t.delete3: good
+t.delete4:
+t.delete4: good
+t.delinloop:
+t.delinloop: good
+t.dobreak:
+t.dobreak: good
+t.dobreak2:
+t.dobreak2: good
+t.dobreak3:
+t.dobreak3: good
+t.dolawk:
+t.dolawk: good
+t.doll:
+t.doll: good
+t.doll2:
+t.doll2: good
+t.doll3:
+t.doll3: good
+t.doll4:
+t.doll4: good
+t.doublea:
+t.doublea: good
+t.doubleb:
+nawk: nonterminated character class \\[
+ source line number 24 source file t.doubleb
+ context is
+	if ("x" !~ >>>  "\\\\\x") <<<  { print "24" }
+t.doubleb: BAD
+	0a1,32
+	> 1
+	> 3
+	> 4
+	> 5
+	> 6
+	> 7
+	> 8
+	> 9
+	> 13
+t.doublec:
+t.doublec: good
+t.doublesp:
+t.doublesp: good
+t.e:
+t.e: good
+t.else:
+t.else: good
+t.emitppmm:
+t.emitppmm: good
+t.empty:
+t.empty: good
+t.endprint:
+t.endprint: good
+t.exit:
+t.exit: good
+t.exit1:
+t.exit1: good
+t.exit2:
+t.exit2: good
+t.f:
+t.f: good
+t.f.x:
+t.f.x: good
+t.f0:
+t.f0: good
+t.f1:
+t.f1: good
+t.f2:
+t.f2: good
+t.f3:
+t.f3: good
+t.f4:
+t.f4: good
+t.fix_this:
+t.fix_this: good
+t.foo:
+t.foo: good
+t.foobar:
+t.foobar: good
+t.foobar3:
+t.foobar3: good
+t.foobar4:
+t.foobar4: good
+t.foobar99:
+t.foobar99: good
+t.for:
+t.for: good
+t.for1:
+t.for1: good
+t.for2:
+t.for2: good
+t.format4:
+t.format4.c: In function 'BEGIN':
+t.format4.c:97:21: warning: incompatible implicit declaration of built-in function 'strlen'
+t.format4: good
+t.freea:
+t.freea: good
+t.fret:
+t.fret: good
+t.fs:
+t.fs: good
+t.fs2:
+t.fs2.c: In function 'BEGIN':
+t.fs2.c:82:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.fs2.c: In function 'END':
+t.fs2.c:95:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.fs2: BAD
+	1,7c1,7
+	< 123|4%56|6a78\|\a\ad|
+	< 123|4%56|6a78\|\a\ad|
+	< 123|4%56|6a78\|\a\ad|
+	< 123|4%56|6a78\|\a\ad|
+	< 123|4%56|6a78\|\a\ad|
+	< 123|4%56|6a78\|\a\ad|
+	< 123|4%56|6a78\|\a\ad|
+	---
+	> 123
+t.fun:
+t.fun: good
+t.fun2:
+t.fun2: good
+t.fun3:
+t.fun3: good
+t.fun4:
+t.fun4: good
+t.fun5:
+t.fun5: good
+t.getline:
+t.getline: good
+t.gets:
+t.gets: good
+t.gsub:
+t.gsub: good
+t.gsub1:
+t.gsub1: good
+t.gsub3:
+t.gsub3: good
+t.hello:
+t.hello: good
+t.hfl100:
+t.hfl100: good
+t.hfl99:
+t.hfl99.c: In function 'USR':
+t.hfl99.c:77:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.hfl99.c: In function 'BEGIN':
+t.hfl99.c:97:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.hfl99: good
+t.hflconv:
+t.hflconv: good
+t.i.x:
+t.i.x: good
+t.if:
+t.if: good
+t.if1:
+t.if1: good
+t.if2:
+t.if2: good
+t.if3:
+t.if3: good
+t.in:
+t.in: good
+t.in1:
+t.in1: good
+t.in2:
+t.in2: good
+t.in3:
+t.in3: good
+t.incr:
+t.incr: good
+t.incr2:
+t.incr2: good
+t.incr3:
+t.incr3: good
+t.index:
+t.index: good
+t.inter:
+t.inter: good
+t.intest:
+t.intest: good
+t.intest2:
+t.intest2: good
+t.j.x:
+t.j.x: good
+t.jcrtest:
+t.jcrtest: good
+t.johnbug:
+t.johnbug.c: In function 'BEGIN':
+t.johnbug.c:106:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.johnbug.c:109:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.johnbug: good
+t.lbs:
+t.lbs: good
+t.lessthan:
+t.lessthan: good
+t.longstr:
+t.longstr: good
+t.makef:
+t.makef: good
+t.match:
+t.match: good
+t.max:
+t.max: good
+t.min:
+t.min: good
+t.mod:
+t.mod: good
+t.monotone:
+t.monotone: good
+t.nameval:
+t.nameval: good
+t.newbg:
+t.newbg: good
+t.newcat:
+t.newcat: good
+t.newestfromda:
+t.newestfromda.c: In function 'BEGIN':
+t.newestfromda.c:96:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.newestfromda.c:157:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.newestfromda: good
+t.newjlb:
+t.newjlb: good
+t.next:
+t.next: good
+t.next3:
+t.next3: good
+t.nf:
+t.nf: good
+t.nf3:
+t.nf3: good
+t.nonl:
+t.nonl: good
+t.not:
+t.not: good
+t.nr:
+t.nr: good
+t.null:
+Z(-1081284448,137687536,137687552): N:1, s:, n:0, curr:17, len:1.
+X(-1081284464,137688840,137688856): N:1, s:, n:0, curr:17, len:1.
+junk(137688760,137688784,137688800): N:0, s:, n:0, curr:17, len:1.
+nullvar(137687512,137687536,137687552): N:1, s:, n:0, curr:17, len:1.
+t.null: good
+t.null0:
+t.null0.c: In function 'BEGIN':
+t.null0.c:213:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.null0.c:216:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.null0: good
+t.numbers:
+t.numbers.c: In function 'BEGIN':
+t.numbers.c:108:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.numbers.c:111:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.numbers: good
+t.oddarr:
+t.oddarr: good
+t.oddball:
+t.oddball: good
+t.oddball1:
+t.oddball1: good
+t.ofmt:
+t.ofmt: good
+t.ofmt3456:
+t.ofmt3456: BAD
+	1,2c1,2
+	< 1000.06
+	< 1000.06
+	---
+	> 1000.0599999999999454
+	> 1000.0599999999999454
+t.ofmt3457:
+REMINDER:  assuming `-b'
+t.ofmt3457: good
+t.ofs:
+t.ofs: good
+t.ors:
+t.ors: good
+t.ost100:
+t.ost100: good
+t.ost99:
+t.ost99: good
+t.pass:
+t.pass: good
+t.pass2:
+t.pass2: good
+t.pass3:
+t.pass3: good
+t.pat:
+t.pat: good
+t.pipe:
+t.pipe: good
+t.pow2:
+t.pow2: good
+t.pp:
+t.pp: good
+t.pp1:
+t.pp1: good
+t.pp2:
+t.pp2: good
+t.ppdoll:
+t.ppdoll: good
+t.prepost:
+t.prepost: good
+t.printf:
+t.printf: good
+t.printf3:
+t.printf3: good
+t.quest:
+t.quest: good
+t.quest2:
+t.quest2: good
+t.quest3:
+t.quest3: good
+t.quote:
+t.quote: good
+t.randk:
+t.randk: good
+t.re1:
+t.re1: good
+t.re2:
+t.re2: good
+t.re7:
+t.re7: good
+t.reFS:
+t.reFS.c: In function 'BEGIN':
+t.reFS.c:91:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.reFS.c:94:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.reFS: good
+t.rec:
+t.rec: good
+t.redir:
+t.redir: good
+t.reg:
+t.reg: good
+t.reg1:
+t.reg1: good
+t.rete:
+t.rete: good
+t.rjj:
+t.rjj.c: In function 'BEGIN':
+t.rjj.c:102:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.rjj.c:106:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.rjj: good
+t.rjj2:
+t.rjj2: good
+t.roff:
+t.roff.c: In function 'USR':
+t.roff.c:103:7: warning: incompatible implicit declaration of built-in function 'strlen'
+t.roff: good
+t.sad1:
+t.sad1: good
+t.sep:
+t.sep.c: In function 'BEGIN':
+t.sep.c:109:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.sep.c:112:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.sep: good
+t.seqno:
+t.seqno: good
+t.set0:
+t.set0: good
+t.set0a:
+t.set0a: good
+t.set0b:
+t.set0b: good
+t.set1:
+t.set1: good
+t.set2:
+t.set2: good
+t.set3:
+t.set3: good
+t.smallnum:
+t.smallnum: good
+t.sp:
+t.sp: good
+t.split:
+t.split: good
+t.split2:
+t.split2: good
+t.split9:
+t.split9: good
+t.split9a:
+t.split9a.c: In function 'BEGIN':
+t.split9a.c:134:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.split9a.c:137:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.split9a: good
+t.splitfoo:
+t.splitfoo.c: In function 'BEGIN':
+t.splitfoo.c:113:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.splitfoo.c:116:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.splitfoo: good
+t.stately:
+t.stately: good
+t.stderr:
+t.stderr: good
+t.strcmp:
+t.strcmp: good
+t.strcmp1:
+t.strcmp1: good
+t.sub:
+t.sub: good
+t.sub1:
+t.sub1: good
+t.sub2:
+t.sub2: good
+t.subsephfl:
+t.subsephfl: good
+t.substr:
+t.substr.c: In function 'USR':
+t.substr.c:99:5: warning: incompatible implicit declaration of built-in function 'strlen'
+t.substr: good
+t.substr1:
+t.substr1: good
+t.tb:
+t.tb: good
+t.tb2:
+t.tb2: good
+t.testfreeftm:
+t.testfreeftm: good
+t.time:
+t.time.c: In function 'USR':
+t.time.c:111:7: warning: incompatible implicit declaration of built-in function 'strlen'
+t.time.c: In function 'BEGIN':
+t.time.c:128:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.time.c:131:1: warning: incompatible implicit declaration of built-in function 'strlen'
+t.time: good
+t.toupper:
+t.toupper: good
+t.toupper2:
+t.toupper2: good
+t.vf:
+t.vf: good
+t.vf1:
+t.vf1: good
+t.vf2:
+t.vf2: good
+t.vf3:
+t.vf3: good
+t.w:
+t.w: good
+t.wmb:
+t.wmb: good
+t.wolit:
+t.wolit: good
+t.x:
+t.x: good
+t.xPP:
+t.xPP: good
+t.yly:
+nawk: null file name in print or getline
+ input record number 4, file test.data
+ source line number 2
+
+awkcc: null file name in print or getlineinput record number 4, file test.data.
+t.yly: good

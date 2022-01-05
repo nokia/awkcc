@@ -1,0 +1,6 @@
+BEGIN {
+	ARGV[1]="/etc/motd"
+	ARGV[2]="/etc/passwd"
+	ARGC=3
+}
+FNR<4 

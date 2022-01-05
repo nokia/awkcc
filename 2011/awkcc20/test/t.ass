@@ -1,0 +1,5 @@
+BEGIN {
+	d="hello"
+	a=b=c=3
+	print a b c (d=3), e=a+2
+}

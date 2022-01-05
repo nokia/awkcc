@@ -1,0 +1,6 @@
+#!/bin/sh
+#This script is here only to make sure that users do not have to
+#add any new directory to their PATH for awkcc. 
+PATH=/opt/exp/lib/awkcc:${PATH} # Note that awkcc should be first; else infinite loop.
+export PATH		# Without export it does not work.
+awkcc $*		# now call the real awkcc.

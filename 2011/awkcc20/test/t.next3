@@ -1,0 +1,14 @@
+
+BEGIN {
+	init_next(Next)
+	for (i in Next) print i, Next[i] | "sort"
+}
+
+func init_next(Next,		letarray, i, digits, lowerc, upperc, num)
+{
+	digits="1 2 3 4 5 6 7 8 9"
+	lowerc="a b c d e f g h i j k l m n o p q r s t u v w x y z"
+	upperc="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+	num=split(digits " " lowerc " " upperc, letarray)
+	for (i=1; i<num; i++) Next[letarray[i]]=letarray[i+1]
+}

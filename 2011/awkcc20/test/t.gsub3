@@ -1,0 +1,6 @@
+BEGIN { OFS="$" }
+{
+	a="12345"
+	gsub("1", "2", a);print a
+	gsub("1", "2", $1); print
+}

@@ -1,0 +1,7 @@
+BEGIN {
+	foo(x)
+}
+
+function foo(y)
+{
+}

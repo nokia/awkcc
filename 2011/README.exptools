@@ -1,0 +1,32 @@
+08/19/11
+========
+The non-standard packaging is related to the tools are built for the
+Alcatel-Lucent "Exptools" distribution.   The source files are collected
+by the developer, and sent to a build machine in a server farm.   The
+top-level "Makefile" is intended to be used by those automated tools.
+However, it should be possible to run from the commmand line with 
+the right environment, e.g.
+
+	make awkcc TYPE=ilinux CC=/path/to/gcc
+
+The original source code uses varargs.h, so it will not currently compile with 
+gcc3.   It was recently converted to use stdarg.h, and buillds on all
+platforms, but has not been heavily tested yet, so the varargs versions
+of the files have been left in the source tree.
+
+08/30/05
+========
+
+linux build:
+  Lex needs to be run on Solaris machine.   awk.lx.c is built on solaris, then
+  modified by hand to remove the static initialization of yyin and yyout.
+  (These are now initialized in main.c)
+
+  On solaris, math.h provides the definition of atof(), but linux needs
+  stldlib.h.  Added stdlib.h to ear.h
+
+cygwin,darwin build:
+  Same fixes as linux
+
+awkcc.sh is not returned by the build, as there are hand-edited changes
+for each platform.

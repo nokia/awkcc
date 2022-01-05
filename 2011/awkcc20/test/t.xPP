@@ -1,0 +1,5 @@
+{
+	print NF
+	$(NF++)="(,0)"
+	print NF, $(NF-1)
+}

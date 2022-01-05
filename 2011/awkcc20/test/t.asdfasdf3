@@ -1,0 +1,30 @@
+	BEGIN {
+		j = 3
+		k = 5
+		A[3,5] = 7
+	
+		B[k] = mid(6, A[j,k], 9)
+		C[k] = mid(6, A[j,k], 9)
+	
+		print "B=" B[k]
+		print "OB=", B[5]
+		print "C=" C[k]
+	}
+	
+	function mid(x,y,z) {
+		return y
+	}
+
+#	$$$ awkcc test1.awk 
+#	REMINDER:  assuming `-c test1.c'
+#	REMINDER:  assuming `-o test1'
+#	+ /etc/preroot /native /bin/cc -I/a20/mjs3/src/awkcc/include -O -o test1 test1.c /a20/mjs3/src/awkcc/bin/libAWK.a -lm 
+#	test1.c: 33: warning: tmpv unused
+#	$$$ test1 /dev/null
+#	B=
+#	C=7
+#	$$$
+#
+#
+#Mike
+#
