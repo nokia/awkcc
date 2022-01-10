@@ -10,7 +10,8 @@ purposes. This code is not being further developed or maintained.
 
 The repo contains two snapshots of the source code in the [1988](1988) and
 [2011](2011) folders. Both snapshots contain the complete codebase of awkcc
-at the given time. The codebase includes the original documentation.
+at the given time. The codebase includes the original documentation.  Much
+thanks to Arnold Robbins for his help in recovering these snapshots.
 
 ## License
 
