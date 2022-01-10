@@ -8,7 +8,7 @@ purposes. This code is not being further developed or maintained.
 
 ## Repo structure
 
-The repo contains two snapshots of the source code in the [1998](1998) and
+The repo contains two snapshots of the source code in the [1988](1988) and
 [2011](2011) folders. Both snapshots contain the complete codebase of awkcc
 at the given time. The codebase includes the original documentation.
 
