@@ -9,12 +9,13 @@ by AT&T to its successors. This license is granted by Nokia solely to the
 extent of its right to do so.
 */
 
-#define	DEBUG
+//#define	DEBUG
 
 #include "awk.h"
 #define NIL ((Node *) 0)
 #include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "y.tab.h"
 
 #define	HAT	(NCHARS-1)	/* matches ^ in regular expr */
